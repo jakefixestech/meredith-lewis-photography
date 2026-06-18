@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .cam { fill: #111111; }
+    @media (prefers-color-scheme: dark) {
+      .cam { fill: #ffffff; }
+    }
+  </style>
+  <mask id="lens">
+    <rect width="32" height="32" fill="#fff" />
+    <circle cx="16" cy="19" r="3.7" fill="#000" />
+  </mask>
+  <g class="cam" mask="url(#lens)">
+    <path d="M10.5 10 L12.6 6.4 H19.4 L21.5 10 Z" />
+    <rect x="2.5" y="9.6" width="27" height="17.4" rx="3.4" />
+  </g>
+  <circle class="cam" cx="24.5" cy="13.5" r="1.15" />
+</svg>

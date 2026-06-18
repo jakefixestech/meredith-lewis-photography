@@ -1,17 +1,752 @@
 ---
+import "../styles/global.css";
 
+const navLinks = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Portfolio", href: "#portfolio" },
+  { label: "Services", href: "#services" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Contact", href: "#contact" },
+];
+
+const galleries = [
+  {
+    title: "Senior Portraits",
+    href: "#senior-portraits",
+    img: "/senior.jpg",
+    alt: "A high school senior standing outdoors among tall grasses during a fall senior portrait session.",
+    span: "md:col-span-2 md:row-span-2",
+    ratio: "aspect-[3/4]",
+  },
+  {
+    title: "Couples",
+    href: "#couples",
+    img: "/couples.png",
+    alt: "A couple laughing together during a relaxed outdoor photo session.",
+    span: "md:col-span-2",
+    ratio: "aspect-[4/3]",
+  },
+  {
+    title: "Engagement",
+    href: "#engagement",
+    img: "/engagement.jpg",
+    alt: "A couple in autumn flannel sharing a quiet moment during an engagement session.",
+    span: "md:col-span-2",
+    ratio: "aspect-[4/3]",
+  },
+  {
+    title: "Family",
+    href: "#family",
+    img: "/family.jpg",
+    alt: "A mother and father holding their baby in front of golden autumn birch trees backlit by the sun.",
+    span: "md:col-span-2 md:row-span-2",
+    ratio: "aspect-[3/4]",
+  },
+  {
+    title: "Maternity",
+    href: "#maternity",
+    img: "/maternity.jpg",
+    alt: "An expectant couple standing in a sunlit field, holding up a strip of black-and-white ultrasound photos.",
+    span: "md:col-span-2",
+    ratio: "aspect-[4/3]",
+  },
+  {
+    title: "Pet Photography",
+    href: "#pet-photography",
+    img: "/pet.jpg",
+    alt: "A close-up portrait of a chocolate Labrador's face, with warm light catching its eye.",
+    span: "md:col-span-2",
+    ratio: "aspect-[4/3]",
+  },
+  {
+    title: "Events & Parties",
+    href: "#events",
+    img: "/events.jpg",
+    alt: "A soccer player in a number 3 jersey raising an arm on the field under the lights at dusk.",
+    span: "md:col-span-4",
+    ratio: "aspect-[16/7]",
+  },
+];
+
+const testimonials = [
+  {
+    quote: "Meredith was amazing to work with! She gave us enough direction so we knew the photo she was wanting but left enough room for it to feel natural and capture the essence of the love in our family. She was especially great with our two year old- absolutely nailed singing wheels on the bus to him to keep him smiling and capture his attention! We will definitely get more photos done in the future with her",
+    author: "Megan Rose Maguire",
+  },
+  {
+    quote: "I have the great fortune to work with Meredith for both my son's senior pictures and for a senior night soccer shoot. I can begin to express my pleasure with her work. She was able to get my son to relax and take great senior photos. So much so it was hard to pick one! So many great pictures. For the senior night, she took great pictures of all the seniors and their families during an emotional time. She captured the moment beautifully. I would whole heartedly recommend her for any task! Great job, great photographer, great person!",
+    author: "Susan Gagner",
+  },
+  {
+    quote: "Meredith took our engagement pictures last summer and then she took pictures at my bridal shower. Working with her was so easy and we spent a lot of time laughing and just really having a great time. My now husband and I are somewhat awkward when we have our pictures taken, but Meredith made it easy! She had great ideas and the photos turned out AMAZING!! We are due with our first baby in December and I have already talked with Meredith about taking maternity photos! I'm so excited! Meredith is fun, professional and TALENTED! Thank you, Meredith! You're the best!",
+    author: "Abby Pelletier",
+  },
+  {
+    quote: "Our family recently participated in a mini session with Meredith, and it was an amazing experience. With two little ones under 2, we weren't quite sure what to expect, but Meredith made the entire process so enjoyable. She was incredibly patient and kind, providing simple, clear directions that helped us capture beautiful moments. What truly stood out was Meredith's flexibility and quick thinking. Our toddler wasn't too keen on some of the poses, but Meredith seamlessly adjusted and found ways to keep our toddler engaged and happy. The final photos were absolutely stunning! They're the perfect keepsake for our first family photos as a family of four. We can't wait for more sessions with Meredith in the future!",
+    author: "Emily Goldman",
+  },
+  {
+    quote: "110% recommend! Meredith went above and beyond to make sure we were comfortable with all poses. She not only asked my consent but my fiancé as well. She was fun, energetic and anyone that can make my fiancé laugh and naturally smile in photos gets my stamp of approval. Will definitely be working with Meredith again!",
+    author: "Alyssa Stinson",
+  },
+  {
+    quote: "Meredith was great to work with, she has a great eye and took photos that captured the moment with my horses but were also artistic and caught their presence. She's so talented!",
+    author: "Jessica Freiman Dressage, LLC",
+  },
+  {
+    quote: "We have worked with Meredith twice this summer; once for minis, and once for senior photos. Not only are we thrilled with the photos themselves, but working with Meredith was a breeze before the appointments, and during the sessions she was wonderful. I highly, highly recommend working with her!",
+    author: "Shelby Harlow Lackie",
+  },
+  {
+    quote: "My husband and I recently had Meredith do a photo session with us at the Hamilton House here in South Berwick, Maine. She was wonderful! Very kind and patient, as we are 83 and 75 years old and I had back surgery pending. We were very pleased with the photos she took and have already had Christmas cards made with some of our favorite shots. Would highly recommend her to anyone looking to do photos.",
+    author: "Marjorie Brown",
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<!doctype html>
+<html lang="en" class="bg-white scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Meredith Lewis Photography — capturing candid, heartfelt moments throughout the White Mountains of New Hampshire, Maine, and Vermont. Approachable, affordable portrait and event photography."
+    />
+    <title>Meredith Lewis Photography | White Mountains, NH</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+
+    <!-- Google Fonts: Playfair Display (serif) + Inter (sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style is:global>
+      :root {
+        --font-serif: "Playfair Display", Georgia, serif;
+        --font-sans: "Inter", system-ui, sans-serif;
+      }
+      body {
+        font-family: var(--font-sans);
+      }
+      .font-serif {
+        font-family: var(--font-serif);
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-neutral-900 antialiased">
+    <!-- ===================== NAV ===================== -->
+    <header
+      id="site-nav"
+      class="fixed inset-x-0 top-0 z-50 transition-colors duration-300"
+    >
+      <nav
+        aria-label="Primary"
+        class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12"
+      >
+        
+        <a  href="#home"
+          id="wordmark"
+          class="font-serif text-lg font-medium tracking-tight text-white transition-colors duration-300 sm:text-xl"
+        >
+          Meredith Lewis Photography
+        </a>
+
+        <!-- Desktop nav -->
+        <div class="hidden items-center gap-8 lg:flex">
+          <ul class="flex items-center gap-7">
+            {
+              navLinks.map((link) => (
+                <li>
+                  
+                  <a  href={link.href}
+                    class="nav-link text-sm font-light tracking-wide text-white/90 transition-colors duration-300 hover:text-white"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+          
+          <a  href="#contact"
+            class="nav-cta rounded-full border border-white/70 px-5 py-2 text-sm font-light tracking-wide text-white transition-colors duration-300 hover:bg-white hover:text-neutral-900"
+          >
+            Get in Touch
+          </a>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button
+          id="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="flex h-10 w-10 items-center justify-center lg:hidden"
+        >
+          <span class="sr-only">Open menu</span>
+          <svg
+            id="icon-open"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+          </svg>
+          <svg
+            id="icon-close"
+            xmlns="http://www.w3.org/2000/svg"
+            class="hidden h-6 w-6 text-neutral-900"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Mobile menu panel -->
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-neutral-200 bg-white lg:hidden"
+      >
+        <ul class="flex flex-col px-5 py-4 sm:px-8">
+          {
+            navLinks.map((link) => (
+              <li>
+                
+                <a  href={link.href}
+                  class="mobile-link block border-b border-neutral-100 py-3 text-sm font-light tracking-wide text-neutral-700 hover:text-neutral-900"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+          <li class="pt-4">
+            
+            <a  href="#contact"
+              class="mobile-link block rounded-full border border-neutral-900 px-5 py-3 text-center text-sm font-light tracking-wide text-neutral-900 hover:bg-neutral-900 hover:text-white"
+            >
+              Get in Touch
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===================== HERO ===================== -->
+      <section id="home" class="relative h-screen min-h-[600px] w-full">
+        <img
+          src="/hero1.jpg"
+          alt="An elevated view of a New Hampshire notch in the White Mountains, with peak autumn foliage covering the mountainsides above a lake and a winding road."
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <!-- Dark gradient scrim at the bottom for legibility -->
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10"
+        >
+        </div>
+        <!-- Soft top scrim so the nav reads over the bright sky -->
+        <div
+          class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/50 to-transparent"
+        >
+        </div>
+
+        <div
+          class="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-5 pb-24 sm:px-8 sm:pb-28 lg:px-12"
+        >
+          <h1
+            class="max-w-3xl font-serif text-3xl font-medium leading-tight text-white text-balance [text-shadow:0_2px_16px_rgba(0,0,0,0.55)] sm:text-4xl md:text-4xl lg:text-5xl"
+          >
+            Capturing candid &amp; heartfelt moments throughout the White
+            Mountains of New Hampshire.
+          </h1>
+        </div>
+
+        <!-- Scroll-down cue -->
+        
+        <a  href="#about"
+          aria-label="Scroll down to learn more"
+          class="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-white/80 transition-colors hover:text-white"
+        >
+          <span class="text-[11px] font-light uppercase tracking-[0.25em]">Scroll</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 animate-bounce"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+          </svg>
+        </a>
+      </section>
+
+      <!-- ===================== INTRO / ABOUT ===================== -->
+      <section id="about" class="bg-white px-5 py-24 sm:px-8 sm:py-32 lg:px-12">
+        <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div class="order-1 lg:order-none">
+            <img
+              src="/about.jpg"
+              alt="Meredith Lewis at the Mt. Washburn summit sign, camera in hand."
+              width="1000"
+              height="1250"
+              loading="lazy"
+              class="aspect-[4/5] w-full rounded-sm object-cover"
+            />
+          </div>
+          <div class="text-center lg:text-left">
+            <p class="mb-6 text-xs font-medium uppercase tracking-[0.3em] text-neutral-500">
+              Hello &amp; welcome
+            </p>
+            <h2 class="font-serif text-3xl font-medium leading-snug text-neutral-900 text-balance sm:text-4xl">
+              Hi, I&apos;m Meredith.
+            </h2>
+            <div class="mx-auto mt-8 max-w-xl space-y-5 text-lg font-light leading-relaxed text-neutral-600 text-pretty lg:mx-0">
+              <p>
+                I&apos;m a New Hampshire based photographer rooted in the picturesque White Mountains. My passion behind the camera is capturing candid, meaningful moments that feel genuine — the real, raw emotion of your story.
+              </p>
+              <p>
+                Whether it&apos;s a quiet in-between glance or a big joyful milestone, my goal is to tell your story in a way that feels true to you, all while keeping my photography approachable and affordable.
+              </p>
+              <p>
+                I believe everyone deserves the chance to have their photos taken — and I hope you&apos;ll give me that chance. Welcome to my website, and to the place I&apos;m lucky to call home.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PORTFOLIO ===================== -->
+      <section
+        id="portfolio"
+        class="bg-neutral-50 px-5 py-24 sm:px-8 sm:py-28 lg:px-12"
+      >
+        <div class="mx-auto max-w-6xl">
+          <div class="mb-10 flex flex-col gap-3 sm:mb-12 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p class="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-neutral-500">
+                Portfolio
+              </p>
+              <h2 class="font-serif text-3xl font-medium tracking-tight text-neutral-900 sm:text-4xl">
+                The Galleries
+              </h2>
+            </div>
+            <p class="max-w-sm text-sm leading-relaxed text-neutral-500">
+              Seven bodies of work — each one a different kind of story, photographed with the same
+              honest, unhurried approach.
+            </p>
+          </div>
+
+          <div class="grid auto-rows-[180px] grid-cols-1 gap-4 sm:auto-rows-[220px] sm:grid-cols-2 md:grid-cols-4">
+            {
+              galleries.map((g, i) => (
+                
+                <a  href={g.href}
+                  class={`group relative block overflow-hidden bg-neutral-100 ${g.span}`}
+                >
+                  <img
+                    src={g.img}
+                    alt={g.alt}
+                    loading={i < 2 ? "eager" : "lazy"}
+                    class={`h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 ${g.ratio}`}
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/70 via-neutral-900/0 to-transparent" />
+                  <div class="absolute inset-x-0 bottom-0 flex items-center justify-between p-4">
+                    <h3 class="font-serif text-lg text-white drop-shadow-sm sm:text-xl">
+                      {g.title}
+                    </h3>
+                    <span class="text-xs font-medium uppercase tracking-[0.2em] text-white/80 opacity-0 transition-opacity group-hover:opacity-100">
+                      View
+                    </span>
+                  </div>
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SERVICES & PRICING ===================== -->
+      <section id="services" class="bg-white px-5 py-24 sm:px-8 sm:py-32 lg:px-12">
+        <div class="mx-auto max-w-3xl">
+          <div class="mb-12 text-center">
+            <p class="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-neutral-500">
+              Services &amp; Pricing
+            </p>
+            <h2 class="font-serif text-3xl font-medium text-neutral-900 sm:text-4xl">
+              Sessions for every season of life.
+            </h2>
+            <p class="mx-auto mt-6 max-w-xl text-base font-light leading-relaxed text-neutral-600 text-pretty">
+              Every one-hour session includes 10 edited digital images of your choice, hand-picked from a gallery of at least 30.
+            </p>
+          </div>
+
+          <ul class="divide-y divide-neutral-200 border-y border-neutral-200">
+            <li class="flex items-baseline justify-between gap-4 py-5">
+              <span class="font-serif text-xl text-neutral-900">Senior Portraits</span>
+              <span aria-hidden="true" class="mx-3 hidden flex-1 border-b border-dotted border-neutral-300 sm:block"></span>
+              <span class="tabular-nums text-neutral-600">$225</span>
+            </li>
+            <li class="flex items-baseline justify-between gap-4 py-5">
+              <span class="font-serif text-xl text-neutral-900">Couples</span>
+              <span aria-hidden="true" class="mx-3 hidden flex-1 border-b border-dotted border-neutral-300 sm:block"></span>
+              <span class="tabular-nums text-neutral-600">$225</span>
+            </li>
+            <li class="flex items-baseline justify-between gap-4 py-5">
+              <span class="font-serif text-xl text-neutral-900">Engagement</span>
+              <span aria-hidden="true" class="mx-3 hidden flex-1 border-b border-dotted border-neutral-300 sm:block"></span>
+              <span class="tabular-nums text-neutral-600">$225</span>
+            </li>
+            <li class="flex items-baseline justify-between gap-4 py-5">
+              <span class="font-serif text-xl text-neutral-900">Family</span>
+              <span aria-hidden="true" class="mx-3 hidden flex-1 border-b border-dotted border-neutral-300 sm:block"></span>
+              <span class="tabular-nums text-neutral-600">$250</span>
+            </li>
+            <li class="flex items-baseline justify-between gap-4 py-5">
+              <span class="font-serif text-xl text-neutral-900">Maternity</span>
+              <span aria-hidden="true" class="mx-3 hidden flex-1 border-b border-dotted border-neutral-300 sm:block"></span>
+              <span class="tabular-nums text-neutral-600">$225</span>
+            </li>
+            <li class="flex items-baseline justify-between gap-4 py-5">
+              <span class="font-serif text-xl text-neutral-900">Pet Photography</span>
+              <span aria-hidden="true" class="mx-3 hidden flex-1 border-b border-dotted border-neutral-300 sm:block"></span>
+              <span class="tabular-nums text-neutral-600">$225</span>
+            </li>
+            <li class="flex items-baseline justify-between gap-4 py-5">
+              <span class="font-serif text-xl text-neutral-900">Events &amp; Parties</span>
+              <span aria-hidden="true" class="mx-3 hidden flex-1 border-b border-dotted border-neutral-300 sm:block"></span>
+              <span class="tabular-nums text-neutral-600">$300</span>
+            </li>
+          </ul>
+
+          <p class="mt-8 text-center text-sm font-light leading-relaxed text-neutral-500 text-pretty">
+            Add additional people, extra event coverage, more edited images, or 48-hour rush delivery anytime. Seasonal 15-minute mini sessions run throughout the year — reach out to see what&apos;s currently available.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================== PAY WHAT YOU CAN BAND ===================== -->
+      <section
+        id="mini-sessions"
+        class="bg-neutral-900 px-5 py-24 text-center sm:px-8 sm:py-28 lg:px-12"
+      >
+        <div class="mx-auto max-w-3xl">
+          <p
+            class="mb-6 text-xs font-medium uppercase tracking-[0.3em] text-neutral-500"
+          >
+            Photography for everyone
+          </p>
+          <h2
+            class="font-serif text-3xl font-medium leading-snug text-white text-balance sm:text-4xl"
+          >
+            Everyone deserves beautiful photographs.
+          </h2>
+          <p
+            class="mx-auto mt-8 max-w-2xl text-lg font-light leading-relaxed text-neutral-300 text-pretty"
+          >
+            I believe the moments that matter most shouldn&apos;t be out of
+            reach. That&apos;s why I host seasonal
+            <span class="text-white">&ldquo;Pay What You Can&rdquo;</span> mini
+            sessions — a warm, no-pressure way for families and individuals to
+            have their stories captured, no matter the budget. Great photos,
+            made approachable.
+          </p>
+          <a href="/services"
+            class="mt-10 inline-block rounded-full border border-white/70 px-7 py-3 text-sm font-light uppercase tracking-[0.15em] text-white transition-colors hover:bg-white hover:text-neutral-900"
+          >
+            See Mini Session Details
+          </a>
+        </div>
+      </section>
+
+      <!-- ===================== TESTIMONIALS CAROUSEL ===================== -->
+      <section
+        id="testimonials"
+        class="bg-white px-5 py-24 sm:px-8 sm:py-32 lg:px-12"
+      >
+        <div class="mx-auto max-w-6xl">
+          <div class="mb-12 flex flex-col gap-4 text-center sm:flex-row sm:items-end sm:justify-between sm:text-left">
+            <div>
+              <p class="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-neutral-500">
+                Kind words
+              </p>
+              <h2 class="font-serif text-3xl font-medium text-neutral-900 sm:text-4xl">
+                From the people I&apos;ve worked with.
+              </h2>
+            </div>
+            <div class="flex items-center justify-center gap-3 sm:justify-end">
+              <button
+                id="tst-prev"
+                type="button"
+                aria-label="Previous testimonial"
+                class="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition-colors hover:border-neutral-900 hover:text-neutral-900"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+              </button>
+              <button
+                id="tst-next"
+                type="button"
+                aria-label="Next testimonial"
+                class="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition-colors hover:border-neutral-900 hover:text-neutral-900"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="tst-track"
+            class="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {
+              testimonials.map((t) => (
+                <figure class="w-[85%] flex-shrink-0 snap-start border border-neutral-200 bg-neutral-50 p-8 sm:w-[60%] sm:p-10 lg:w-[46%]">
+                  <blockquote class="font-serif text-lg font-normal italic leading-relaxed text-neutral-800 text-pretty sm:text-xl">
+                    &ldquo;{t.quote}&rdquo;
+                  </blockquote>
+                  <figcaption class="mt-6 text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
+                    — {t.author}
+                  </figcaption>
+                </figure>
+              ))
+            }
+          </div>
+
+          <div class="mt-10 text-center">
+            
+            <a  href="/testimonials"
+              class="inline-block text-sm font-medium uppercase tracking-[0.2em] text-neutral-900 underline underline-offset-4 transition-colors hover:text-neutral-600"
+            >
+              Read more kind words
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CLOSING CTA ===================== -->
+      <section id="contact" class="relative w-full">
+        <img
+          src="/bottom.jpg"
+          alt="A loon stretching its wings on a calm lake, water droplets falling from its feathers."
+          loading="lazy"
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <div
+          class="relative z-10 mx-auto flex max-w-3xl flex-col items-center px-5 py-32 text-center sm:px-8 sm:py-40 lg:px-12"
+        >
+          <h2
+            class="font-serif text-4xl font-medium leading-tight text-white text-balance sm:text-5xl"
+          >
+            Let&apos;s tell your story.
+          </h2>
+          <p
+            class="mt-6 max-w-xl text-lg font-light leading-relaxed text-white/80 text-pretty"
+          >
+            Whether it&apos;s a milestone, a celebration, or an ordinary day
+            worth remembering — I&apos;d love to hear from you.
+          </p>
+          
+          <a  href="mailto:meredith.lewis2018@gmail.com"
+            class="mt-10 inline-block rounded-full bg-white px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-neutral-900 transition-colors hover:bg-neutral-200"
+          >
+            Get in Touch
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-white px-5 py-16 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-7xl">
+        <div
+          class="flex flex-col items-center gap-8 border-b border-neutral-200 pb-12 text-center"
+        >
+          <a href="#home" aria-label="Meredith Lewis Photography — home">
+            <img
+              src="/logo.png"
+              alt="Meredith Lewis Photography — based in the White Mountains, ME, NH &amp; VT, established 2019."
+              width="760"
+              height="485"
+              class="h-64 w-auto sm:h-80"
+            />
+          </a>
+
+          <nav aria-label="Footer" class="flex flex-wrap justify-center gap-x-6 gap-y-3">
+            {
+              navLinks.map((link) => (
+                
+                <a  href={link.href}
+                  class="text-sm font-light tracking-wide text-neutral-800 transition-colors hover:text-neutral-900"
+                >
+                  {link.label}
+                </a>
+              ))
+            }
+          </nav>
+
+          <div class="flex items-center gap-3">
+            
+            <a  href="https://www.facebook.com/share/1Ew67obhv6/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Meredith Lewis Photography on Facebook"
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition-colors hover:border-neutral-900 hover:text-neutral-900"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.797c0-2.507 1.492-3.892 3.777-3.892 1.094 0 2.238.196 2.238.196v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12Z"
+                ></path>
+              </svg>
+            </a>
+            
+            <a  href="mailto:meredith.lewis2018@gmail.com"
+              aria-label="Email Meredith Lewis Photography"
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition-colors hover:border-neutral-900 hover:text-neutral-900"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+            </a>
+            
+            <a  href="https://meredithlewisphotography.pixieset.com/booking/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Book a session on Pixieset"
+              class="flex h-10 items-center justify-center rounded-full border border-neutral-300 px-4 text-xs font-medium uppercase tracking-[0.18em] text-neutral-700 transition-colors hover:border-neutral-900 hover:text-neutral-900"
+            >
+              Book
+            </a>
+          </div>
+        </div>
+
+        <p class="mt-8 text-center text-xs font-light tracking-wide text-neutral-700">
+          &copy; {new Date().getFullYear()} Meredith Lewis Photography. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- ===================== VANILLA JS ===================== -->
+    <script>
+      // Nav background on scroll
+      const nav = document.getElementById("site-nav");
+      const wordmark = document.getElementById("wordmark");
+      const navLinkEls = document.querySelectorAll(".nav-link");
+      const navCta = document.querySelector(".nav-cta");
+      const iconOpenEl = document.getElementById("icon-open");
+
+      const onScroll = () => {
+        const scrolled = window.scrollY > 40;
+        if (scrolled) {
+          nav?.classList.add("bg-white", "shadow-sm");
+          wordmark?.classList.remove("text-white");
+          wordmark?.classList.add("text-neutral-900");
+          navLinkEls.forEach((el) => {
+            el.classList.remove("text-white/90", "hover:text-white");
+            el.classList.add("text-neutral-700", "hover:text-neutral-900");
+          });
+          navCta?.classList.remove("border-white/70", "text-white", "hover:bg-white", "hover:text-neutral-900");
+          navCta?.classList.add("border-neutral-900", "text-neutral-900", "hover:bg-neutral-900", "hover:text-white");
+          iconOpenEl?.classList.remove("text-white");
+          iconOpenEl?.classList.add("text-neutral-900");
+        } else {
+          nav?.classList.remove("bg-white", "shadow-sm");
+          wordmark?.classList.add("text-white");
+          wordmark?.classList.remove("text-neutral-900");
+          navLinkEls.forEach((el) => {
+            el.classList.add("text-white/90", "hover:text-white");
+            el.classList.remove("text-neutral-700", "hover:text-neutral-900");
+          });
+          navCta?.classList.add("border-white/70", "text-white", "hover:bg-white", "hover:text-neutral-900");
+          navCta?.classList.remove("border-neutral-900", "text-neutral-900", "hover:bg-neutral-900", "hover:text-white");
+          iconOpenEl?.classList.add("text-white");
+          iconOpenEl?.classList.remove("text-neutral-900");
+        }
+      };
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      // Mobile menu toggle
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+
+      const closeMenu = () => {
+        menu?.classList.add("hidden");
+        iconOpen?.classList.remove("hidden");
+        iconClose?.classList.add("hidden");
+        toggle?.setAttribute("aria-expanded", "false");
+      };
+
+      toggle?.addEventListener("click", () => {
+        const isOpen = !menu?.classList.contains("hidden");
+        if (isOpen) {
+          closeMenu();
+        } else {
+          menu?.classList.remove("hidden");
+          iconOpen?.classList.add("hidden");
+          iconClose?.classList.remove("hidden");
+          toggle?.setAttribute("aria-expanded", "true");
+        }
+      });
+
+      // Close mobile menu when a link is tapped
+      document.querySelectorAll(".mobile-link").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      // Testimonial carousel
+      const tstTrack = document.getElementById("tst-track");
+      const tstPrev = document.getElementById("tst-prev");
+      const tstNext = document.getElementById("tst-next");
+
+      if (tstTrack && tstPrev && tstNext) {
+        const scrollByCard = (dir: number) => {
+          const card = tstTrack.querySelector("figure");
+          const amount = card ? card.offsetWidth + 24 : tstTrack.clientWidth * 0.8;
+          tstTrack.scrollBy({ left: dir * amount, behavior: "smooth" });
+        };
+        tstPrev.addEventListener("click", () => scrollByCard(-1));
+        tstNext.addEventListener("click", () => scrollByCard(1));
+      }
+    </script>
+  </body>
 </html>
