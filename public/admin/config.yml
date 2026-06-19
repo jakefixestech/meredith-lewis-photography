@@ -18,24 +18,73 @@ collections:
         editor:
           preview: false
         fields:
-          - { name: "hero_heading", label: "Hero Heading", widget: "string" }
-          - { name: "hero_image", label: "Hero Image", widget: "image" }
-          - { name: "welcome_eyebrow", label: "Welcome Eyebrow (small text above heading)", widget: "string" }
-          - { name: "welcome_heading", label: "Welcome Heading", widget: "string" }
-          - { name: "welcome_photo", label: "Your Photo", widget: "image" }
-          - { name: "welcome_paragraphs", label: "Welcome Paragraphs", widget: "list", field: { name: "text", label: "Paragraph", widget: "text" } }
+          # ---------- HERO ----------
+          - { name: "hero_image", label: "Hero Image (top banner)", widget: "image" }
+          - { name: "hero_image_alt", label: "Hero Image — description for screen readers", widget: "string" }
+          - { name: "hero_heading", label: "Hero Heading", widget: "text" }
+
+          # ---------- ABOUT / WELCOME ----------
+          - { name: "about_eyebrow", label: "About — small text above heading", widget: "string" }
+          - { name: "about_heading", label: "About — Heading", widget: "string" }
+          - { name: "about_photo", label: "About — Your Photo", widget: "image" }
+          - { name: "about_photo_alt", label: "About Photo — description for screen readers", widget: "string" }
+          - name: "about_paragraphs"
+            label: "About — Paragraphs"
+            widget: "list"
+            field: { name: "text", label: "Paragraph", widget: "text" }
+
+          # ---------- PORTFOLIO ----------
+          - { name: "portfolio_eyebrow", label: "Portfolio — small text above heading", widget: "string" }
+          - { name: "portfolio_heading", label: "Portfolio — Heading", widget: "string" }
+          - { name: "portfolio_blurb", label: "Portfolio — Short Description", widget: "text" }
           - name: "galleries"
             label: "Gallery Tiles"
             widget: "list"
             fields:
               - { name: "title", label: "Title", widget: "string" }
-              - { name: "image", label: "Image", widget: "image" }
+              - { name: "href", label: "Link (leave as is unless you know it)", widget: "string" }
+              - { name: "img", label: "Image", widget: "image" }
+              - { name: "alt", label: "Image description (screen readers)", widget: "string" }
+              - { name: "span", label: "Tile size code (do not change)", widget: "string" }
+              - { name: "ratio", label: "Tile shape code (do not change)", widget: "string" }
+
+          # ---------- SERVICES & PRICING ----------
+          - { name: "services_eyebrow", label: "Services — small text above heading", widget: "string" }
+          - { name: "services_heading", label: "Services — Heading", widget: "string" }
+          - { name: "services_blurb", label: "Services — Short Description", widget: "text" }
           - name: "services"
-            label: "Services & Pricing"
+            label: "Services & Pricing List"
             widget: "list"
             fields:
               - { name: "name", label: "Service Name", widget: "string" }
               - { name: "price", label: "Price", widget: "string" }
-          - { name: "cta_heading", label: "Closing Heading", widget: "string" }
-          - { name: "cta_text", label: "Closing Text", widget: "text" }
-          - { name: "cta_image", label: "Closing Image", widget: "image" }
+          - { name: "services_footnote", label: "Services — Footnote", widget: "text" }
+
+          # ---------- PAY WHAT YOU CAN ----------
+          - { name: "minis_eyebrow", label: "Mini Sessions — small text above heading", widget: "string" }
+          - { name: "minis_heading", label: "Mini Sessions — Heading", widget: "string" }
+          - { name: "minis_body_before", label: "Mini Sessions — Text (before the quoted phrase)", widget: "text" }
+          - { name: "minis_body_emphasis", label: "Mini Sessions — Highlighted Phrase", widget: "string" }
+          - { name: "minis_body_after", label: "Mini Sessions — Text (after the quoted phrase)", widget: "text" }
+          - { name: "minis_button_label", label: "Mini Sessions — Button Text", widget: "string" }
+          - { name: "minis_button_href", label: "Mini Sessions — Button Link", widget: "string" }
+
+          # ---------- TESTIMONIALS ----------
+          - { name: "testimonials_eyebrow", label: "Testimonials — small text above heading", widget: "string" }
+          - { name: "testimonials_heading", label: "Testimonials — Heading", widget: "string" }
+          - name: "testimonials"
+            label: "Testimonials (reviews)"
+            widget: "list"
+            fields:
+              - { name: "quote", label: "Review Text", widget: "text" }
+              - { name: "author", label: "Reviewer Name", widget: "string" }
+          - { name: "testimonials_link_label", label: "Testimonials — Link Text", widget: "string" }
+          - { name: "testimonials_link_href", label: "Testimonials — Link Destination", widget: "string" }
+
+          # ---------- CLOSING CTA ----------
+          - { name: "cta_image", label: "Closing — Background Image", widget: "image" }
+          - { name: "cta_image_alt", label: "Closing Image — description for screen readers", widget: "string" }
+          - { name: "cta_heading", label: "Closing — Heading", widget: "string" }
+          - { name: "cta_text", label: "Closing — Text", widget: "text" }
+          - { name: "cta_button_label", label: "Closing — Button Text", widget: "string" }
+          - { name: "cta_button_href", label: "Closing — Button Link", widget: "string" }
