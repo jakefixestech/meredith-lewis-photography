@@ -1,0 +1,41 @@
+backend:
+  name: github
+  repo: jakefixestech/meredith-lewis-photography
+  branch: main
+  base_url: https://meredithlewisphotography.com
+  auth_endpoint: /api/auth
+
+media_folder: "src/assets/uploads"
+public_folder: "/src/assets/uploads"
+
+collections:
+  - name: "homepage"
+    label: "Home Page"
+    files:
+      - name: "content"
+        label: "Home Page Content"
+        file: "src/content/homepage.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "hero_heading", label: "Hero Heading", widget: "string" }
+          - { name: "hero_image", label: "Hero Image", widget: "image" }
+          - { name: "welcome_eyebrow", label: "Welcome Eyebrow (small text above heading)", widget: "string" }
+          - { name: "welcome_heading", label: "Welcome Heading", widget: "string" }
+          - { name: "welcome_photo", label: "Your Photo", widget: "image" }
+          - { name: "welcome_paragraphs", label: "Welcome Paragraphs", widget: "list", field: { name: "text", label: "Paragraph", widget: "text" } }
+          - name: "galleries"
+            label: "Gallery Tiles"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "image", label: "Image", widget: "image" }
+          - name: "services"
+            label: "Services & Pricing"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Service Name", widget: "string" }
+              - { name: "price", label: "Price", widget: "string" }
+          - { name: "cta_heading", label: "Closing Heading", widget: "string" }
+          - { name: "cta_text", label: "Closing Text", widget: "text" }
+          - { name: "cta_image", label: "Closing Image", widget: "image" }
