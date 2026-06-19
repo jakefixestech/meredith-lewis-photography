@@ -1,21 +1,19 @@
 {
-  "hero_image": "/hero1.jpg",
   "hero_image_alt": "An elevated view of a New Hampshire notch in the White Mountains, with peak autumn foliage covering the mountainsides above a lake and a winding road.",
-  "hero_heading": "Capturing candid & heartfelt moments throughout the White Mountains of New Hampshire.",
-
-  "about_eyebrow": "Hello & welcome",
-  "about_heading": "Hi, I'm Meredith.",
   "about_photo": "/about.jpg",
-  "about_photo_alt": "Meredith Lewis at the Mt. Washburn summit sign, camera in hand.",
-  "about_paragraphs": [
-    "I'm a New Hampshire based photographer rooted in the picturesque White Mountains. My passion behind the camera is capturing candid, meaningful moments that feel genuine — the real, raw emotion of your story.",
-    "Whether it's a quiet in-between glance or a big joyful milestone, my goal is to tell your story in a way that feels true to you, all while keeping my photography approachable and affordable.",
-    "I believe everyone deserves the chance to have their photos taken — and I hope you'll give me that chance. Welcome to my website, and to the place I'm lucky to call home."
-  ],
-
-  "portfolio_eyebrow": "Portfolio",
-  "portfolio_heading": "The Galleries",
+  "services_footnote": "Add additional people, extra event coverage, more edited images, or 48-hour rush delivery anytime. Seasonal 15-minute mini sessions run throughout the year — reach out to see what's currently available.",
+  "services_heading": "Sessions for every season of life.",
+  "minis_body_after": "mini sessions — a warm, no-pressure way for families and individuals to have their stories captured, no matter the budget. Great photos, made approachable.",
   "portfolio_blurb": "Seven bodies of work — each one a different kind of story, photographed with the same honest, unhurried approach.",
+  "testimonials_link_href": "/testimonials",
+  "minis_eyebrow": "Photography for everyone",
+  "services_eyebrow": "Services & Pricing",
+  "cta_button_href": "mailto:meredith.lewis2018@gmail.com",
+  "minis_button_label": "See Mini Session Details",
+  "about_photo_alt": "Meredith Lewis at the Mt. Washburn summit sign, camera in hand.",
+  "portfolio_heading": "The Galleries",
+  "cta_image": "/bottom.jpg",
+  "about_heading": "Hi, I'm Meredith.",
   "galleries": [
     {
       "title": "Senior Portraits",
@@ -74,31 +72,8 @@
       "ratio": "aspect-[16/7]"
     }
   ],
-
-  "services_eyebrow": "Services & Pricing",
-  "services_heading": "Sessions for every season of life.",
-  "services_blurb": "Every one-hour session includes 10 edited digital images of your choice, hand-picked from a gallery of at least 30.",
-  "services": [
-    { "name": "Senior Portraits", "price": "$225" },
-    { "name": "Couples", "price": "$225" },
-    { "name": "Engagement", "price": "$225" },
-    { "name": "Family", "price": "$250" },
-    { "name": "Maternity", "price": "$225" },
-    { "name": "Pet Photography", "price": "$225" },
-    { "name": "Events & Parties", "price": "$300" }
-  ],
-  "services_footnote": "Add additional people, extra event coverage, more edited images, or 48-hour rush delivery anytime. Seasonal 15-minute mini sessions run throughout the year — reach out to see what's currently available.",
-
-  "minis_eyebrow": "Photography for everyone",
-  "minis_heading": "Everyone deserves beautiful photographs.",
-  "minis_body_before": "I believe the moments that matter most shouldn't be out of reach. That's why I host seasonal",
-  "minis_body_emphasis": "\u201cPay What You Can\u201d",
-  "minis_body_after": "mini sessions — a warm, no-pressure way for families and individuals to have their stories captured, no matter the budget. Great photos, made approachable.",
-  "minis_button_label": "See Mini Session Details",
-  "minis_button_href": "/services",
-
-  "testimonials_eyebrow": "Kind words",
-  "testimonials_heading": "From the people I've worked with.",
+  "portfolio_eyebrow": "Portfolio",
+  "cta_heading": "Let's tell your story.",
   "testimonials": [
     {
       "quote": "Meredith was amazing to work with! She gave us enough direction so we knew the photo she was wanting but left enough room for it to feel natural and capture the essence of the love in our family. She was especially great with our two year old- absolutely nailed singing wheels on the bus to him to keep him smiling and capture his attention! We will definitely get more photos done in the future with her",
@@ -133,13 +108,53 @@
       "author": "Marjorie Brown"
     }
   ],
-  "testimonials_link_label": "Read more kind words",
-  "testimonials_link_href": "/testimonials",
-
-  "cta_image": "/bottom.jpg",
+  "minis_button_href": "/services",
+  "hero_image": "/hero1.jpg",
   "cta_image_alt": "A loon stretching its wings on a calm lake, water droplets falling from its feathers.",
-  "cta_heading": "Let's tell your story.",
-  "cta_text": "Whether it's a milestone, a celebration, or an ordinary day worth remembering — I'd love to hear from you.",
   "cta_button_label": "Get in Touch",
-  "cta_button_href": "mailto:meredith.lewis2018@gmail.com"
+  "minis_body_emphasis": "“Pay What You Can”",
+  "testimonials_heading": "From the people I've worked with.",
+  "about_paragraphs": [
+    "I'm a New Hampshire based photographer rooted in the picturesque White Mountains. My passion behind the camera is capturing candid, meaningful moments that feel genuine — the real, raw emotion of your story.",
+    "Whether it's a quiet in-between glance or a big joyful milestone, my goal is to tell your story in a way that feels true to you, all while keeping my photography approachable and affordable.",
+    "I believe everyone deserves the chance to have their photos taken — and I hope you'll give me that chance. Welcome to my website, and to the place I'm lucky to call home."
+  ],
+  "about_eyebrow": "Hello & welcome",
+  "minis_body_before": "I believe the moments that matter most shouldn't be out of reach. That's why I host seasonal",
+  "services_blurb": "Every one-hour session includes 10 edited digital images of your choice, hand-picked from a gallery of at least 30.",
+  "testimonials_link_label": "Read more kind words",
+  "cta_text": "Whether it's a milestone, a celebration, or an ordinary day worth remembering — I'd love to hear from you.",
+  "hero_heading": "Capturing the candid & heartfelt moments throughout the White Mountains of New Hampshire.",
+  "services": [
+    {
+      "name": "Senior Portraits",
+      "price": "$225"
+    },
+    {
+      "name": "Couples",
+      "price": "$225"
+    },
+    {
+      "name": "Engagement",
+      "price": "$225"
+    },
+    {
+      "name": "Family",
+      "price": "$250"
+    },
+    {
+      "name": "Maternity",
+      "price": "$225"
+    },
+    {
+      "name": "Pet Photography",
+      "price": "$225"
+    },
+    {
+      "name": "Events & Parties",
+      "price": "$300"
+    }
+  ],
+  "testimonials_eyebrow": "Kind words",
+  "minis_heading": "Everyone deserves beautiful photographs."
 }
