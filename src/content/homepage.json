@@ -1,18 +1,16 @@
 {
-  "hero_image": "/hero1.jpg",
+  "hero_image": "/src/assets/uploads/hero1.jpg",
   "hero_image_alt": "An elevated view of a New Hampshire notch in the White Mountains, with peak autumn foliage covering the mountainsides above a lake and a winding road.",
   "hero_heading": "Capturing candid & heartfelt moments throughout the White Mountains of New Hampshire.",
-
   "about_eyebrow": "Hello & welcome",
   "about_heading": "Hi, I'm Meredith.",
-  "about_photo": "/about.jpg",
+  "about_photo": "/src/assets/uploads/about.jpg",
   "about_photo_alt": "Meredith Lewis at the Mt. Washburn summit sign, camera in hand.",
   "about_paragraphs": [
     "I'm a New Hampshire based photographer rooted in the picturesque White Mountains. My passion behind the camera is capturing candid, meaningful moments that feel genuine — the real, raw emotion of your story.",
     "Whether it's a quiet in-between glance or a big joyful milestone, my goal is to tell your story in a way that feels true to you, all while keeping my photography approachable and affordable.",
     "I believe everyone deserves the chance to have their photos taken — and I hope you'll give me that chance. Welcome to my website, and to the place I'm lucky to call home."
   ],
-
   "portfolio_eyebrow": "Portfolio",
   "portfolio_heading": "The Galleries",
   "portfolio_blurb": "Seven bodies of work — each one a different kind of story, photographed with the same honest, unhurried approach.",
@@ -20,7 +18,7 @@
     {
       "title": "Senior Portraits",
       "href": "#senior-portraits",
-      "img": "/senior.jpg",
+      "img": "/src/assets/uploads/senior.jpg",
       "alt": "A high school senior standing outdoors among tall grasses during a fall senior portrait session.",
       "span": "md:col-span-2 md:row-span-2",
       "ratio": "aspect-[3/4]"
@@ -28,7 +26,7 @@
     {
       "title": "Couples",
       "href": "#couples",
-      "img": "/couples.png",
+      "img": "/src/assets/uploads/couples.png",
       "alt": "A couple laughing together during a relaxed outdoor photo session.",
       "span": "md:col-span-2",
       "ratio": "aspect-[4/3]"
@@ -36,7 +34,7 @@
     {
       "title": "Engagement",
       "href": "#engagement",
-      "img": "/engagement.jpg",
+      "img": "/src/assets/uploads/engagement.jpg",
       "alt": "A couple in autumn flannel sharing a quiet moment during an engagement session.",
       "span": "md:col-span-2",
       "ratio": "aspect-[4/3]"
@@ -44,7 +42,7 @@
     {
       "title": "Family",
       "href": "#family",
-      "img": "/family.jpg",
+      "img": "/src/assets/uploads/family.jpg",
       "alt": "A mother and father holding their baby in front of golden autumn birch trees backlit by the sun.",
       "span": "md:col-span-2 md:row-span-2",
       "ratio": "aspect-[3/4]"
@@ -52,7 +50,7 @@
     {
       "title": "Maternity",
       "href": "#maternity",
-      "img": "/maternity.jpg",
+      "img": "/src/assets/uploads/maternity.jpg",
       "alt": "An expectant couple standing in a sunlit field, holding up a strip of black-and-white ultrasound photos.",
       "span": "md:col-span-2",
       "ratio": "aspect-[4/3]"
@@ -60,7 +58,7 @@
     {
       "title": "Pet Photography",
       "href": "#pet-photography",
-      "img": "/pet.jpg",
+      "img": "/src/assets/uploads/pet.jpg",
       "alt": "A close-up portrait of a chocolate Labrador's face, with warm light catching its eye.",
       "span": "md:col-span-2",
       "ratio": "aspect-[4/3]"
@@ -68,35 +66,53 @@
     {
       "title": "Events & Parties",
       "href": "#events",
-      "img": "/events.jpg",
+      "img": "/src/assets/uploads/events.jpg",
       "alt": "A soccer player in a number 3 jersey raising an arm on the field under the lights at dusk.",
       "span": "md:col-span-4",
       "ratio": "aspect-[16/7]"
     }
   ],
-
   "services_eyebrow": "Services & Pricing",
   "services_heading": "Sessions for every season of life.",
   "services_blurb": "Every one-hour session includes 10 edited digital images of your choice, hand-picked from a gallery of at least 30.",
   "services": [
-    { "name": "Senior Portraits", "price": "$225" },
-    { "name": "Couples", "price": "$225" },
-    { "name": "Engagement", "price": "$225" },
-    { "name": "Family", "price": "$250" },
-    { "name": "Maternity", "price": "$225" },
-    { "name": "Pet Photography", "price": "$225" },
-    { "name": "Events & Parties", "price": "$300" }
+    {
+      "name": "Senior Portraits",
+      "price": "$225"
+    },
+    {
+      "name": "Couples",
+      "price": "$225"
+    },
+    {
+      "name": "Engagement",
+      "price": "$225"
+    },
+    {
+      "name": "Family",
+      "price": "$250"
+    },
+    {
+      "name": "Maternity",
+      "price": "$225"
+    },
+    {
+      "name": "Pet Photography",
+      "price": "$225"
+    },
+    {
+      "name": "Events & Parties",
+      "price": "$300"
+    }
   ],
   "services_footnote": "Add additional people, extra event coverage, more edited images, or 48-hour rush delivery anytime. Seasonal 15-minute mini sessions run throughout the year — reach out to see what's currently available.",
-
   "minis_eyebrow": "Photography for everyone",
   "minis_heading": "Everyone deserves beautiful photographs.",
   "minis_body_before": "I believe the moments that matter most shouldn't be out of reach. That's why I host seasonal",
-  "minis_body_emphasis": "\u201cPay What You Can\u201d",
+  "minis_body_emphasis": "“Pay What You Can”",
   "minis_body_after": "mini sessions — a warm, no-pressure way for families and individuals to have their stories captured, no matter the budget. Great photos, made approachable.",
   "minis_button_label": "See Mini Session Details",
   "minis_button_href": "/services",
-
   "testimonials_eyebrow": "Kind words",
   "testimonials_heading": "From the people I've worked with.",
   "testimonials": [
@@ -135,8 +151,7 @@
   ],
   "testimonials_link_label": "Read more kind words",
   "testimonials_link_href": "/testimonials",
-
-  "cta_image": "/bottom.jpg",
+  "cta_image": "/src/assets/uploads/bottom.jpg",
   "cta_image_alt": "A loon stretching its wings on a calm lake, water droplets falling from its feathers.",
   "cta_heading": "Let's tell your story.",
   "cta_text": "Whether it's a milestone, a celebration, or an ordinary day worth remembering — I'd love to hear from you.",

@@ -1,0 +1,63 @@
+---
+
+
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+  width?: number;
+  height?: number;
+  loading?: "eager" | "lazy";
+  fetchpriority?: "high" | "low" | "auto";
+}
+
+const {
+  src,
+  alt,
+  class: className,
+  width,
+  height,
+  loading = "lazy",
+  fetchpriority,
+} = Astro.props;
+
+// Grab every image under src/assets (any subfolder, common formats).
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/**/*.{jpeg,jpg,png,gif,webp,avif}"
+);
+
+// The CMS stores paths like "/src/assets/uploads/hero.jpg".
+// Normalize so a leading slash (or not) both resolve.
+const key = src.startsWith("/") ? src : `/${src}`;
+
+const loader = images[key];
+---
+
+{
+  loader ? (
+    <Image
+      src={loader()}
+      alt={alt}
+      class={className}
+      width={width}
+      height={height}
+      loading={loading}
+      fetchpriority={fetchpriority}
+    />
+  ) : (
+    // Fallback: if the path isn't in src/assets (e.g. still in public/),
+    // render a normal img so the site never breaks mid-migration.
+    <img
+      src={src}
+      alt={alt}
+      class={className}
+      width={width}
+      height={height}
+      loading={loading}
+      fetchpriority={fetchpriority}
+    />
+  )
+}

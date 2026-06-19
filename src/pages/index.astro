@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import content from "../content/homepage.json";
+import SmartImage from "../components/SmartImage.astro";
 
 // Nav + footer stay hardcoded on purpose — Meredith edits page content, not site chrome.
 const navLinks = [
@@ -159,9 +160,13 @@ const navLinks = [
     <main>
       <!-- ===================== HERO ===================== -->
       <section id="home" class="relative h-screen min-h-[600px] w-full">
-        <img
+        <SmartImage
           src={content.hero_image}
           alt={content.hero_image_alt}
+          width={1600}
+          height={1000}
+          loading="eager"
+          fetchpriority="high"
           class="absolute inset-0 h-full w-full object-cover"
         />
         <!-- Dark gradient scrim at the bottom for legibility -->
@@ -209,11 +214,11 @@ const navLinks = [
       <section id="about" class="bg-white px-5 py-24 sm:px-8 sm:py-32 lg:px-12">
         <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div class="order-1 lg:order-none">
-            <img
+            <SmartImage
               src={content.about_photo}
               alt={content.about_photo_alt}
-              width="1000"
-              height="1250"
+              width={1000}
+              height={1250}
               loading="lazy"
               class="aspect-[4/5] w-full rounded-sm object-cover"
             />
@@ -259,9 +264,11 @@ const navLinks = [
                   href={g.href}
                   class={`group relative block overflow-hidden bg-neutral-100 ${g.span}`}
                 >
-                  <img
+                  <SmartImage
                     src={g.img}
                     alt={g.alt}
+                    width={800}
+                    height={1000}
                     loading={i < 2 ? "eager" : "lazy"}
                     class={`h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 ${g.ratio}`}
                   />
@@ -416,9 +423,11 @@ const navLinks = [
 
       <!-- ===================== CLOSING CTA ===================== -->
       <section id="contact" class="relative w-full">
-        <img
+        <SmartImage
           src={content.cta_image}
           alt={content.cta_image_alt}
+          width={1600}
+          height={900}
           loading="lazy"
           class="absolute inset-0 h-full w-full object-cover"
         />
