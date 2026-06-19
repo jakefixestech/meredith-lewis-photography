@@ -42,11 +42,11 @@ collections:
             widget: "list"
             fields:
               - { name: "title", label: "Title", widget: "string" }
-              - { name: "href", label: "Link (leave as is unless you know it)", widget: "string" }
               - { name: "img", label: "Image", widget: "image" }
-              - { name: "alt", label: "Image description (screen readers)", widget: "string" }
-              - { name: "span", label: "Tile size code (do not change)", widget: "string" }
-              - { name: "ratio", label: "Tile shape code (do not change)", widget: "string" }
+              - { name: "alt", label: "Image description (for screen readers)", widget: "string" }
+              - { name: "href", widget: "hidden" }
+              - { name: "span", widget: "hidden" }
+              - { name: "ratio", widget: "hidden" }
 
           # ---------- SERVICES & PRICING ----------
           - { name: "services_eyebrow", label: "Services — small text above heading", widget: "string" }
@@ -66,8 +66,8 @@ collections:
           - { name: "minis_body_before", label: "Mini Sessions — Text (before the quoted phrase)", widget: "text" }
           - { name: "minis_body_emphasis", label: "Mini Sessions — Highlighted Phrase", widget: "string" }
           - { name: "minis_body_after", label: "Mini Sessions — Text (after the quoted phrase)", widget: "text" }
-          - { name: "minis_button_label", label: "Mini Sessions — Button Text", widget: "string" }
-          - { name: "minis_button_href", label: "Mini Sessions — Button Link", widget: "string" }
+          - { name: "minis_button_label", widget: "hidden" }
+          - { name: "minis_button_href", widget: "hidden" }
 
           # ---------- TESTIMONIALS ----------
           - { name: "testimonials_eyebrow", label: "Testimonials — small text above heading", widget: "string" }
@@ -78,13 +78,13 @@ collections:
             fields:
               - { name: "quote", label: "Review Text", widget: "text" }
               - { name: "author", label: "Reviewer Name", widget: "string" }
-          - { name: "testimonials_link_label", label: "Testimonials — Link Text", widget: "string" }
-          - { name: "testimonials_link_href", label: "Testimonials — Link Destination", widget: "string" }
+          - { name: "testimonials_link_label", widget: "hidden" }
+          - { name: "testimonials_link_href", widget: "hidden" }
 
           # ---------- CLOSING CTA ----------
           - { name: "cta_image", label: "Closing — Background Image", widget: "image" }
           - { name: "cta_image_alt", label: "Closing Image — description for screen readers", widget: "string" }
           - { name: "cta_heading", label: "Closing — Heading", widget: "string" }
           - { name: "cta_text", label: "Closing — Text", widget: "text" }
-          - { name: "cta_button_label", label: "Closing — Button Text", widget: "string" }
-          - { name: "cta_button_href", label: "Closing — Button Link", widget: "string" }
+          - { name: "cta_button_label", widget: "hidden" }
+          - { name: "cta_button_href", widget: "hidden" }
