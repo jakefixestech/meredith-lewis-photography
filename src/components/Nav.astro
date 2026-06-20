@@ -1,0 +1,207 @@
+---
+// Nav.astro — shared site navigation. Edit links once, updates everywhere.
+//
+// Props:
+//   solid (boolean, default true)
+//     - true  = solid white nav, dark text, fixed top (for inner pages with no hero)
+//     - false = transparent nav, white text, turns white on scroll (home page over hero)
+
+interface Props {
+  solid?: boolean;
+}
+const { solid = true } = Astro.props;
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Services", href: "/services" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "Contact", href: "/contact" },
+];
+---
+
+<header
+  id="site-nav"
+  class={solid
+    ? "sticky top-0 z-50 border-b border-neutral-200 bg-white"
+    : "fixed inset-x-0 top-0 z-50 transition-colors duration-300"}
+>
+  <nav
+    aria-label="Primary"
+    class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12"
+  >
+    <a
+      href="/"
+      id="wordmark"
+      class={solid
+        ? "font-serif text-lg font-medium tracking-tight text-neutral-900 sm:text-xl"
+        : "font-serif text-lg font-medium tracking-tight text-white transition-colors duration-300 sm:text-xl"}
+    >
+      Meredith Lewis Photography
+    </a>
+
+    <!-- Desktop nav -->
+    <div class="hidden items-center gap-8 lg:flex">
+      <ul class="flex items-center gap-7">
+        {
+          navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class={solid
+                  ? "nav-link text-sm font-light tracking-wide text-neutral-700 transition-colors duration-300 hover:text-neutral-900"
+                  : "nav-link text-sm font-light tracking-wide text-white/90 transition-colors duration-300 hover:text-white"}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a
+        href="/contact"
+        class={solid
+          ? "nav-cta rounded-full border border-neutral-900 px-5 py-2 text-sm font-light tracking-wide text-neutral-900 transition-colors duration-300 hover:bg-neutral-900 hover:text-white"
+          : "nav-cta rounded-full border border-white/70 px-5 py-2 text-sm font-light tracking-wide text-white transition-colors duration-300 hover:bg-white hover:text-neutral-900"}
+      >
+        Get in Touch
+      </a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="menu-toggle"
+      type="button"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      class="flex h-10 w-10 items-center justify-center lg:hidden"
+    >
+      <span class="sr-only">Open menu</span>
+      <svg
+        id="icon-open"
+        xmlns="http://www.w3.org/2000/svg"
+        class={solid ? "h-6 w-6 text-neutral-900" : "h-6 w-6 text-white"}
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="1.5"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+      </svg>
+      <svg
+        id="icon-close"
+        xmlns="http://www.w3.org/2000/svg"
+        class="hidden h-6 w-6 text-neutral-900"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="1.5"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu panel -->
+  <div
+    id="mobile-menu"
+    class="hidden border-t border-neutral-200 bg-white lg:hidden"
+  >
+    <ul class="flex flex-col px-5 py-4 sm:px-8">
+      {
+        navLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="mobile-link block border-b border-neutral-100 py-3 text-sm font-light tracking-wide text-neutral-700 hover:text-neutral-900"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+      <li class="pt-4">
+        <a
+          href="/contact"
+          class="mobile-link block rounded-full border border-neutral-900 px-5 py-3 text-center text-sm font-light tracking-wide text-neutral-900 hover:bg-neutral-900 hover:text-white"
+        >
+          Get in Touch
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle (runs on every page)
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+  const iconOpen = document.getElementById("icon-open");
+  const iconClose = document.getElementById("icon-close");
+
+  const closeMenu = () => {
+    menu?.classList.add("hidden");
+    iconOpen?.classList.remove("hidden");
+    iconClose?.classList.add("hidden");
+    toggle?.setAttribute("aria-expanded", "false");
+  };
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = !menu?.classList.contains("hidden");
+    if (isOpen) {
+      closeMenu();
+    } else {
+      menu?.classList.remove("hidden");
+      iconOpen?.classList.add("hidden");
+      iconClose?.classList.remove("hidden");
+      toggle?.setAttribute("aria-expanded", "true");
+    }
+  });
+
+  document.querySelectorAll(".mobile-link").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Transparent-over-hero scroll behavior — only runs if the nav is NOT solid.
+  const nav = document.getElementById("site-nav");
+  if (nav && !nav.classList.contains("bg-white")) {
+    const wordmark = document.getElementById("wordmark");
+    const navLinkEls = document.querySelectorAll(".nav-link");
+    const navCta = document.querySelector(".nav-cta");
+    const iconOpenEl = document.getElementById("icon-open");
+
+    const onScroll = () => {
+      const scrolled = window.scrollY > 40;
+      if (scrolled) {
+        nav.classList.add("bg-white", "shadow-sm");
+        wordmark?.classList.remove("text-white");
+        wordmark?.classList.add("text-neutral-900");
+        navLinkEls.forEach((el) => {
+          el.classList.remove("text-white/90", "hover:text-white");
+          el.classList.add("text-neutral-700", "hover:text-neutral-900");
+        });
+        navCta?.classList.remove("border-white/70", "text-white", "hover:bg-white", "hover:text-neutral-900");
+        navCta?.classList.add("border-neutral-900", "text-neutral-900", "hover:bg-neutral-900", "hover:text-white");
+        iconOpenEl?.classList.remove("text-white");
+        iconOpenEl?.classList.add("text-neutral-900");
+      } else {
+        nav.classList.remove("bg-white", "shadow-sm");
+        wordmark?.classList.add("text-white");
+        wordmark?.classList.remove("text-neutral-900");
+        navLinkEls.forEach((el) => {
+          el.classList.add("text-white/90", "hover:text-white");
+          el.classList.remove("text-neutral-700", "hover:text-neutral-900");
+        });
+        navCta?.classList.add("border-white/70", "text-white", "hover:bg-white", "hover:text-neutral-900");
+        navCta?.classList.remove("border-neutral-900", "text-neutral-900", "hover:bg-neutral-900", "hover:text-white");
+        iconOpenEl?.classList.add("text-white");
+        iconOpenEl?.classList.remove("text-neutral-900");
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+</script>

@@ -1,0 +1,94 @@
+---
+// Layout.astro — the master wrapper for every page.
+// Handles <head> (fonts, SEO, OG tags), the shared Nav, and the shared Footer.
+// Each page just imports this, passes title + description, and drops its content
+// in the <slot />.
+//
+// USAGE (an inner page):
+//   ---
+//   import Layout from "../layouts/Layout.astro";
+//   ---
+//   <Layout title="About | Meredith Lewis Photography" description="...">
+//     <section>...page content...</section>
+//   </Layout>
+//
+// For the HOME page only, pass solidNav={false} so the nav is transparent
+// over the hero: <Layout title="..." description="..." solidNav={false}>
+
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;        // OG share image, defaults to logo
+  solidNav?: boolean;    // false only for the home page (transparent over hero)
+  noindex?: boolean;     // true for placeholder/private pages
+}
+
+const {
+  title,
+  description,
+  image = "/logo.png",
+  solidNav = true,
+  noindex = false,
+} = Astro.props;
+
+// Canonical + OG URL. Requires `site` set in astro.config.mjs:
+//   site: 'https://meredithlewisphotography.com'
+const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://meredithlewisphotography.com").href;
+const ogImage = new URL(image, Astro.site ?? "https://meredithlewisphotography.com").href;
+---
+
+<!doctype html>
+<html lang="en" class="bg-white scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+
+    <!-- Open Graph (Facebook / link previews) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style is:global>
+      :root {
+        --font-serif: "Playfair Display", Georgia, serif;
+        --font-sans: "Inter", system-ui, sans-serif;
+      }
+      body {
+        font-family: var(--font-sans);
+      }
+      .font-serif {
+        font-family: var(--font-serif);
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-neutral-900 antialiased">
+    <Nav solid={solidNav} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
