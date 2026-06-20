@@ -127,3 +127,22 @@ collections:
             fields:
               - { name: "title", label: "Box Title", widget: "string" }
               - { name: "body", label: "Box Text", widget: "text" }
+
+  - name: "testimonials_page"
+    label: "Testimonials Page"
+    files:
+      - name: "content"
+        label: "Testimonials Content"
+        file: "src/content/testimonials.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Line", widget: "text" }
+          - name: "testimonials"
+            label: "Testimonials (reviews)"
+            widget: "list"
+            fields:
+              - { name: "author", label: "Reviewer Name", widget: "string" }
+              - { name: "quote", label: "Review Text", widget: "text" }
