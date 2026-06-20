@@ -88,3 +88,42 @@ collections:
           - { name: "cta_text", label: "Closing — Text", widget: "text" }
           - { name: "cta_button_label", widget: "hidden" }
           - { name: "cta_button_href", widget: "hidden" }
+
+  - name: "services"
+    label: "Services & Pricing Page"
+    files:
+      - name: "content"
+        label: "Services & Pricing Content"
+        file: "src/content/services.json"
+        editor:
+          preview: false
+        fields:
+          # ---------- HEADER ----------
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - { name: "header_subnote", label: "Header — Note (what every session includes)", widget: "text" }
+
+          # ---------- SERVICE CARDS ----------
+          - name: "services"
+            label: "Services (each card)"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Service Name", widget: "string" }
+              - { name: "price", label: "Price", widget: "string" }
+              - { name: "image", label: "Photo", widget: "image" }
+              - { name: "alt", label: "Photo description (for screen readers)", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - { name: "link", widget: "hidden", required: false }
+
+          # ---------- ADD ONS / ADDITIONAL PHOTOS ----------
+          - { name: "addons_bg", label: "Add Ons — Background Photo", widget: "image" }
+          - { name: "addons_bg_alt", label: "Add Ons Background — description for screen readers", widget: "string" }
+          - { name: "addons_eyebrow", label: "Add Ons — small text above title", widget: "string" }
+          - { name: "addons_heading", label: "Add Ons — Section Title", widget: "string" }
+          - name: "addons"
+            label: "Additional Photos (the three boxes)"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Box Title", widget: "string" }
+              - { name: "body", label: "Box Text", widget: "text" }
