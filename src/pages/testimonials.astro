@@ -1,113 +1,32 @@
 ---
-import "../styles/global.css";
-
-const navLinks = [
-  { label: "Home", href: "/#home" },
-  { label: "About", href: "/#about" },
-  { label: "Portfolio", href: "/#portfolio" },
-  { label: "Services", href: "/services" },
-  { label: "Testimonials", href: "/testimonials" },
-  { label: "Contact", href: "/#contact" },
-];
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="en" class="bg-white scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <title>Testimonials | Meredith Lewis Photography</title>
-    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <style is:global>
-      :root {
-        --font-serif: "Playfair Display", Georgia, serif;
-        --font-sans: "Inter", system-ui, sans-serif;
-      }
-      body {
-        font-family: var(--font-sans);
-      }
-      .font-serif {
-        font-family: var(--font-serif);
-      }
-    </style>
-  </head>
-
-  <body class="flex min-h-screen flex-col bg-white text-neutral-900 antialiased">
-    <!-- ===================== NAV ===================== -->
-    <header class="border-b border-neutral-200 bg-white">
-      <nav
-        aria-label="Primary"
-        class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12"
+<Layout
+  title="Testimonials | Meredith Lewis Photography"
+  description="Read what clients say about working with Meredith Lewis Photography, candid portrait and event photography throughout the White Mountains of New Hampshire."
+  noindex={true}
+>
+  <section class="flex min-h-[70vh] items-center justify-center px-5 py-32 sm:px-8">
+    <div class="mx-auto max-w-xl text-center">
+      <p class="mb-6 text-xs font-medium uppercase tracking-[0.3em] text-neutral-500">
+        Testimonials
+      </p>
+      <h1 class="font-serif text-4xl font-medium leading-tight text-neutral-900 text-balance sm:text-5xl">
+        This page is coming together.
+      </h1>
+      <p class="mx-auto mt-8 max-w-md text-lg font-light leading-relaxed text-neutral-600 text-pretty">
+        Hey Meredith! This is your full Testimonials page. It&apos;s a placeholder
+        for now so the link from your home page has somewhere to go. I&apos;ll build
+        it out with all of your reviews once we lock in the home page. Send over any
+        extras you want included and I&apos;ll add them here.
+      </p>
+      <a
+        href="/"
+        class="mt-10 inline-block rounded-full bg-neutral-900 px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-white transition-colors hover:bg-neutral-700"
       >
-        
-        <a  href="/"
-          class="font-serif text-lg font-medium tracking-tight text-neutral-900 sm:text-xl"
-        >
-          Meredith Lewis Photography
-        </a>
-        <div class="hidden items-center gap-7 lg:flex">
-          {
-            navLinks.map((link) => (
-              
-            <a    href={link.href}
-                class="text-sm font-light tracking-wide text-neutral-700 transition-colors hover:text-neutral-900"
-              >
-                {link.label}
-              </a>
-            ))
-          }
-        </div>
-      </nav>
-    </header>
-
-    <!-- ===================== PLACEHOLDER NOTE TO MEREDITH ===================== -->
-    <main class="flex flex-1 items-center justify-center px-5 py-32 sm:px-8">
-      <div class="mx-auto max-w-xl text-center">
-        <p class="mb-6 text-xs font-medium uppercase tracking-[0.3em] text-neutral-500">
-          Testimonials
-        </p>
-        <h1 class="font-serif text-4xl font-medium leading-tight text-neutral-900 text-balance sm:text-5xl">
-          This page is coming together.
-        </h1>
-        <p class="mx-auto mt-8 max-w-md text-lg font-light leading-relaxed text-neutral-600 text-pretty">
-          Hey Meredith! This is the full Testimonials page — it&apos;s just a
-          placeholder for now so the &ldquo;Read more&rdquo; link on your home page
-          has somewhere to go. I&apos;ll build this out with all of your reviews
-          (you mentioned you&apos;ve got plenty!) once we lock in the home page.
-          Send over any extras you want included and I&apos;ll add them here.
-        </p>
-        
-        <a  href="/#testimonials"
-          class="mt-10 inline-block rounded-full bg-neutral-900 px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-white transition-colors hover:bg-neutral-700"
-        >
-          Back to Home
-        </a>
-      </div>
-    </main>
-
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="border-t border-neutral-200 bg-white px-5 py-12 sm:px-8 lg:px-12">
-      <div class="mx-auto flex max-w-7xl flex-col items-center gap-4 text-center">
-        
-        <a  href="/"
-          class="font-serif text-lg font-medium tracking-tight text-neutral-900"
-        >
-          Meredith Lewis Photography
-        </a>
-        <p class="text-sm font-light text-neutral-500">
-          Serving the White Mountains &amp; North Country, NH
-        </p>
-        <p class="text-xs font-light tracking-wide text-neutral-400">
-          &copy; {new Date().getFullYear()} Meredith Lewis Photography. All rights reserved.
-        </p>
-      </div>
-    </footer>
-  </body>
-</html>
+        Back to Home
+      </a>
+    </div>
+  </section>
+</Layout>
