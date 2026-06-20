@@ -87,18 +87,16 @@ import content from "../content/services.json";
     />
 
     <div class="relative z-10 mx-auto max-w-6xl">
-      <div class="mb-14 text-center">
-        <p class="mb-4 inline-block rounded-full border border-white/40 bg-white/30 px-4 py-1 text-xs font-medium uppercase tracking-[0.3em] text-neutral-800 backdrop-blur-md">
+      <div class="mx-auto mb-12 max-w-2xl rounded-xl border border-white/40 bg-white/30 px-6 py-8 text-center shadow-lg backdrop-blur-md sm:mb-16">
+        <p class="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-neutral-700">
           {content.addons_eyebrow}
         </p>
-        <h2 class="font-serif text-3xl font-medium text-neutral-900 sm:text-4xl">
-          <span class="rounded-lg border border-white/40 bg-white/30 px-5 py-2 box-decoration-clone leading-relaxed backdrop-blur-md">
-            {content.addons_heading}
-          </span>
+        <h2 class="font-serif text-3xl font-medium leading-tight text-neutral-900 text-balance sm:text-4xl">
+          {content.addons_heading}
         </h2>
       </div>
 
-      <div class="grid gap-8 sm:grid-cols-3">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
         {
           content.addons.map((a) => (
             <div class="rounded-xl border border-white/40 bg-white/25 p-8 text-center shadow-lg backdrop-blur-md">
