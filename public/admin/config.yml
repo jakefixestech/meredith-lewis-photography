@@ -146,3 +146,18 @@ collections:
             fields:
               - { name: "author", label: "Reviewer Name", widget: "string" }
               - { name: "quote", label: "Review Text", widget: "text" }
+
+  - name: "contact_page"
+    label: "Contact Page"
+    files:
+      - name: "content"
+        label: "Contact Content"
+        file: "src/content/contact.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - { name: "info_heading", label: "Contact Info — Heading", widget: "string" }
+          - { name: "booking_text", label: "Booking — Text above the Book button", widget: "text" }
