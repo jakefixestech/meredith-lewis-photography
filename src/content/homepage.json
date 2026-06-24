@@ -1,10 +1,10 @@
 {
   "hero_image_alt": "An elevated view of a New Hampshire notch in the White Mountains, with peak autumn foliage covering the mountainsides above a lake and a winding road.",
   "about_photo": "/src/assets/uploads/about.jpg",
-  "services_footnote": "Add additional people, extra event coverage, more edited images, or 48-hour rush delivery anytime. Seasonal 15-minute mini sessions run throughout the year — reach out to see what's currently available.",
+  "services_footnote": "Add additional people, extended event coverage, additional edited images, edited images on a mailed flash drive, or 48-hour rush delivery to your session anytime. Please contact me for additional pricing!\n\nSeasonal 15 minute mini sessions run throughout the year. Contact me to see what mini's are currently available in the White Mountains! ",
   "services_heading": "Sessions for every season of life.",
-  "minis_body_after": "mini sessions, a no-pressure way for families and individuals to have their stories captured, no matter the budget.",
-  "portfolio_blurb": "Seven bodies of work — each one a different kind of story, photographed with the same honest, unhurried approach.",
+  "minis_body_after": "mini sessions seasonally is so important to me. They are no pressure sessions aimed for all families and individuals to have their stories captured no matter the budget. ",
+  "portfolio_blurb": "I am a naturally vibrant and colorful photographer that captures a blend of candid moments alongside posed portraits to create a timeless and authentically you gallery. ",
   "testimonials_link_href": "/testimonials",
   "minis_eyebrow": "Photography for everyone",
   "services_eyebrow": "Services & Pricing",
@@ -73,7 +73,7 @@
     }
   ],
   "portfolio_eyebrow": "Portfolio",
-  "cta_heading": "Let's tell your story.",
+  "cta_heading": "Let's capture your story.",
   "testimonials": [
     {
       "quote": "Meredith was amazing to work with! She gave us enough direction so we knew the photo she was wanting but left enough room for it to feel natural and capture the essence of the love in our family. She was especially great with our two year old- absolutely nailed singing wheels on the bus to him to keep him smiling and capture his attention! We will definitely get more photos done in the future with her",
@@ -120,10 +120,10 @@
     "I believe everyone deserves the chance to have their photos taken and I hope you'll give me that chance. Welcome to my website, and to the place I'm lucky to call home."
   ],
   "about_eyebrow": "Hello & welcome",
-  "minis_body_before": "I believe the moments that matter most shouldn't be out of reach. That's why I host seasonal",
-  "services_blurb": "Every one-hour session includes 10 edited digital images of your choice, hand-picked from a gallery of at least 30.",
+  "minis_body_before": "I believe the moments that matter most shouldn't be out of reach. That's why hosting",
+  "services_blurb": "Every one hour photography session includes 10 edited digital images of your choice, hand picked from a private gallery of at least 30 edited images.",
   "testimonials_link_label": "Read more kind words",
-  "cta_text": "Whether it's a milestone, a celebration, or an ordinary day worth remembering — I'd love to hear from you.",
+  "cta_text": "Whether it's a milestone, a celebration, or an ordinary day worth remembering, I'd love to hear from you! ",
   "hero_heading": "Capturing candid & heartfelt moments throughout the White Mountains of New Hampshire.",
   "services": [
     {
@@ -156,5 +156,5 @@
     }
   ],
   "testimonials_eyebrow": "Kind words",
-  "minis_heading": "Everyone deserves beautiful photographs."
+  "minis_heading": "Pay What You Can Mini Sessions"
 }
