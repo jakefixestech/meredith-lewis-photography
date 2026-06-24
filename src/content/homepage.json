@@ -12,7 +12,7 @@
   "minis_button_label": "See Mini Session Details",
   "about_photo_alt": "Meredith Lewis at the Mt. Washburn summit sign, camera in hand.",
   "portfolio_heading": "The Galleries",
-  "cta_image": "/src/assets/uploads/dsc_3779.jpg",
+  "cta_image": "/src/assets/uploads/rocks.jpg",
   "about_heading": "Hi, I'm Meredith!",
   "galleries": [
     {
@@ -26,7 +26,7 @@
     {
       "title": "Couples",
       "href": "/couples",
-      "img": "/src/assets/uploads/dsc_6872.jpg",
+      "img": "/src/assets/uploads/dsc_3779.jpg",
       "alt": "A couple laughing together during a relaxed outdoor photo session.",
       "span": "md:col-span-2",
       "ratio": "aspect-[4/3]"
@@ -42,7 +42,7 @@
     {
       "title": "Family",
       "href": "/family",
-      "img": "/src/assets/uploads/dsc_5986.jpg",
+      "img": "/src/assets/uploads/dsc_6633.jpg",
       "alt": "A mother and father holding their baby in front of golden autumn birch trees backlit by the sun.",
       "span": "md:col-span-2 md:row-span-2",
       "ratio": "aspect-[3/4]"
@@ -58,7 +58,7 @@
     {
       "title": "Pet Photography",
       "href": "/pet-photography",
-      "img": "/src/assets/uploads/dsc_2031.jpg",
+      "img": "/src/assets/uploads/photo-mar-16-2022-3-28-14-pm.jpg",
       "alt": "A close-up portrait of a chocolate Labrador's face, with warm light catching its eye.",
       "span": "md:col-span-2",
       "ratio": "aspect-[4/3]"
@@ -66,7 +66,7 @@
     {
       "title": "Events & Parties",
       "href": "/events",
-      "img": "/src/assets/uploads/events.jpg",
+      "img": "/src/assets/uploads/pevents.avif",
       "alt": "A soccer player in a number 3 jersey raising an arm on the field under the lights at dusk.",
       "span": "md:col-span-4",
       "ratio": "aspect-[16/7]"
