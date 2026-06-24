@@ -1,7 +1,7 @@
 {
   "hero_image_alt": "An elevated view of a New Hampshire notch in the White Mountains, with peak autumn foliage covering the mountainsides above a lake and a winding road.",
   "about_photo": "/src/assets/uploads/about.jpg",
-  "services_footnote": "Add additional people, extended event coverage, additional edited images, edited images on a mailed flash drive, or 48-hour rush delivery to your session anytime. Please contact me for additional pricing!\n\nSeasonal 15 minute mini sessions run throughout the year. Contact me to see what mini's are currently available in the White Mountains! ",
+  "services_footnote": "Add additional people, extended event coverage, additional edited images, edited images on a mailed flash drive, or 48-hour rush delivery to your session anytime. Please contact me for additional pricing!\n\nSeasonal 15 minute mini sessions run throughout the year. Contact me to see what mini's are currently available in the White Mountains! \n\nDon't see your session available? Please reach out for a quote unique to your session!",
   "services_heading": "Sessions for every season of life.",
   "minis_body_after": "mini sessions seasonally is so important to me. They are no pressure sessions aimed for all families and individuals to have their stories captured no matter the budget. ",
   "portfolio_blurb": "I am a naturally vibrant and colorful photographer that captures a blend of candid moments alongside posed portraits to create a timeless and authentically you gallery. ",
@@ -12,7 +12,7 @@
   "minis_button_label": "See Mini Session Details",
   "about_photo_alt": "Meredith Lewis at the Mt. Washburn summit sign, camera in hand.",
   "portfolio_heading": "The Galleries",
-  "cta_image": "/src/assets/uploads/bottom.jpg",
+  "cta_image": "/src/assets/uploads/dsc_3779.jpg",
   "about_heading": "Hi, I'm Meredith!",
   "galleries": [
     {
@@ -50,7 +50,7 @@
     {
       "title": "Maternity",
       "href": "/maternity",
-      "img": "/src/assets/uploads/maternity.jpg",
+      "img": "/src/assets/uploads/dsc_4547.jpg",
       "alt": "An expectant couple standing in a sunlit field, holding up a strip of black-and-white ultrasound photos.",
       "span": "md:col-span-2",
       "ratio": "aspect-[4/3]"
