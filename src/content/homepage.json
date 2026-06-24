@@ -18,7 +18,7 @@
     {
       "title": "Senior Portraits",
       "href": "/senior-portraits",
-      "img": "/src/assets/uploads/senior.jpg",
+      "img": "/src/assets/uploads/dsc_2705.jpg",
       "alt": "A high school senior standing outdoors among tall grasses during a fall senior portrait session.",
       "span": "md:col-span-2 md:row-span-2",
       "ratio": "aspect-[3/4]"
@@ -26,7 +26,7 @@
     {
       "title": "Couples",
       "href": "/couples",
-      "img": "/src/assets/uploads/couples.png",
+      "img": "/src/assets/uploads/dsc_6872.jpg",
       "alt": "A couple laughing together during a relaxed outdoor photo session.",
       "span": "md:col-span-2",
       "ratio": "aspect-[4/3]"
@@ -34,7 +34,7 @@
     {
       "title": "Engagement",
       "href": "/engagement",
-      "img": "/src/assets/uploads/engagement.jpg",
+      "img": "/src/assets/uploads/dsc_3705.jpg",
       "alt": "A couple in autumn flannel sharing a quiet moment during an engagement session.",
       "span": "md:col-span-2",
       "ratio": "aspect-[4/3]"
@@ -42,7 +42,7 @@
     {
       "title": "Family",
       "href": "/family",
-      "img": "/src/assets/uploads/family.jpg",
+      "img": "/src/assets/uploads/dsc_5986.jpg",
       "alt": "A mother and father holding their baby in front of golden autumn birch trees backlit by the sun.",
       "span": "md:col-span-2 md:row-span-2",
       "ratio": "aspect-[3/4]"
@@ -58,7 +58,7 @@
     {
       "title": "Pet Photography",
       "href": "/pet-photography",
-      "img": "/src/assets/uploads/pet.jpg",
+      "img": "/src/assets/uploads/dsc_2031.jpg",
       "alt": "A close-up portrait of a chocolate Labrador's face, with warm light catching its eye.",
       "span": "md:col-span-2",
       "ratio": "aspect-[4/3]"
