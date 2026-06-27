@@ -1,34 +1,90 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SmartImage from "../components/SmartImage.astro";
+import content from "../content/portfolio.json";
 ---
 
 <Layout
-  title="Portfolio | Meredith Lewis Photography"
-  description="Browse the photography portfolio of Meredith Lewis, senior portraits, couples, engagement, family, maternity, pet, and event photography throughout the White Mountains of New Hampshire."
-  noindex={true}
+  title="Portfolio Galleries | Meredith Lewis Photography"
+  description="Browse the comprehensive photography portfolios of Meredith Lewis. Professional senior portraits, couples, family, engagement, and milestone photography in the White Mountains, NH."
+  solidNav={true}
 >
-  <section class="flex min-h-[70vh] items-center justify-center px-5 py-32 sm:px-8">
-    <div class="mx-auto max-w-xl text-center">
-      <p class="mb-6 text-xs font-medium uppercase tracking-[0.3em] text-neutral-500">
-        Portfolio
-      </p>
-      <h1 class="font-serif text-4xl font-medium leading-tight text-neutral-900 text-balance sm:text-5xl">
-        The galleries.
+  <section class="bg-white px-5 py-20 text-center sm:px-8 sm:py-24 lg:px-12">
+    <div class="mx-auto max-w-3xl">
+      <span class="text-xs font-medium uppercase tracking-[0.2em] text-neutral-400">
+        {content.header_eyebrow}
+      </span>
+      <h1 class="mt-3 font-serif text-4xl font-medium tracking-tight text-neutral-900 sm:text-5xl">
+        {content.header_heading}
       </h1>
-      <p class="mx-auto mt-8 max-w-md text-lg font-light leading-relaxed text-neutral-600 text-pretty">
-        Hey Meredith! This is your main Portfolio page, it&apos;ll showcase all
-        seven of your galleries in one place. When you have a moment, head to the
-        Google Drive, open the <strong>"Portfolio"</strong> folder, and drop photos
-        into each category folder you&apos;d like featured. Once your photos are in,
-        I&apos;ll build the layout, and you&apos;ll be able to swap images yourself
-        anytime from your editor.
+      <div class="mx-auto mt-6 h-px w-16 bg-neutral-300"></div>
+      <p class="mt-6 text-base font-light leading-relaxed text-neutral-600 text-pretty">
+        {content.header_intro}
       </p>
-      <a
-        href="/"
-        class="mt-10 inline-block rounded-full bg-neutral-900 px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-white transition-colors hover:bg-neutral-700"
-      >
-        Back to Home
-      </a>
+    </div>
+  </section>
+
+  <section class="overflow-hidden">
+    {content.sections && content.sections.map((section, index) => {
+      const isEven = index % 2 === 0;
+      return (
+        <div class={`w-full py-16 sm:py-24 px-5 sm:px-8 lg:px-16 ${isEven ? 'bg-white text-neutral-900' : 'bg-neutral-950 text-white'}`}>
+          <div class="mx-auto max-w-7xl grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-16">
+            
+            {/* Image Container - Swaps position on desktop using Tailwind orders */}
+            <div class={`w-full aspect-[4/3] md:aspect-[3/4] lg:aspect-[4/3] overflow-hidden rounded-sm bg-neutral-100 shadow-md ${isEven ? 'md:order-1' : 'md:order-2'}`}>
+              <SmartImage 
+                src={section.image} 
+                alt={`${section.title} Category Showcase`} 
+                width={1000}
+                class="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Text Copy Container */}
+            <div class={`flex flex-col justify-center ${isEven ? 'md:order-2 md:pl-6' : 'md:order-1 md:pr-6'}`}>
+              <h2 class={`font-serif text-3xl font-medium tracking-tight sm:text-4xl ${isEven ? 'text-neutral-900' : 'text-neutral-50'}`}>
+                {section.title}
+              </h2>
+              <div class={`my-5 h-px w-12 ${isEven ? 'bg-neutral-300' : 'bg-neutral-800'}`}></div>
+              <p class={`text-base font-light leading-relaxed text-pretty ${isEven ? 'text-neutral-600' : 'text-neutral-400'}`}>
+                {section.description}
+              </p>
+              <div class="mt-8">
+                <a 
+                  href={section.href} 
+                  class={`inline-block rounded-full px-7 py-3 text-xs font-medium uppercase tracking-[0.2em] transition-colors ${
+                    isEven 
+                      ? 'bg-neutral-950 text-white hover:bg-neutral-800' 
+                      : 'bg-white text-neutral-950 hover:bg-neutral-200'
+                  }`}
+                >
+                  View Gallery
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      );
+    })}
+  </section>
+
+  <section class="bg-neutral-900 px-5 py-24 text-center text-white sm:px-8 lg:px-12">
+    <div class="mx-auto max-w-2xl">
+      <p class="text-xs font-medium uppercase tracking-[0.3em] text-neutral-400">Ready to Book?</p>
+      <h2 class="mt-4 font-serif text-3xl font-light tracking-wide text-neutral-100 sm:text-4xl">
+        Let’s preserve your moments.
+      </h2>
+      <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+        <a href="/contact" class="inline-block rounded-full bg-white px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-neutral-900 transition-colors hover:bg-neutral-200">
+          Get in Touch
+        </a>
+        <a href="https://meredithlewisphotography.pixieset.com/booking/" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full border border-neutral-700 bg-transparent px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-neutral-200 transition-colors hover:bg-white hover:text-neutral-900">
+          Book Online
+        </a>
+      </div>
     </div>
   </section>
 </Layout>

@@ -162,6 +162,27 @@ collections:
           - { name: "info_heading", label: "Contact Info — Heading", widget: "string" }
           - { name: "booking_text", label: "Booking — Text above the Book button", widget: "text" }
 
+  - name: "portfolio_page"
+    label: "Portfolio Main Page"
+    files:
+      - name: "content"
+        label: "Portfolio Overview Content"
+        file: "src/content/portfolio.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - name: "sections"
+            label: "Portfolio Row Sections"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Collection Title (e.g. Couples)", widget: "string" }
+              - { name: "description", label: "Short Blurb description", widget: "text" }
+              - { name: "image", label: "Featured Section Photo", widget: "image" }
+              - { name: "href", label: "Page URL Path (e.g. /couples)", widget: "string" }
+
   - name: "portfolio_senior_portraits"
     label: "Portfolio - Senior Portraits"
     files:
