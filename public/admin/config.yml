@@ -161,3 +161,23 @@ collections:
           - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
           - { name: "info_heading", label: "Contact Info — Heading", widget: "string" }
           - { name: "booking_text", label: "Booking — Text above the Book button", widget: "text" }
+
+- name: "portfolio_senior_portraits"
+    label: "Portfolio - Senior Portraits"
+    files:
+      - name: "content"
+        label: "Senior Portraits Content"
+        file: "src/content/portfolio-senior-portraits.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - { name: "cta_text", label: "CTA Box Text", widget: "string" }
+          - name: "gallery"
+            label: "Photo Gallery"
+            widget: "list"
+            fields:
+              - { name: "image", label: "Photo", widget: "image" }
+              - { name: "alt", label: "Description for Screen Readers (Accessibility)", widget: "string" }

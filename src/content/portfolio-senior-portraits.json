@@ -1,0 +1,56 @@
+{
+  "header_eyebrow": "Portfolio",
+  "header_heading": "Senior Portraits",
+  "header_intro": "Celebrating milestones in the heart of the North Country. Each session is specifically tailored to showcase your senior's unique personality and achievements against the beautiful backdrop of the White Mountains.",
+  "cta_text": "Ready to capture this incredible next milestone?",
+  "gallery": [
+    {
+      "image": "/src/assets/uploads/dsc_8732.jpg",
+      "alt": "Senior portrait of a smiling student outdoors in a beautiful New Hampshire landscape."
+    },
+    {
+      "image": "/src/assets/uploads/dsc_7587.jpg",
+      "alt": "Candid portraits highlighting real, raw milestone moments."
+    },
+    {
+      "image": "/src/assets/uploads/dsc_5986.jpg",
+      "alt": "Portrait session placeholder."
+    },
+    {
+      "image": "/src/assets/uploads/dsc_6633.jpg",
+      "alt": "Outdoor photography placeholder."
+    },
+    {
+      "image": "/src/assets/uploads/dsc_4547.jpg",
+      "alt": "Natural light portrait placeholder."
+    },
+    {
+      "image": "/src/assets/uploads/dsc_3269-enhanced-nr.jpg",
+      "alt": "White Mountains photo shoot placeholder."
+    },
+    {
+      "image": "/src/assets/uploads/dsc_1685.jpg",
+      "alt": "North Country creative portrait backdrop."
+    },
+    {
+      "image": "/src/assets/uploads/dsc_1746.jpg",
+      "alt": "Candid session portrait shot."
+    },
+    {
+      "image": "/src/assets/uploads/dsc_2031.jpg",
+      "alt": "Beautiful natural setting photo shoot."
+    },
+    {
+      "image": "/src/assets/uploads/dsc_2705.jpg",
+      "alt": "New Hampshire mountain portrait landscape."
+    },
+    {
+      "image": "/src/assets/uploads/dsc_3705.jpg",
+      "alt": "Authentic tailored portrait moments."
+    },
+    {
+      "image": "/src/assets/uploads/dsc_3779.jpg",
+      "alt": "Heartfelt portrait layout session placeholder."
+    }
+  ]
+}
