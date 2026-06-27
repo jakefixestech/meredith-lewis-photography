@@ -1,0 +1,20 @@
+{
+  "header_eyebrow": "Galleries",
+  "header_heading": "Maternity",
+  "header_intro": "Celebrating new beginnings, motherhood, and the soft beauty of growing life. Elegant, natural portrait sessions set against breathtaking mountain and field backdrops.",
+  "cta_text": "Ready to document this incredible chapter of your journey?",
+  "gallery": [
+    { "title": "Photo 1", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Photo 2", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Photo 3", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Photo 4", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Photo 5", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Photo 6", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Photo 7", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Photo 8", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Photo 9", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Photo 10", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Photo 11", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Photo 12", "image": "/src/assets/uploads/dsc_5986.jpg" }
+  ]
+}

@@ -1,33 +1,173 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SmartImage from "../components/SmartImage.astro";
+import content from "../content/portfolio-seasonal-minis.json";
 ---
 
 <Layout
-  title="Seasonal Mini Sessions | Meredith Lewis Photography"
-  description="Seasonal Pay What You Can mini sessions with Meredith Lewis Photography, affordable, no-pressure photo sessions throughout the White Mountains of New Hampshire."
-  noindex={true}
+  title={`${content.header_heading} Portfolio | Meredith Lewis Photography`}
+  description={content.header_intro}
+  solidNav={false}
 >
-  <section class="flex min-h-[70vh] items-center justify-center px-5 py-32 sm:px-8">
-    <div class="mx-auto max-w-xl text-center">
-      <p class="mb-6 text-xs font-medium uppercase tracking-[0.3em] text-neutral-500">
-        Seasonal Mini Sessions
-      </p>
-      <h1 class="font-serif text-4xl font-medium leading-tight text-neutral-900 text-balance sm:text-5xl">
-        Pay What You Can minis.
+  <section class="relative min-h-[70vh] flex items-center justify-center px-5 py-24 sm:px-8 lg:px-12 overflow-hidden bg-neutral-900">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src={content.hero_bg_image} 
+        alt={content.hero_bg_alt} 
+        class="h-full w-full object-cover object-center opacity-85"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-neutral-900/20"></div>
+    </div>
+
+    <div class="relative z-10 w-full max-w-2xl mx-auto rounded-sm bg-white/95 backdrop-blur-md p-8 sm:p-12 text-center shadow-xl border border-white/20">
+      <span class="text-xs font-medium uppercase tracking-[0.2em] text-neutral-500">
+        {content.header_eyebrow}
+      </span>
+      <h1 class="mt-4 font-serif text-3xl font-medium tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
+        {content.header_heading}
       </h1>
-      <p class="mx-auto mt-8 max-w-md text-lg font-light leading-relaxed text-neutral-600 text-pretty">
-        Hey Meredith! This page is ready to be built out. When you have a moment,
-        head to the Google Drive, open the <strong>"Seasonal Minis"</strong> folder,
-        and drop in any photos you&apos;d like featured here. Once your photos are in,
-        I&apos;ll lay the page out, and you&apos;ll be able to swap images yourself
-        anytime from your editor.
+      <div class="mx-auto mt-6 h-px w-16 bg-neutral-300"></div>
+      <p class="mt-6 text-base font-light leading-relaxed text-neutral-600 text-pretty">
+        {content.header_intro}
       </p>
-      <a
-        href="/"
-        class="mt-10 inline-block rounded-full bg-neutral-900 px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-white transition-colors hover:bg-neutral-700"
-      >
-        Back to Home
-      </a>
     </div>
   </section>
+
+  <section class="bg-white px-5 py-20 sm:px-8 lg:px-12">
+    <div class="mx-auto max-w-8xl">
+      {content.gallery && content.gallery.length > 0 ? (
+        <div class="columns-1 gap-5 sm:columns-2 lg:columns-3 [&>div]:mb-5">
+          {content.gallery.map((item, index) => (
+            <div 
+              class="gallery-item break-inside-avoid overflow-hidden rounded-sm bg-neutral-100 transition-transform duration-300 hover:scale-[1.01] cursor-pointer"
+              data-index={index}
+            >
+              <SmartImage
+                src={(item as any).image}
+                alt={(item as any).title || "Seasonal Mini Photo"}
+                width={800}
+                class="portfolio-img h-auto w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="py-12 text-center text-neutral-400 font-light">
+          <p>Images are currently being loaded into this collection. Check back soon!</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section class="bg-neutral-950 px-5 py-24 sm:px-8 sm:py-28 lg:px-12 text-white border-t border-neutral-900">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-serif text-2xl font-light tracking-wide text-neutral-100 sm:text-3xl">
+        {content.cta_box_title}
+      </h2>
+      <p class="mt-6 text-sm font-light leading-relaxed text-neutral-400 text-pretty">
+        {content.cta_box_text}
+      </p>
+      <div class="mt-10">
+        <a 
+          href="/contact" 
+          class="inline-block rounded-full bg-white px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-neutral-900 transition-colors hover:bg-neutral-200"
+        >
+          {content.cta_button_label}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div 
+    id="lightbox" 
+    class="fixed inset-0 z-[100] hidden flex-col items-center justify-center bg-black/95 p-4 opacity-0 transition-opacity duration-300 backdrop-blur-sm select-none"
+    role="dialog"
+    aria-label="Image viewer"
+    aria-hidden="true"
+  >
+    <button id="lightbox-close" class="absolute top-6 right-6 z-[110] text-white/70 hover:text-white transition-colors focus:outline-none p-2" aria-label="Close image viewer">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+    </button>
+    <button id="lightbox-prev" class="absolute left-4 z-[110] hidden sm:flex text-white/50 hover:text-white transition-colors focus:outline-none p-4 rounded-full hover:bg-white/5" aria-label="Previous image">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
+    </button>
+    <div class="relative max-h-[85vh] max-w-[90vw] flex items-center justify-center">
+      <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-[90vw] object-contain rounded-sm shadow-2xl pointer-events-none"/>
+    </div>
+    <button id="lightbox-next" class="absolute right-4 z-[110] hidden sm:flex text-white/50 hover:text-white transition-colors focus:outline-none p-4 rounded-full hover:bg-white/5" aria-label="Next image">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+    </button>
+  </div>
 </Layout>
+
+<script>
+  const items = document.querySelectorAll('.gallery-item');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+  const closeBtn = document.getElementById('lightbox-close');
+  const prevBtn = document.getElementById('lightbox-prev');
+  const nextBtn = document.getElementById('lightbox-next');
+  
+  let currentIndex = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
+  const minSwipeDistance = 50;
+
+  if (lightbox && lightboxImg && items.length > 0) {
+    const openLightbox = (index: number) => {
+      currentIndex = index;
+      updateLightboxContent();
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+      lightbox.setAttribute('aria-hidden', 'false');
+      setTimeout(() => {
+        lightbox.classList.remove('opacity-0');
+        lightbox.classList.add('opacity-100');
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('opacity-100');
+      lightbox.classList.add('opacity-0');
+      lightbox.setAttribute('aria-hidden', 'true');
+      setTimeout(() => {
+        lightbox.classList.remove('flex');
+        lightbox.classList.add('hidden');
+      }, 300);
+      document.body.style.overflow = '';
+    };
+
+    const showNext = () => { currentIndex = (currentIndex + 1) % items.length; updateLightboxContent(); };
+    const showPrev = () => { currentIndex = (currentIndex - 1 + items.length) % items.length; updateLightboxContent(); };
+
+    const updateLightboxContent = () => {
+      const currentWrapper = items[currentIndex];
+      const targetImg = currentWrapper?.querySelector('.portfolio-img') as HTMLImageElement;
+      if (targetImg) { lightboxImg.src = targetImg.currentSrc || targetImg.src; lightboxImg.alt = targetImg.alt || ''; }
+    };
+
+    const handleGesture = () => {
+      const swipeDistance = touchEndX - touchStartX;
+      if (swipeDistance < -minSwipeDistance) showNext();
+      if (swipeDistance > minSwipeDistance) showPrev();
+    };
+
+    lightbox.addEventListener('touchstart', (e: TouchEvent) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+    lightbox.addEventListener('touchend', (e: TouchEvent) => { touchEndX = e.changedTouches[0].screenX; handleGesture(); }, { passive: true });
+
+    items.forEach((item, index) => item.addEventListener('click', () => openLightbox(index)));
+    closeBtn?.addEventListener('click', closeLightbox);
+    nextBtn?.addEventListener('click', showNext);
+    prevBtn?.addEventListener('click', showPrev);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'ArrowLeft') showPrev();
+    });
+  }
+</script>

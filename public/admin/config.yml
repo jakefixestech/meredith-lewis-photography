@@ -202,3 +202,153 @@ collections:
             fields:
               - { name: "title", label: "Photo Label Description (e.g. Photo 1)", widget: "string" }
               - { name: "image", label: "Photo Asset", widget: "image" }
+
+  - name: "portfolio_couples"
+    label: "Portfolio - Couples"
+    files:
+      - name: "content"
+        label: "Couples & Romance Content"
+        file: "src/content/portfolio-couples.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - { name: "cta_text", label: "CTA Box Text", widget: "string" }
+          - name: "gallery"
+            label: "Photo Gallery"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Photo Label Description (e.g. Photo 1)", widget: "string" }
+              - { name: "image", label: "Photo Asset", widget: "image" }
+
+  - name: "portfolio_engagement"
+    label: "Portfolio - Engagement"
+    files:
+      - name: "content"
+        label: "Engagement Content"
+        file: "src/content/portfolio-engagement.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - { name: "cta_text", label: "CTA Box Text", widget: "string" }
+          - name: "gallery"
+            label: "Photo Gallery"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Photo Label Description (e.g. Photo 1)", widget: "string" }
+              - { name: "image", label: "Photo Asset", widget: "image" }
+
+  - name: "portfolio_family"
+    label: "Portfolio - Family Gatherings"
+    files:
+      - name: "content"
+        label: "Family Content"
+        file: "src/content/portfolio-family.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - { name: "cta_text", label: "CTA Box Text", widget: "string" }
+          - name: "gallery"
+            label: "Photo Gallery"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Photo Label Description (e.g. Photo 1)", widget: "string" }
+              - { name: "image", label: "Photo Asset", widget: "image" }
+
+  - name: "portfolio_maternity"
+    label: "Portfolio - Maternity"
+    files:
+      - name: "content"
+        label: "Maternity Content"
+        file: "src/content/portfolio-maternity.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - { name: "cta_text", label: "CTA Box Text", widget: "string" }
+          - name: "gallery"
+            label: "Photo Gallery"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Photo Label Description (e.g. Photo 1)", widget: "string" }
+              - { name: "image", label: "Photo Asset", widget: "image" }
+
+  - name: "portfolio_event"
+    label: "Portfolio - Event"
+    files:
+      - name: "content"
+        label: "Event Content"
+        file: "src/content/portfolio-event.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - { name: "cta_text", label: "CTA Box Text", widget: "string" }
+          - name: "gallery"
+            label: "Photo Gallery"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Photo Label Description (e.g. Photo 1)", widget: "string" }
+              - { name: "image", label: "Photo Asset", widget: "image" }
+
+  - name: "portfolio_pets"
+    label: "Portfolio - Pets"
+    files:
+      - name: "content"
+        label: "Pets Content"
+        file: "src/content/portfolio-pets.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - name: "gallery"
+            label: "Photo Gallery"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Photo Label Description (e.g. Photo 1)", widget: "string" }
+              - { name: "image", label: "Photo Asset", widget: "image" }
+          # ---------- END OF LIFE SECTION ----------
+          - { name: "eol_heading", label: "End Of Life — Heading", widget: "string" }
+          - { name: "eol_paragraph_1", label: "End Of Life — Paragraph 1", widget: "text" }
+          - { name: "eol_paragraph_2", label: "End Of Life — Paragraph 2", widget: "text" }
+          - { name: "eol_qualify_text", label: "End Of Life — Guidelines Box Text", widget: "text" }
+          - { name: "eol_share_text", label: "End Of Life — Share Appeal Text", widget: "text" }
+          - { name: "eol_cta_label", label: "End Of Life — Button Label", widget: "string" }
+
+- name: "portfolio_seasonal_minis"
+    label: "Portfolio - Seasonal Minis"
+    files:
+      - name: "content"
+        label: "Seasonal Minis Content"
+        file: "src/content/portfolio-seasonal-minis.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "hero_bg_image", label: "Hero Banner Background Image", widget: "image" }
+          - { name: "hero_bg_alt", label: "Hero Image — description for screen readers", widget: "string" }
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title (e.g., Lupine Seasonal Minis)", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - { name: "cta_box_title", label: "Bottom CTA — Box Title", widget: "string" }
+          - { name: "cta_box_text", label: "Bottom CTA — Box Paragraph", widget: "text" }
+          - { name: "cta_button_label", label: "Bottom CTA — Button text", widget: "string" }
+          - name: "gallery"
+            label: "Photo Gallery (Upload your 12 seasonal photos here)"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Photo Label Description (e.g. Lupine Mini 1)", widget: "string" }
+              - { name: "image", label: "Photo Asset", widget: "image" }

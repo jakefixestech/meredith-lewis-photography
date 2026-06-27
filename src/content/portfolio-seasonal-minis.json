@@ -1,0 +1,24 @@
+{
+  "hero_bg_image": "/src/assets/uploads/lupine.jpg",
+  "hero_bg_alt": "Beautiful field of purple lupine flowers blooming in the White Mountains of New Hampshire",
+  "header_eyebrow": "Limited Seasonal Sessions",
+  "header_heading": "Lupine Seasonal Minis",
+  "header_intro": "Captured during their brief, magical bloom in the White Mountains. These limited-edition sessions celebrate the changing seasons of New Hampshire in their purest form.",
+  "gallery": [
+    { "title": "Lupine Mini 1", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Lupine Mini 2", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Lupine Mini 3", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Lupine Mini 4", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Lupine Mini 5", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Lupine Mini 6", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Lupine Mini 7", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Lupine Mini 8", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Lupine Mini 9", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Lupine Mini 10", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Lupine Mini 11", "image": "/src/assets/uploads/dsc_5986.jpg" },
+    { "title": "Lupine Mini 12", "image": "/src/assets/uploads/dsc_5986.jpg" }
+  ],
+  "cta_box_title": "Want to secure a spot for the next round?",
+  "cta_box_text": "Because seasonal blooms and weather windows are incredibly tight, these sessions sell out fast. Sign up for the email community or send a message to get first dibs on the schedule.",
+  "cta_button_label": "Inquire About Minis"
+}
