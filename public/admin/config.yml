@@ -178,7 +178,7 @@ collections:
           - name: "gallery"
             label: "Photo Gallery"
             widget: "list"
-            summary_label: "{{fields.alt}} - Photo #{{index}}"
+            summary_label: "Photo #{{index}} — {{fields.alt}}"
             fields:
               - { name: "image", label: "Photo", widget: "image" }
               - { name: "alt", label: "Description for Screen Readers (Accessibility)", widget: "string" }
