@@ -329,7 +329,7 @@ collections:
           - { name: "eol_share_text", label: "End Of Life — Share Appeal Text", widget: "text" }
           - { name: "eol_cta_label", label: "End Of Life — Button Label", widget: "string" }
 
-- name: "portfolio_seasonal_minis"
+  - name: "portfolio_seasonal_minis"
     label: "Portfolio - Seasonal Minis"
     files:
       - name: "content"
@@ -347,7 +347,7 @@ collections:
           - { name: "cta_box_text", label: "Bottom CTA — Box Paragraph", widget: "text" }
           - { name: "cta_button_label", label: "Bottom CTA — Button text", widget: "string" }
           - name: "gallery"
-            label: "Photo Gallery (Upload your 12 seasonal photos here)"
+            label: "Photo Gallery (Upload seasonal photos here)"
             widget: "list"
             fields:
               - { name: "title", label: "Photo Label Description (e.g. Lupine Mini 1)", widget: "string" }
