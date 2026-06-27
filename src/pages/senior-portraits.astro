@@ -32,14 +32,12 @@ import content from "../content/portfolio-senior-portraits.json";
             <div 
               class="gallery-item break-inside-avoid overflow-hidden rounded-sm bg-neutral-100 transition-transform duration-300 hover:scale-[1.01] cursor-pointer"
               data-index={index}
-              data-src={item.image}
-              data-alt={item.alt || "Senior Portrait Portfolio Photo"}
             >
               <SmartImage
                 src={item.image}
                 alt={item.alt || "Senior Portrait Portfolio Photo"}
                 width={800}
-                class="h-auto w-full object-cover"
+                class="portfolio-img h-auto w-full object-cover"
                 loading="lazy"
               />
             </div>
@@ -136,45 +134,31 @@ import content from "../content/portfolio-senior-portraits.json";
   let currentIndex = 0;
 
   if (lightbox && lightboxImg && items.length > 0) {
-    
-    // Open Lightbox
     const openLightbox = (index: number) => {
       currentIndex = index;
-      const item = items[currentIndex] as HTMLElement;
-      const src = item.getAttribute('data-src') || '';
-      const alt = item.getAttribute('data-alt') || '';
-      
-      lightboxImg.src = src;
-      lightboxImg.alt = alt;
+      updateLightboxContent();
       
       lightbox.classList.remove('hidden');
       lightbox.classList.add('flex');
       lightbox.setAttribute('aria-hidden', 'false');
-      
-      // Smooth fade in
       setTimeout(() => {
         lightbox.classList.remove('opacity-0');
         lightbox.classList.add('opacity-100');
       }, 10);
-      
-      document.body.style.overflow = 'hidden'; // Lock background scrolling
+      document.body.style.overflow = 'hidden';
     };
 
-    // Close Lightbox
     const closeLightbox = () => {
       lightbox.classList.remove('opacity-100');
       lightbox.classList.add('opacity-0');
       lightbox.setAttribute('aria-hidden', 'true');
-      
       setTimeout(() => {
         lightbox.classList.remove('flex');
         lightbox.classList.add('hidden');
       }, 300);
-      
-      document.body.style.overflow = ''; // Restore background scrolling
+      document.body.style.overflow = '';
     };
 
-    // Navigate Images
     const showNext = () => {
       currentIndex = (currentIndex + 1) % items.length;
       updateLightboxContent();
@@ -186,14 +170,16 @@ import content from "../content/portfolio-senior-portraits.json";
     };
 
     const updateLightboxContent = () => {
-      const item = items[currentIndex] as HTMLElement;
-      const src = item.getAttribute('data-src') || '';
-      const alt = item.getAttribute('data-alt') || '';
-      lightboxImg.src = src;
-      lightboxImg.alt = alt;
+      const currentWrapper = items[currentIndex];
+      const targetImg = currentWrapper?.querySelector('.portfolio-img') as HTMLImageElement;
+      
+      if (targetImg) {
+        // Use currentSrc to pull the actual active optimized webp layout source link
+        lightboxImg.src = targetImg.currentSrc || targetImg.src;
+        lightboxImg.alt = targetImg.alt || '';
+      }
     };
 
-    // Event Listeners
     items.forEach((item, index) => {
       item.addEventListener('click', () => openLightbox(index));
     });
@@ -202,12 +188,10 @@ import content from "../content/portfolio-senior-portraits.json";
     nextBtn?.addEventListener('click', showNext);
     prevBtn?.addEventListener('click', showPrev);
 
-    // Click outside image to close
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) closeLightbox();
     });
 
-    // Keyboard Shortcuts (Arrow keys & Escape)
     document.addEventListener('keydown', (e) => {
       if (lightbox.classList.contains('hidden')) return;
       if (e.key === 'Escape') closeLightbox();
