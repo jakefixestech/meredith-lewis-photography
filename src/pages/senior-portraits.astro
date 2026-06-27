@@ -53,7 +53,7 @@ import content from "../content/portfolio-senior-portraits.json";
 
   <div 
     id="lightbox" 
-    class="fixed inset-0 z-[100] hidden flex-col items-center justify-center bg-black/95 p-4 opacity-0 transition-opacity duration-300 backdrop-blur-sm select-none"
+    class="fixed inset-0 z-[100] hidden flex-col items-center justify-center bg-black/95 p-4 opacity-0 transition-opacity duration-300 backdrop-blur-sm select-none animate-none"
     role="dialog"
     aria-label="Image viewer"
     aria-hidden="true"
@@ -62,7 +62,7 @@ import content from "../content/portfolio-senior-portraits.json";
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
     </button>
 
-    <button id="lightbox-prev" class="absolute left-4 z-[110] text-white/50 hover:text-white transition-colors focus:outline-none p-4 rounded-full hover:bg-white/5" aria-label="Previous image">
+    <button id="lightbox-prev" class="absolute left-4 z-[110] hidden sm:flex text-white/50 hover:text-white transition-colors focus:outline-none p-4 rounded-full hover:bg-white/5" aria-label="Previous image">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
     </button>
 
@@ -70,7 +70,7 @@ import content from "../content/portfolio-senior-portraits.json";
       <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-[90vw] object-contain rounded-sm shadow-2xl pointer-events-none"/>
     </div>
 
-    <button id="lightbox-next" class="absolute right-4 z-[110] text-white/50 hover:text-white transition-colors focus:outline-none p-4 rounded-full hover:bg-white/5" aria-label="Next image">
+    <button id="lightbox-next" class="absolute right-4 z-[110] hidden sm:flex text-white/50 hover:text-white transition-colors focus:outline-none p-4 rounded-full hover:bg-white/5" aria-label="Next image">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
     </button>
   </div>
@@ -101,6 +101,11 @@ import content from "../content/portfolio-senior-portraits.json";
   const nextBtn = document.getElementById('lightbox-next');
   
   let currentIndex = 0;
+
+  // Swipe Variables
+  let touchStartX = 0;
+  let touchEndX = 0;
+  const minSwipeDistance = 50;
 
   if (lightbox && lightboxImg && items.length > 0) {
     const openLightbox = (index: number) => {
@@ -146,6 +151,27 @@ import content from "../content/portfolio-senior-portraits.json";
       }
     };
 
+    // --- SWIPE GESTURE DETECTION ---
+    const handleGesture = () => {
+      const swipeDistance = touchEndX - touchStartX;
+      if (swipeDistance < -minSwipeDistance) {
+        showNext();
+      }
+      if (swipeDistance > minSwipeDistance) {
+        showPrev();
+      }
+    };
+
+    lightbox.addEventListener('touchstart', (e: TouchEvent) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', (e: TouchEvent) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleGesture();
+    }, { passive: true });
+
+    // --- EVENT LISTENERS ---
     items.forEach((item, index) => {
       item.addEventListener('click', () => openLightbox(index));
     });
