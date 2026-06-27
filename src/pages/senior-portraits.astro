@@ -35,7 +35,7 @@ import content from "../content/portfolio-senior-portraits.json";
             >
               <SmartImage
                 src={item.image}
-                alt={item.title || "Senior Portrait Portfolio Photo"}
+                alt={item["title"] || item["alt"] || "Senior Portrait Portfolio Photo"}
                 width={800}
                 class="portfolio-img h-auto w-full object-cover"
                 loading="lazy"
