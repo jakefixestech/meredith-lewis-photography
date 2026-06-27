@@ -179,5 +179,5 @@ collections:
             label: "Photo Gallery"
             widget: "list"
             fields:
-              - { name: "title", label: "Photo Label Description (e.g. Photo 1, Senior Portrait)", widget: "string" }
+              - { name: "title", label: "Photo Label Description (e.g. Photo 1)", widget: "string" }
               - { name: "image", label: "Photo Asset", widget: "image" }
