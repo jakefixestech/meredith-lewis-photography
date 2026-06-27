@@ -1,89 +1,89 @@
 {
-  "header_subnote": "All one hour long photography sessions include 10 edited images of your choosing.",
+  "header_subnote": "All one hour long photography sessions include 10 edited images of your choosing and include free travel within 30 minutes of the photographer's location.",
   "header_heading": "Photography Menu",
-  "addons_bg": "/src/assets/uploads/rocks.jpg",
+  "addons_bg": "/src/assets/uploads/dsc_8732.jpg",
   "addons": [
     {
       "title": "Printed Images",
-      "body": "Meredith Lewis Photography does not offer printed images at this time. All photos will be delivered digitally, or via flash drive for a $40 service fee."
+      "body": "Meredith Lewis Photography does not offer printed images at this time. \n\nAll photos will be delivered digitally, or via flash drive for a $40 service fee."
     },
     {
       "title": "Additional Digital Images",
-      "body": "Additional digital image cost is as follows. All one hour sessions will contain at least 30 edited images to choose from. One digital image of choice: $25. Rest of gallery: $150."
+      "body": "Additional digital image cost is as follows. (All one hour sessions will contain at least 30 edited images)\n\nOne digital image of choice: $25. Rest of gallery: $100."
     },
     {
       "title": "Events",
       "body": "All edited images are included in the event package at the rate of 40 edited digital images per hour."
     }
   ],
-  "addons_heading": "Purchasing Additional Photos",
+  "addons_heading": "Upgrade your photoshoot experience",
   "header_eyebrow": "Services & Pricing",
-  "header_intro": "Below is a detailed list of photographic services offered by Meredith Lewis Photography. Don't see something you're interested in? Send me an email at Meredith.lewis2018@gmail.com.",
+  "header_intro": "Below is a detailed list of photographic services offered by Meredith Lewis Photography. \n\nDon't see something you're interested in? Send me an email at Meredith.lewis2018@gmail.com.",
   "addons_bg_alt": "An alpine tarn reflecting the sky among the rocks of the White Mountains.",
   "addons_eyebrow": "Add Ons",
   "services": [
     {
       "name": "Senior Portraits",
       "price": "$225",
-      "image": "/src/assets/uploads/psenior.avif",
+      "image": "/src/assets/uploads/dsc_0360.jpg",
       "alt": "A high school senior in a white dress sitting in a sunlit field of wildflowers.",
-      "description": "This session includes one hour of coverage at one location. I'd love to get to know your senior, and to make their photos uniquely them! (30 minute senior sessions are available at the cost of $175 and include 7 edited images.)",
+      "description": "A senior portrait session includes one hour of coverage at one location and ten edited images. I'd love to get to know your senior, and to make their photos uniquely them! \n\n(30 minute senior sessions are available at the cost of $175 and include 5 edited images.)",
       "link": ""
     },
     {
       "name": "Couples",
       "price": "$225",
-      "image": "/src/assets/uploads/pcouples.avif",
+      "image": "/src/assets/uploads/couples.png",
       "alt": "A couple embracing in front of a weathered grey barn.",
-      "description": "This photoshoot includes one hour of coverage at one location between two people.",
+      "description": "A couples session includes one hour of coverage at one location between two people.",
       "link": ""
     },
     {
       "name": "Engagement",
       "price": "$225",
-      "image": "/src/assets/uploads/pengagement.avif",
+      "image": "/src/assets/uploads/dsc_3705.jpg",
       "alt": "A close up of an engaged couple's hands showing the engagement ring.",
-      "description": "This session includes one hour of coverage at one location between two people. There is nothing more I'd rather do than capture this special time in your life as you begin the rest of your lives together! Congratulations!",
+      "description": "An engagement session includes one hour of coverage at one location between two people and ten edited images. There is nothing more I'd rather do than capture this special time in your life as you begin the rest of your lives together! Congratulations on our engagement!",
       "link": ""
     },
     {
       "name": "Family",
       "price": "$250",
-      "image": "/src/assets/uploads/pfamily.avif",
+      "image": "/src/assets/uploads/dsc_7587.jpg",
       "alt": "A family of four with two young children together outdoors in the mountains.",
-      "description": "This session includes one hour of shooting time for up to four people at one location. Each additional person added to the photoshoot is an additional $25, up to 6 people.",
+      "description": "A family session includes one hour of shooting time for up to four people at one location and ten edited images. Each additional person added to the photoshoot is an additional $25.",
       "link": ""
     },
     {
       "name": "Maternity",
       "price": "$225",
-      "image": "/src/assets/uploads/pmaternity.avif",
+      "image": "/src/assets/uploads/dsc_7265.jpg",
       "alt": "An expecting couple holding an ultrasound photo in a field.",
-      "description": "This session includes one hour of coverage at one location. This session includes up to four people, and additional persons can be added at $25 per person, up to 6 people.",
+      "description": "A maternity session includes one hour of coverage at one location and ten edited images. This session includes up to four people, and additional persons can be added at $25 per person.",
       "link": ""
     },
     {
       "name": "Pet Photography",
       "price": "$225",
-      "image": "/src/assets/uploads/ppet.avif",
+      "image": "/src/assets/uploads/dsc_9074.jpg",
       "alt": "A woman kissing her small dog outdoors.",
-      "description": "This session includes one hour of coverage at one location. This shoot includes two additional people and your pup (up to two). Additional people may be added at $25 per person, up to 6 people.",
+      "description": "A pet photography includes one hour of coverage at one location and ten edited images. This shoot includes two people and your pup (up to two). Additional people may be added at $25 per person.",
       "link": ""
     },
     {
       "name": "Events & Parties",
       "price": "$300",
-      "image": "/src/assets/uploads/pevents.avif",
+      "image": "/src/assets/uploads/dsc_8625.jpg",
       "alt": "An elegant event table setup with floral arrangements and greenery.",
-      "description": "This session includes two hours of coverage at one location. Whether it be a birthday party, bridal shower, sporting event, or even an anniversary party, I'd love to photograph it! Additional hours of event coverage may also be added to your day. (This does not apply to weddings.)",
+      "description": "Events include two hours of coverage at one location and ten edited images. Whether it's a birthday party, bridal shower, sporting event, or even an anniversary, I'd love to photograph it! Additional hours of event coverage may also be added to your day at $50 per hour (This does not apply to weddings.)",
       "link": ""
     },
     {
       "name": "Seasonal Mini Sessions",
-      "price": "Pay What You Can",
-      "image": "/src/assets/uploads/pminis.avif",
+      "price": "Pay What You Can Minis",
+      "image": "/src/assets/uploads/dsc_1076.jpg",
       "alt": "A mother and young son sitting together in a field of purple lupine flowers.",
-      "description": "Fifteen minute mini sessions are offered seasonally throughout the year. A no pressure, Pay What You Can way to have your story captured, no matter the budget. Tap to see what seasonal sessions are currently being offered.",
+      "description": "Fifteen minute mini sessions are offered seasonally throughout the year. A no pressure, Pay What You Can way to have your story captured, no matter the budget. Tap to see what seasonal sessions are currently being offered!",
       "link": "/seasonal-minis"
     }
   ]
