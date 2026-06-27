@@ -162,7 +162,7 @@ collections:
           - { name: "info_heading", label: "Contact Info — Heading", widget: "string" }
           - { name: "booking_text", label: "Booking — Text above the Book button", widget: "text" }
 
-- name: "portfolio_senior_portraits"
+  - name: "portfolio_senior_portraits"
     label: "Portfolio - Senior Portraits"
     files:
       - name: "content"
