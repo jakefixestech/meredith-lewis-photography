@@ -35,7 +35,7 @@ import content from "../content/portfolio-senior-portraits.json";
             >
               <SmartImage
                 src={item.image}
-                alt={item.alt || "Senior Portrait Portfolio Photo"}
+                alt={item.title || "Senior Portrait Portfolio Photo"}
                 width={800}
                 class="portfolio-img h-auto w-full object-cover"
                 loading="lazy"
@@ -58,43 +58,20 @@ import content from "../content/portfolio-senior-portraits.json";
     aria-label="Image viewer"
     aria-hidden="true"
   >
-    <button 
-      id="lightbox-close" 
-      class="absolute top-6 right-6 z-[110] text-white/70 hover:text-white transition-colors focus:outline-none p-2"
-      aria-label="Close image viewer"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-      </svg>
+    <button id="lightbox-close" class="absolute top-6 right-6 z-[110] text-white/70 hover:text-white transition-colors focus:outline-none p-2" aria-label="Close image viewer">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
     </button>
 
-    <button 
-      id="lightbox-prev" 
-      class="absolute left-4 z-[110] text-white/50 hover:text-white transition-colors focus:outline-none p-4 rounded-full hover:bg-white/5"
-      aria-label="Previous image"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-      </svg>
+    <button id="lightbox-prev" class="absolute left-4 z-[110] text-white/50 hover:text-white transition-colors focus:outline-none p-4 rounded-full hover:bg-white/5" aria-label="Previous image">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
     </button>
 
     <div class="relative max-h-[85vh] max-w-[90vw] flex items-center justify-center">
-      <img 
-        id="lightbox-img" 
-        src="" 
-        alt="" 
-        class="max-h-[85vh] max-w-[90vw] object-contain rounded-sm shadow-2xl pointer-events-none"
-      />
+      <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-[90vw] object-contain rounded-sm shadow-2xl pointer-events-none"/>
     </div>
 
-    <button 
-      id="lightbox-next" 
-      class="absolute right-4 z-[110] text-white/50 hover:text-white transition-colors focus:outline-none p-4 rounded-full hover:bg-white/5"
-      aria-label="Next image"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
-        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-      </svg>
+    <button id="lightbox-next" class="absolute right-4 z-[110] text-white/50 hover:text-white transition-colors focus:outline-none p-4 rounded-full hover:bg-white/5" aria-label="Next image">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
     </button>
   </div>
 
@@ -104,18 +81,10 @@ import content from "../content/portfolio-senior-portraits.json";
         {content.cta_text}
       </h2>
       <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-        <a
-          href="/contact"
-          class="inline-block rounded-full bg-white px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-neutral-900 transition-colors hover:bg-neutral-200"
-        >
+        <a href="/contact" class="inline-block rounded-full bg-white px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-neutral-900 transition-colors hover:bg-neutral-200">
           Get in Touch
         </a>
-        <a
-          href="https://meredithlewisphotography.pixieset.com/booking/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block rounded-full border border-neutral-700 bg-transparent px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-neutral-200 transition-colors hover:bg-white hover:text-neutral-900"
-        >
+        <a href="https://meredithlewisphotography.pixieset.com/booking/" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full border border-neutral-700 bg-transparent px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-neutral-200 transition-colors hover:bg-white hover:text-neutral-900">
           Book Online
         </a>
       </div>
@@ -137,7 +106,6 @@ import content from "../content/portfolio-senior-portraits.json";
     const openLightbox = (index: number) => {
       currentIndex = index;
       updateLightboxContent();
-      
       lightbox.classList.remove('hidden');
       lightbox.classList.add('flex');
       lightbox.setAttribute('aria-hidden', 'false');
@@ -172,9 +140,7 @@ import content from "../content/portfolio-senior-portraits.json";
     const updateLightboxContent = () => {
       const currentWrapper = items[currentIndex];
       const targetImg = currentWrapper?.querySelector('.portfolio-img') as HTMLImageElement;
-      
       if (targetImg) {
-        // Use currentSrc to pull the actual active optimized webp layout source link
         lightboxImg.src = targetImg.currentSrc || targetImg.src;
         lightboxImg.alt = targetImg.alt || '';
       }

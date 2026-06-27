@@ -178,7 +178,6 @@ collections:
           - name: "gallery"
             label: "Photo Gallery"
             widget: "list"
-            summary_label: "Photo #{{index}} — {{fields.alt}}"
             fields:
-              - { name: "image", label: "Photo", widget: "image" }
-              - { name: "alt", label: "Description for Screen Readers (Accessibility)", widget: "string" }
+              - { name: "title", label: "Photo Label Description (e.g. Photo 1, Senior Portrait)", widget: "string" }
+              - { name: "image", label: "Photo Asset", widget: "image" }
