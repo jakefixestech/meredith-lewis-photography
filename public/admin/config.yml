@@ -352,3 +352,21 @@ collections:
             fields:
               - { name: "title", label: "Photo Label Description (e.g. Lupine Mini 1)", widget: "string" }
               - { name: "image", label: "Photo Asset", widget: "image" }
+- name: "faqs_page"
+    label: "FAQs Page"
+    files:
+      - name: "content"
+        label: "FAQ Content"
+        file: "src/content/faqs.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Line", widget: "text" }
+          - name: "faqs"
+            label: "Questions & Answers List"
+            widget: "list"
+            fields:
+              - { name: "question", label: "Question", widget: "string" }
+              - { name: "answer", label: "Answer Content", widget: "text" }

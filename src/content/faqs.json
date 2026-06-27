@@ -1,0 +1,19 @@
+{
+  "header_eyebrow": "Common Questions",
+  "header_heading": "Frequently Asked Questions",
+  "header_intro": "Everything you need to know about booking, sessions, and what to expect when working together.",
+  "faqs": [
+    {
+      "question": "What should we wear for our session?",
+      "answer": "Coordinating colors work much better than matching outfits! I recommend neutral tones, earthy colors, and avoiding large logos or distracting patterns."
+    },
+    {
+      "question": "What happens if it rains on our session date?",
+      "answer": "New Hampshire weather can be unpredictable! If the weather doesn't cooperate, we will keep an eye on the forecast and make a call to reschedule to an alternative date at no extra cost."
+    },
+    {
+      "question": "When will we receive our digital photo gallery?",
+      "answer": "Your fully edited online proofing gallery will be delivered via email within 2-3 weeks of your session date."
+    }
+  ]
+}
