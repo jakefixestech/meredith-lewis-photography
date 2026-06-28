@@ -51,7 +51,6 @@ const ogImage = new URL(image, Astro.site ?? "https://meredithlewisphotography.c
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex" />}
 
-    <!-- Open Graph (Facebook / link previews) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -59,10 +58,8 @@ const ogImage = new URL(image, Astro.site ?? "https://meredithlewisphotography.c
     <meta property="og:image" content={ogImage} />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -80,6 +77,18 @@ const ogImage = new URL(image, Astro.site ?? "https://meredithlewisphotography.c
       }
       .font-serif {
         font-family: var(--font-serif);
+      }
+
+      /* ===================== CANVAS MODE SCROLLBAR HIDER ===================== */
+      html, body {
+        /* Chrome, Safari, Opera, Edge */
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        /* Firefox */
+        scrollbar-width: none;
+        /* IE / Old Edge Legacy */
+        -ms-overflow-style: none;
       }
     </style>
   </head>
