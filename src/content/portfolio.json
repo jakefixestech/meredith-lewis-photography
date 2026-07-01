@@ -1,53 +1,53 @@
 {
   "header_eyebrow": "Galleries",
   "header_heading": "The Portfolio Collections",
-  "header_intro": "Explore curated moments capturing authentic stories, milestones, and portraits across the beautiful landscapes of the White Mountains in New Hampshire. ",
+  "header_intro": "Explore personally curated moments capturing memories, milestones, and portraits across the beautiful landscapes of the White Mountains in New Hampshire. ",
   "sections": [
     {
       "title": "Senior Portraits",
-      "description": "Relaxed, fun, and authentic sessions designed to capture your true personality and celebrate this incredible milestone against stunning mountain vistas.",
+      "description": "Weather you're up for a coffee and a stroll in downtown littleton, making a splash in Franconia Notch, or showing off your sport or hobby; let me help make your senior portraits show off exactly who are are! This session is all about you: let's have fun, let loose and take photos that you'll want to look back on for a life time (and hang on your moms fridge ;) )",
       "image": "/src/assets/uploads/dsc_0469.jpg",
       "href": "/senior-portraits"
     },
     {
       "title": "Couples",
-      "description": "Intimate, unposed storytelling celebrating your unique connection. Perfect for anniversaries, adventurous dates, or just capturing your love story.",
+      "description": "Couples sessions are all about capturing the two of you in purest form: the laughs, the inside jokes, and the way you look at each other when you think no one is watching. No stiff poses here, just photos that feel uniquely you! Let's create a fun session together! ",
       "image": "/src/assets/uploads/dsc_7018.jpg",
       "href": "/couples"
     },
     {
       "title": "Engagement Sessions",
-      "description": "Bespoke engagement photography tailored to your favorite locations. Let's capture the excitement and joy of your journey toward marriage.",
+      "description": "Congratulations on your engagement lovebirds, now let's take pictures to celebrate! Whether you're aiming for classic engagement portraits, or want to make these photos uniquely you, I am your girl! Let's chat about bringing your personalities to life in your engagement session!",
       "image": "/src/assets/uploads/dsc_3779.jpg",
       "href": "/engagement"
     },
     {
       "title": "Family",
-      "description": "Timeless family portraits filled with genuine laughter, warm embraces, and beautiful candids that your family will treasure for generations.",
+      "description": "Helping tell the story of your family with timeless family portraits filled with love, laughs and imperfect moments that are what really make your family YOU!",
       "image": "/src/assets/uploads/dsc_7286.jpg",
       "href": "/family"
     },
     {
       "title": "Maternity",
-      "description": "Celebrating the breathtaking beauty and quiet anticipation of new life with elegant, luminous portraits in natural light settings.",
+      "description": "Congratulations mama! Let's capture your maternity photos in a way that is uniquely you, and celebrate your baby to be! Whether it's just you, your entire family, or including that first fur baby of yours, I'm all in! ",
       "image": "/src/assets/uploads/dsc_0235.jpg",
       "href": "/maternity"
     },
     {
       "title": "Pet Photography",
-      "description": "Paws, claws, and personality! Fun, patient sessions dedicated entirely to capturing the unique character and spirit of your beloved pets.",
+      "description": "Paws, claws, and personality! These sessions are aimed to be fun and dedicated entirely to capturing the unique character and spirit of your beloved pets. There is no one else who is more pet obsessed than your photographer! Treats included! ",
       "image": "/src/assets/uploads/dsc_1392.jpg",
       "href": "/pet-photography"
     },
     {
       "title": "Events",
-      "description": "Documenting your special celebrations, milestones, and community gatherings with a documentary approach that lets you live completely in the moment.",
+      "description": "Let me take the pressure off your shoulder and document your special celebrations, milestones, and community gatherings with a documentary approach that lets you live completely in the moment! Let me help you put your phone down and enjoy your special day!",
       "image": "/src/assets/uploads/dsc_8541.jpg",
       "href": "/events"
     },
     {
       "title": "Seasonal Mini Sessions",
-      "description": "Short, perfectly themed sessions hosted throughout the year to capture quick family updates, holiday cards, and beautiful fast-changing seasons.",
+      "description": "Don't get me wrong, I love a full session but there is something special about minis! They are fast paced, fun, and perfect for families who just want a handful of updated photos without committing to a full hour. Short and sweet sessions available seasonally!",
       "image": "/src/assets/uploads/dsc_6063.jpg",
       "href": "/seasonal-minis"
     }
