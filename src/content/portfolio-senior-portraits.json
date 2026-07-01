@@ -5,64 +5,76 @@
   "cta_text": "Ready to capture this incredible next milestone?",
   "gallery": [
     {
-      "image": "/src/assets/uploads/722183699_1772029767544205_938123292500960972_n.jpeg",
+      "image": "/src/assets/uploads/dsc_0360.jpg",
       "alt": "Senior portrait of a smiling student outdoors in a beautiful New Hampshire landscape.",
       "title": "little pond"
     },
     {
-      "image": "/src/assets/uploads/dsc_7587.jpg",
+      "image": "/src/assets/uploads/dsc_0501.jpg",
       "alt": "Candid portraits highlighting real, raw milestone moments.",
       "title": "default explanation"
     },
     {
-      "image": "/src/assets/uploads/dsc_5986.jpg",
+      "image": "/src/assets/uploads/dsc_0366.jpg",
       "alt": "Portrait session placeholder.",
       "title": "default explanation"
     },
     {
-      "image": "/src/assets/uploads/dsc_6633.jpg",
+      "image": "/src/assets/uploads/dsc_0451.jpg",
       "alt": "Outdoor photography placeholder.",
       "title": "default explanation"
     },
     {
-      "image": "/src/assets/uploads/dsc_4547.jpg",
+      "image": "/src/assets/uploads/dsc_0469.jpg",
       "alt": "Natural light portrait placeholder.",
       "title": "default explanation"
     },
     {
-      "image": "/src/assets/uploads/dsc_3269-enhanced-nr.jpg",
+      "image": "/src/assets/uploads/dsc_6767.jpg",
       "alt": "White Mountains photo shoot placeholder.",
       "title": "default explanation"
     },
     {
-      "image": "/src/assets/uploads/dsc_1685.jpg",
+      "image": "/src/assets/uploads/dsc_6559.jpg",
       "alt": "North Country creative portrait backdrop.",
       "title": "default explanation"
     },
     {
-      "image": "/src/assets/uploads/dsc_1746.jpg",
+      "image": "/src/assets/uploads/dsc_6637.jpg",
       "alt": "Candid session portrait shot.",
       "title": "default explanation"
     },
     {
-      "image": "/src/assets/uploads/dsc_2031.jpg",
+      "image": "/src/assets/uploads/dsc_6722.jpg",
       "alt": "Beautiful natural setting photo shoot.",
       "title": "default explanation"
     },
     {
-      "image": "/src/assets/uploads/dsc_2705.jpg",
+      "image": "/src/assets/uploads/dsc_6609-2.jpg",
       "alt": "New Hampshire mountain portrait landscape.",
       "title": "default explanation"
     },
     {
-      "image": "/src/assets/uploads/dsc_3705.jpg",
+      "image": "/src/assets/uploads/dsc_2716.jpg",
       "alt": "Authentic tailored portrait moments.",
       "title": "default explanation"
     },
     {
-      "image": "/src/assets/uploads/dsc_3779.jpg",
+      "image": "/src/assets/uploads/dsc_2673.jpg",
       "alt": "Heartfelt portrait layout session placeholder.",
       "title": "default explanation"
+    },
+    {
+      "image": "/src/assets/uploads/dsc_2679.jpg",
+      "title": "photo"
+    },
+    {
+      "image": "/src/assets/uploads/dsc_2750.jpg",
+      "title": "photo 2"
+    },
+    {
+      "image": "/src/assets/uploads/dsc_2705.jpg",
+      "title": "photo 3"
     }
   ]
 }
