@@ -1,7 +1,7 @@
 {
-  "hero_bg_image": "/src/assets/uploads/lupine.jpg",
-  "cta_box_text": "Because seasonal blooms and weather windows are incredibly tight, these sessions sell out fast. Sign up for the email community or send a message to get first dibs on the schedule.",
-  "header_heading": "Lupine Seasonal Minis",
+  "hero_bg_image": "/src/assets/uploads/rocks.jpg",
+  "cta_box_text": "Seasonal Pay What You Can Mini's don't happen often, and their spots sell out quickly! Get in touch with me to be the first to know about the next time minis are available.",
+  "header_heading": "Pay What You Can Minis ",
   "gallery": [
     {
       "title": "Lupine Mini 1",
@@ -53,8 +53,8 @@
     }
   ],
   "hero_bg_alt": "Beautiful field of purple lupine flowers blooming in the White Mountains of New Hampshire",
-  "cta_box_title": "Want to secure a spot for the next round?",
+  "cta_box_title": "Want to secure a spot for the next round of minis?",
   "cta_button_label": "Inquire About Minis",
   "header_eyebrow": "Limited Seasonal Sessions",
-  "header_intro": "Captured during their brief, magical bloom in the White Mountains. These limited-edition sessions celebrate the changing seasons of New Hampshire in their purest form."
+  "header_intro": "Captured in 15 minute increments from May through November these limited edition sessions celebrate the changing seasons of New Hampshire in their purest form. "
 }
