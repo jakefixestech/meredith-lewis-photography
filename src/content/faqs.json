@@ -1,23 +1,39 @@
 {
-  "header_eyebrow": "Common Questions",
+  "header_eyebrow": "Need Help?",
   "header_heading": "Frequently Asked Questions",
-  "header_intro": "Everything you need to know about booking, sessions, and what to expect when working together.",
+  "header_intro": "Everything you need to know about booking, sessions, and what to expect when we are working together!",
   "faqs": [
     {
       "question": "What should we wear for our session?",
-      "answer": "Coordinating colors work much better than matching outfits! I recommend neutral tones, earthy colors, and avoiding large logos or distracting patterns."
+      "answer": "As you are planning your outfit for our session together, I would keep in mind that coordinating colors work much better together than complete matching outfits and patterns! I recommend avoiding large logos and distracting patterns but most importantly wear something that is comfortable and unique to you! If you would like additional help picking the right outfit for your session, please let me know during your booking process!"
     },
     {
       "question": "What happens if it rains on our session date?",
-      "answer": "New Hampshire weather can be unpredictable! If the weather doesn't cooperate, we will keep an eye on the forecast and make a call to reschedule to an alternative date at no extra cost."
+      "answer": "New Hampshire weather can be unpredictable! I will keep an eye on the forecast and I will make the call to reschedule within 24-48 hours of your scheduled photoshoot. We will choose an alternative date at no extra cost."
     },
     {
-      "question": "When will we receive our digital photo gallery?",
-      "answer": "Your fully edited online proofing gallery will be delivered via email within 2-3 weeks of your session date."
+      "question": "When will we receive our edited digital gallery?",
+      "answer": "Your fully edited online proofing gallery will be delivered via private link via email within one month of your session date.\n\nYou will also receive a preview posted to Meredith Lewis Photography on Facebook within one week of your session. "
     },
     {
       "question": "How far do you travel?",
-      "answer": "I travel pretty far! I service Maine, Vermont and New Hampshire, ask about the travel fee. "
+      "answer": "I service Maine, Vermont and New Hampshire! If you are curious about a specific location please send me a message and I would be happy to provide travel information. "
+    },
+    {
+      "question": "How do you edit your photos?",
+      "answer": "I am a photographer that uses natural light to photograph my pictures that are then edited in a realistic yet vibrant color palette! All photos on my website are an accurate representation of my work and are all taken by me!"
+    },
+    {
+      "question": "How do I book a photography session?",
+      "answer": "There are multiple easy ways to get in touch with me to book your photoshoot!\n\n1. Message me on Facebook: @MeredithLewisPhotography\n2. Email me: Meredith.lewis2018@gmail.com\n3. Click \"Get in Touch\" on the top of my website "
+    },
+    {
+      "question": "What is included in my session?",
+      "answer": "All standard photography sessions automatically include unless listed: one hour of shooting time, planning and conversations with your photographer, private online galleries for proofing, 30 minutes of travel time for your photographer, and 10 edited images of your choosing.\n\nAdditional add ons to your photoshoot are available at an extra cost, but is not expected!"
+    },
+    {
+      "question": "What are End of Life sessions?",
+      "answer": "End of life sessions are available for those who are experiencing the unimaginable decision to place their beloved pet to sleep. All End of Life sessions are always Pay What You Can, and are inspired by my own two soul dogs who I tragically lost less than a year apart. There is no set time or photo limit to these sessions, and travel is free within 30 minutes for the photographer. Please don't hesitate to reach out to me for more information. "
     }
   ]
 }
