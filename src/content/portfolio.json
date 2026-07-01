@@ -1,54 +1,54 @@
 {
   "header_eyebrow": "Galleries",
   "header_heading": "The Portfolio Collections",
-  "header_intro": "Explore curated moments capturing authentic stories, milestones, and portraits across the beautiful landscapes of the White Mountains.",
+  "header_intro": "Explore curated moments capturing authentic stories, milestones, and portraits across the beautiful landscapes of the White Mountains in New Hampshire. ",
   "sections": [
     {
       "title": "Senior Portraits",
       "description": "Relaxed, fun, and authentic sessions designed to capture your true personality and celebrate this incredible milestone against stunning mountain vistas.",
-      "image": "/src/assets/uploads/dsc_8732.jpg",
+      "image": "/src/assets/uploads/dsc_0469.jpg",
       "href": "/senior-portraits"
     },
     {
-      "title": "Couples & Romance",
+      "title": "Couples",
       "description": "Intimate, unposed storytelling celebrating your unique connection. Perfect for anniversaries, adventurous dates, or just capturing your love story.",
-      "image": "/src/assets/uploads/dsc_7587.jpg",
+      "image": "/src/assets/uploads/dsc_7018.jpg",
       "href": "/couples"
     },
     {
       "title": "Engagement Sessions",
       "description": "Bespoke engagement photography tailored to your favorite locations. Let's capture the excitement and joy of your journey toward marriage.",
-      "image": "/src/assets/uploads/dsc_5986.jpg",
+      "image": "/src/assets/uploads/dsc_3779.jpg",
       "href": "/engagement"
     },
     {
-      "title": "Family Gatherings",
+      "title": "Family",
       "description": "Timeless family portraits filled with genuine laughter, warm embraces, and beautiful candids that your family will treasure for generations.",
-      "image": "/src/assets/uploads/dsc_6633.jpg",
+      "image": "/src/assets/uploads/dsc_7286.jpg",
       "href": "/family"
     },
     {
-      "title": "Maternity Portraits",
+      "title": "Maternity",
       "description": "Celebrating the breathtaking beauty and quiet anticipation of new life with elegant, luminous portraits in natural light settings.",
-      "image": "/src/assets/uploads/dsc_4547.jpg",
+      "image": "/src/assets/uploads/dsc_0235.jpg",
       "href": "/maternity"
     },
     {
       "title": "Pet Photography",
       "description": "Paws, claws, and personality! Fun, patient sessions dedicated entirely to capturing the unique character and spirit of your beloved pets.",
-      "image": "/src/assets/uploads/dsc_3269-enhanced-nr.jpg",
+      "image": "/src/assets/uploads/dsc_1392.jpg",
       "href": "/pet-photography"
     },
     {
-      "title": "Event Photography",
+      "title": "Events",
       "description": "Documenting your special celebrations, milestones, and community gatherings with a documentary approach that lets you live completely in the moment.",
-      "image": "/src/assets/uploads/dsc_8732.jpg",
+      "image": "/src/assets/uploads/dsc_8541.jpg",
       "href": "/events"
     },
     {
       "title": "Seasonal Mini Sessions",
       "description": "Short, perfectly themed sessions hosted throughout the year to capture quick family updates, holiday cards, and beautiful fast-changing seasons.",
-      "image": "/src/assets/uploads/dsc_7587.jpg",
+      "image": "/src/assets/uploads/dsc_6063.jpg",
       "href": "/seasonal-minis"
     }
   ]
