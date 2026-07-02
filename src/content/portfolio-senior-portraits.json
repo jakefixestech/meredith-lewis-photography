@@ -1,80 +1,32 @@
 {
   "header_eyebrow": "Portfolio",
   "header_heading": "Senior Portraits",
-  "header_intro": "Senior year is a big deal, and your photos should feel like you, not like an awkward school picture from 2008. My goal is to make your senior portrait session fun, relaxed, and full of genuine moments. Whether you're laughing, striking your best model pose, or just hanging out, we'll create photos that best capture your personality and celebrate this exciting milestone in your life. You'll leave with amazing images, and hopefully a few laughs along the way! Each session is specifically tailored to showcase your senior's unique personality and achievements against the beautiful backdrop of the North Country of New Hampshire. ",
-  "cta_text": "Are you ready to begin your Senior Portrait experience? ",
-  "gallery": [
+  "header_intro": "Senior year is a big deal, and your photos should feel like you, not like an awkward school picture from 2008. My goal is to make your senior portrait session fun, relaxed, and full of genuine moments. Whether you're laughing, striking your best model pose, or just hanging out, we'll create photos that best capture your personality and celebrate this exciting milestone in your life. You'll leave with amazing images, and hopefully a few laughs along the way! Each session is specifically tailored to showcase your senior's unique personality and achievements against the beautiful backdrop of the North Country of New Hampshire.",
+  "cta_text": "Ready to celebrate your milestone?",
+  "story_sets": [
     {
-      "image": "/src/assets/uploads/dsc_0360.jpg",
-      "alt": "Senior portrait of a smiling student outdoors in a beautiful New Hampshire landscape.",
-      "title": "little pond"
+      "set_title": "Featured Story Set — 1",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
     },
     {
-      "image": "/src/assets/uploads/dsc_0501.jpg",
-      "alt": "Candid portraits highlighting real, raw milestone moments.",
-      "title": "default explanation"
+      "set_title": "Featured Story Set — 2",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
     },
     {
-      "image": "/src/assets/uploads/dsc_0366.jpg",
-      "alt": "Portrait session placeholder.",
-      "title": "default explanation"
+      "set_title": "Featured Story Set — 3",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
     },
     {
-      "image": "/src/assets/uploads/dsc_0451.jpg",
-      "alt": "Outdoor photography placeholder.",
-      "title": "default explanation"
-    },
-    {
-      "image": "/src/assets/uploads/dsc_0469.jpg",
-      "alt": "Natural light portrait placeholder.",
-      "title": "default explanation"
-    },
-    {
-      "image": "/src/assets/uploads/dsc_6767.jpg",
-      "alt": "White Mountains photo shoot placeholder.",
-      "title": "default explanation"
-    },
-    {
-      "image": "/src/assets/uploads/dsc_6559.jpg",
-      "alt": "North Country creative portrait backdrop.",
-      "title": "default explanation"
-    },
-    {
-      "image": "/src/assets/uploads/dsc_6637.jpg",
-      "alt": "Candid session portrait shot.",
-      "title": "default explanation"
-    },
-    {
-      "image": "/src/assets/uploads/dsc_6722.jpg",
-      "alt": "Beautiful natural setting photo shoot.",
-      "title": "default explanation"
-    },
-    {
-      "image": "/src/assets/uploads/dsc_6609-2.jpg",
-      "alt": "New Hampshire mountain portrait landscape.",
-      "title": "default explanation"
-    },
-    {
-      "image": "/src/assets/uploads/dsc_2716.jpg",
-      "alt": "Authentic tailored portrait moments.",
-      "title": "default explanation"
-    },
-    {
-      "image": "/src/assets/uploads/dsc_2673.jpg",
-      "alt": "Heartfelt portrait layout session placeholder.",
-      "title": "default explanation"
-    },
-    {
-      "image": "/src/assets/uploads/dsc_2679.jpg",
-      "title": "photo"
-    },
-    {
-      "image": "/src/assets/uploads/dsc_2750.jpg",
-      "title": "photo 2"
-    },
-    {
-      "image": "/src/assets/uploads/dsc_2705.jpg",
-      "title": "photo 3"
+      "set_title": "Featured Story Set — 4",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
     }
   ]
 }
