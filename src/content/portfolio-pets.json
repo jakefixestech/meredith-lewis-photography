@@ -2,24 +2,36 @@
   "header_eyebrow": "Galleries",
   "header_heading": "Pets",
   "header_intro": "Capturing the unique personalities, soulful eyes, and joyful energy of your four-legged family members. Set against the beautiful fields and trails of New Hampshire.",
-  "gallery": [
-    { "title": "Photo 1", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 2", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 3", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 4", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 5", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 6", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 7", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 8", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 9", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 10", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 11", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 12", "image": "/src/assets/uploads/dsc_5986.jpg" }
+  "story_sets": [
+    {
+      "set_title": "Featured Story Set — 1",
+      "main_feature": "/src/assets/uploads/dsc_5986.jpg",
+      "right_top": "/src/assets/uploads/dsc_5986.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_5986.jpg"
+    },
+    {
+      "set_title": "Featured Story Set — 2",
+      "main_feature": "/src/assets/uploads/dsc_5986.jpg",
+      "right_top": "/src/assets/uploads/dsc_5986.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_5986.jpg"
+    },
+    {
+      "set_title": "Featured Story Set — 3",
+      "main_feature": "/src/assets/uploads/dsc_5986.jpg",
+      "right_top": "/src/assets/uploads/dsc_5986.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_5986.jpg"
+    },
+    {
+      "set_title": "Featured Story Set — 4",
+      "main_feature": "/src/assets/uploads/dsc_5986.jpg",
+      "right_top": "/src/assets/uploads/dsc_5986.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_5986.jpg"
+    }
   ],
   "eol_heading": "End Of Life Sessions",
   "eol_paragraph_1": "Too much this past year, I’ve learned about the heartache in what it means to say goodbye to my two beloved dogs. In a way I feel lucky, to have been able to cherish some of their moments captured by my camera to have and hold close to remember them in the time to come.",
   "eol_paragraph_2": "Our pets aren’t just pets, they become a huge part of our family taking up a warm home in our heart. While they never will have as much time as we hope for, it’s my own hope to capture some of those precious loving moments held still for everyone.",
   "eol_qualify_text": "To qualify for a pay what you can End of Life Session, your dog, cat or horse must have been diagnosed with a terminal illness and live within 30 minutes of Dalton, NH. (Travel outside of this can be arranged for a fee)",
-  "eol_share_text": "It would mean the world to me if you could share this post with your friends. Please send me a message if you or someone you know is interested.",
+  "eol_share_text": "",
   "eol_cta_label": "Send a Message"
 }

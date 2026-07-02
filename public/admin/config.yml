@@ -333,12 +333,15 @@ collections:
           - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
           - { name: "header_heading", label: "Header — Page Title", widget: "string" }
           - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
-          - name: "gallery"
-            label: "Photo Gallery"
+          - name: "story_sets"
+            label: "Featured Story Sets (Groups of 3 Photos)"
             widget: "list"
+            summary: "{{fields.set_title}}"
             fields:
-              - { name: "title", label: "Photo Label Description (e.g. Photo 1)", widget: "string" }
-              - { name: "image", label: "Photo Asset", widget: "image" }
+              - { name: "set_title", label: "Story Section Title (e.g., Backyard Play)", widget: "string" }
+              - { name: "main_feature", label: "1. Main Large Feature Image (Left Side Slot)", widget: "image" }
+              - { name: "right_top", label: "2. Stacked Top Photo (Right Side Slot)", widget: "image" }
+              - { name: "right_bottom", label: "3. Stacked Bottom Photo (Right Side Slot)", widget: "image" }
           # ---------- END OF LIFE SECTION ----------
           - { name: "eol_heading", label: "End Of Life — Heading", widget: "string" }
           - { name: "eol_paragraph_1", label: "End Of Life — Paragraph 1", widget: "text" }
