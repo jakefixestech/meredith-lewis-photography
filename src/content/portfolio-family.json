@@ -1,20 +1,32 @@
 {
   "header_eyebrow": "Galleries",
   "header_heading": "Family Gatherings",
-  "header_intro": "Authentic, chaotic, and beautiful moments capturing the true essence of your family. No stiff posing—just real connections and laughter in the New Hampshire landscape.",
-  "cta_text": "Ready to freeze these precious family moments in time?",
-  "gallery": [
-    { "title": "Photo 1", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 2", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 3", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 4", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 5", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 6", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 7", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 8", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 9", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 10", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 11", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 12", "image": "/src/assets/uploads/dsc_5986.jpg" }
+  "header_intro": "Natural, fun, and unposed family photography sessions in Dalton, Littleton, and across the White Mountains, NH.",
+  "cta_text": "Ready to capture your family's next chapter?",
+  "story_sets": [
+    {
+      "set_title": "Featured Story Set — 1",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
+    },
+    {
+      "set_title": "Featured Story Set — 2",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
+    },
+    {
+      "set_title": "Featured Story Set — 3",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
+    },
+    {
+      "set_title": "Featured Story Set — 4",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
+    }
   ]
 }
