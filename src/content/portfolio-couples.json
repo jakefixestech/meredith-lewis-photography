@@ -1,56 +1,32 @@
 {
   "header_eyebrow": "Galleries",
-  "header_heading": "Couples",
-  "header_intro": "Every couple has a story, and my favorite part is helping you tell yours without making it feel like a cheesy romance movie (unless that's your thing, and I'm totally here for it). My sessions are all about creating a space where you can relax, be yourselves, and enjoy spending time together while I capture the moments that happen in between. You should expect plenty of laughs, a little movement, and photos that feel authentic and full of the connection that makes your relationship unique.",
+  "header_heading": "Couples & Romance",
+  "header_intro": "Intimate, unposed storytelling celebrating your unique connection. From quiet moments to grand adventures in the heart of the White Mountains.",
   "cta_text": "Ready to capture your love story in the mountains?",
-  "gallery": [
+  "story_sets": [
     {
-      "title": "Photo 1",
-      "image": "/src/assets/uploads/dsc_7587.jpg"
+      "set_title": "Featured Story Set — 1",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
     },
     {
-      "title": "Photo 2",
-      "image": "/src/assets/uploads/dsc_7587.jpg"
+      "set_title": "Featured Story Set — 2",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
     },
     {
-      "title": "Photo 3",
-      "image": "/src/assets/uploads/dsc_7587.jpg"
+      "set_title": "Featured Story Set — 3",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
     },
     {
-      "title": "Photo 4",
-      "image": "/src/assets/uploads/dsc_7587.jpg"
-    },
-    {
-      "title": "Photo 5",
-      "image": "/src/assets/uploads/dsc_7587.jpg"
-    },
-    {
-      "title": "Photo 6",
-      "image": "/src/assets/uploads/dsc_7587.jpg"
-    },
-    {
-      "title": "Photo 7",
-      "image": "/src/assets/uploads/dsc_7587.jpg"
-    },
-    {
-      "title": "Photo 8",
-      "image": "/src/assets/uploads/dsc_7587.jpg"
-    },
-    {
-      "title": "Photo 9",
-      "image": "/src/assets/uploads/dsc_7587.jpg"
-    },
-    {
-      "title": "Photo 10",
-      "image": "/src/assets/uploads/dsc_7587.jpg"
-    },
-    {
-      "title": "Photo 11",
-      "image": "/src/assets/uploads/dsc_7587.jpg"
-    },
-    {
-      "title": "Photo 12",
-      "image": "/src/assets/uploads/dsc_7587.jpg"
+      "set_title": "Featured Story Set — 4",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
     }
   ]
 }
