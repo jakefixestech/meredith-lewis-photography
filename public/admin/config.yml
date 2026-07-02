@@ -367,12 +367,15 @@ collections:
           - { name: "cta_box_title", label: "Bottom CTA — Box Title", widget: "string" }
           - { name: "cta_box_text", label: "Bottom CTA — Box Paragraph", widget: "text" }
           - { name: "cta_button_label", label: "Bottom CTA — Button text", widget: "string" }
-          - name: "gallery"
-            label: "Photo Gallery (Upload seasonal photos here)"
+          - name: "story_sets"
+            label: "Featured Story Sets (Groups of 3 Photos)"
             widget: "list"
+            summary: "{{fields.set_title}}"
             fields:
-              - { name: "title", label: "Photo Label Description (e.g. Lupine Mini 1)", widget: "string" }
-              - { name: "image", label: "Photo Asset", widget: "image" }
+              - { name: "set_title", label: "Story Section Title (e.g., Summer Minis)", widget: "string" }
+              - { name: "main_feature", label: "1. Main Large Feature Image (Left Side Slot)", widget: "image" }
+              - { name: "right_top", label: "2. Stacked Top Photo (Right Side Slot)", widget: "image" }
+              - { name: "right_bottom", label: "3. Stacked Bottom Photo (Right Side Slot)", widget: "image" }
 
   - name: "faqs_page"
     label: "FAQs Page"
