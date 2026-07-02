@@ -3,7 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import SmartImage from "../components/SmartImage.astro";
 import content from "../content/portfolio-couples.json";
 
-// Define structured TypeScript types matching our new explicit layout structure
 interface StorySet {
   set_title?: string;
   main_feature: string;
@@ -14,17 +13,16 @@ interface StorySet {
 const rawContent = content as any;
 
 const headerEyebrow = rawContent.header_eyebrow || "Galleries";
-const headerHeading = rawContent.header_heading || "Couples & Romance";
+const headerHeading = rawContent.header_heading || "Couples";
 const headerIntro = rawContent.header_intro || "";
 const ctaText = rawContent.cta_text || "";
 
-// Pull the explicitly structured sets directly from the JSON
 const storySets = (rawContent.story_sets as StorySet[]) || [];
 ---
 
 <Layout
   title={`${headerHeading} Portfolio | Meredith Lewis Photography`}
-  description={headerIntro || "Intimate, natural couples photography and romance sessions in Dalton, Littleton, and the White Mountains, NH. Capturing authentic love stories."}
+  description={headerIntro || "Intimate, natural couples photography and romance sessions in Dalton, Littleton, and the White Mountains, NH."}
   solidNav={true}
 >
   <section class="bg-white px-5 py-20 text-center sm:px-8 sm:py-24 lg:px-12">
@@ -56,42 +54,42 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
             </h2>
           </div>
 
-          <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 w-full items-start">
+          <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:h-[600px] w-full items-stretch">
             
             {/* Left Column: Big Feature Image */}
             {set.main_feature && (
-              <div class="lg:col-span-2 w-full">
+              <div class="lg:col-span-2 h-full w-full">
                 <div 
-                  class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md"
+                  class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md h-full w-full"
                   data-image-src={set.main_feature}
                   data-image-alt={`${set.set_title || 'Story Set'} - Main Feature`}
                   data-index={baseIndex}
                 >
-                  <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900">
+                  <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 h-full w-full">
                     <SmartImage
                       src={set.main_feature}
                       alt={`${set.set_title || 'Story Set'} - Main Feature`}
-                      class="portfolio-img h-auto w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.015]"
+                      class="portfolio-img h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
                     />
                   </div>
                 </div>
               </div>
             )}
 
-            {/* Right Column: Stacked Side Items */}
-            <div class="lg:col-span-1 flex flex-col gap-8 w-full">
+            {/* Right Column: Split Equal-Sized Stacks */}
+            <div class="lg:col-span-1 flex flex-col gap-6 h-full w-full">
               {set.right_top && (
                 <div 
-                  class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md w-full"
+                  class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md flex-1 h-1/2 w-full"
                   data-image-src={set.right_top}
                   data-image-alt={`${set.set_title || 'Story Set'} - Right Top`}
                   data-index={baseIndex + 1}
                 >
-                  <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900">
+                  <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 h-full w-full">
                     <SmartImage
                       src={set.right_top}
                       alt={`${set.set_title || 'Story Set'} - Right Top`}
-                      class="portfolio-img h-auto w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.015]"
+                      class="portfolio-img h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
                     />
                   </div>
                 </div>
@@ -99,16 +97,16 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
 
               {set.right_bottom && (
                 <div 
-                  class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md w-full"
+                  class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md flex-1 h-1/2 w-full"
                   data-image-src={set.right_bottom}
                   data-image-alt={`${set.set_title || 'Story Set'} - Right Bottom`}
                   data-index={baseIndex + 2}
                 >
-                  <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900">
+                  <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 h-full w-full">
                     <SmartImage
                       src={set.right_bottom}
                       alt={`${set.set_title || 'Story Set'} - Right Bottom`}
-                      class="portfolio-img h-auto w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.015]"
+                      class="portfolio-img h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
                     />
                   </div>
                 </div>
@@ -140,49 +138,23 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
 
   <div
     id="lightbox"
-    class="fixed inset-0 z-[100] hidden flex-col items-center justify-center bg-black/95 p-4 opacity-0 transition-opacity duration-300 backdrop-blur-sm select-none animate-none"
+    class="fixed inset-0 z-[100] hidden flex-col items-center justify-center bg-black/95 p-4 opacity-0 transition-opacity duration-300 backdrop-blur-sm select-none"
     role="dialog"
     aria-label="Image viewer"
     aria-hidden="true"
   >
-    <button
-      id="lightbox-close"
-      class="absolute top-6 right-6 z-[110] text-white/70 hover:text-white transition-colors focus:outline-none p-2"
-      aria-label="Close image viewer"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-      </svg>
+    <button id="lightbox-close" class="absolute top-6 right-6 z-[110] text-white/70 hover:text-white p-2" aria-label="Close image viewer">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
     </button>
-
     <div class="relative flex h-full w-full max-w-6xl items-center justify-center px-12">
-      <button
-        id="lightbox-prev"
-        class="absolute left-4 z-[110] hidden sm:flex text-white/50 hover:text-white transition-colors focus:outline-none p-4 rounded-full hover:bg-white/5"
-        aria-label="Previous image"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-8 w-8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-        </svg>
+      <button id="lightbox-prev" class="absolute left-4 z-[110] hidden sm:flex text-white/50 hover:text-white p-4 rounded-full hover:bg-white/5" aria-label="Previous image">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
       </button>
-
       <div class="relative max-h-[85vh] max-w-[90vw] flex items-center justify-center">
-        <img
-          id="lightbox-img"
-          src=""
-          alt=""
-          class="max-h-[85vh] max-w-[90vw] object-contain rounded-sm shadow-2xl pointer-events-none"
-        />
+        <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-[90vw] object-contain rounded-sm shadow-2xl pointer-events-none" />
       </div>
-
-      <button
-        id="lightbox-next"
-        class="absolute right-4 z-[110] hidden sm:flex text-white/50 hover:text-white transition-colors focus:outline-none p-4 rounded-full hover:bg-white/5"
-        aria-label="Next image"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-8 w-8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-        </svg>
+      <button id="lightbox-next" class="absolute right-4 z-[110] hidden sm:flex text-white/50 hover:text-white p-4 rounded-full hover:bg-white/5" aria-label="Next image">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
       </button>
     </div>
   </div>
@@ -215,11 +187,7 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
       lightbox.classList.remove('hidden');
       lightbox.classList.add('flex');
       lightbox.setAttribute('aria-hidden', 'false');
-      
-      setTimeout(() => {
-        lightbox.classList.remove('opacity-0');
-        lightbox.classList.add('opacity-100');
-      }, 10);
+      setTimeout(() => { lightbox.classList.remove('opacity-0'); lightbox.classList.add('opacity-100'); }, 10);
       document.body.style.overflow = 'hidden';
     };
 
@@ -227,48 +195,23 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
       lightbox.classList.remove('opacity-100');
       lightbox.classList.add('opacity-0');
       lightbox.setAttribute('aria-hidden', 'true');
-      
-      setTimeout(() => {
-        lightbox.classList.remove('flex');
-        lightbox.classList.add('hidden');
-      }, 300);
+      setTimeout(() => { lightbox.classList.remove('flex'); lightbox.classList.add('hidden'); }, 300);
       document.body.style.overflow = '';
     };
 
-    const showNext = () => {
-      currentIndex = (currentIndex + 1) % items.length;
-      updateLightboxContent();
-    };
-
-    const showPrev = () => {
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      updateLightboxContent();
-    };
+    const showNext = () => { currentIndex = (currentIndex + 1) % items.length; updateLightboxContent(); };
+    const showPrev = () => { currentIndex = (currentIndex - 1 + items.length) % items.length; updateLightboxContent(); };
 
     const updateLightboxContent = () => {
       const currentWrapper = items[currentIndex] as HTMLElement;
       if (currentWrapper) {
-        const rawSrc = currentWrapper.getAttribute('data-image-src') || '';
-        const rawAlt = currentWrapper.getAttribute('data-image-alt') || '';
-        lightboxImg.src = rawSrc;
-        lightboxImg.alt = rawAlt;
+        lightboxImg.src = currentWrapper.getAttribute('data-image-src') || '';
+        lightboxImg.alt = currentWrapper.getAttribute('data-image-alt') || '';
       }
     };
 
-    const handleGesture = () => {
-      const swipeDistance = touchEndX - touchStartX;
-      if (swipeDistance < -minSwipeDistance) showNext();
-      if (swipeDistance > minSwipeDistance) showPrev();
-    };
-
-    lightbox.addEventListener('touchstart', (e: TouchEvent) => {
-      touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-
-    lightbox.addEventListener('touchend', (e: TouchEvent) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleGesture();
-    }, { passive: true });
+    lightbox.addEventListener('touchstart', (e: TouchEvent) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+    lightbox.addEventListener('touchend', (e: TouchEvent) => { touchEndX = e.changedTouches[0].screenX; const dist = touchEndX - touchStartX; if (dist < -minSwipeDistance) showNext(); if (dist > minSwipeDistance) showPrev(); }, { passive: true });
 
     items.forEach((item, index) => {
       const newItem = item.cloneNode(true);
@@ -279,17 +222,8 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
     closeBtn?.addEventListener('click', closeLightbox);
     nextBtn?.addEventListener('click', showNext);
     prevBtn?.addEventListener('click', showPrev);
-
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (lightbox.classList.contains('hidden')) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowRight') showNext();
-      if (e.key === 'ArrowLeft') showPrev();
-    });
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => { if (lightbox.classList.contains('hidden')) return; if (e.key === 'Escape') closeLightbox(); if (e.key === 'ArrowRight') showNext(); if (e.key === 'ArrowLeft') showPrev(); });
   }
 
   initLightbox();
