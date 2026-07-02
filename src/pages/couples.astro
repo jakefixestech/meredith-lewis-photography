@@ -54,38 +54,38 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
             </h2>
           </div>
 
-          <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:h-[600px] w-full items-stretch">
+          <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 w-full items-start">
             
-            {/* Left Column: Big Feature Image */}
+            {/* Left Column: Big Feature Image (Maintains its native shape perfectly) */}
             {set.main_feature && (
-              <div class="lg:col-span-2 h-full w-full">
+              <div class="lg:col-span-2 w-full">
                 <div 
-                  class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md h-full w-full"
+                  class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md"
                   data-image-src={set.main_feature}
                   data-image-alt={`${set.set_title || 'Story Set'} - Main Feature`}
                   data-index={baseIndex}
                 >
-                  <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 h-full w-full">
+                  <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900">
                     <SmartImage
                       src={set.main_feature}
                       alt={`${set.set_title || 'Story Set'} - Main Feature`}
-                      class="portfolio-img h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
+                      class="portfolio-img h-auto w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.015]"
                     />
                   </div>
                 </div>
               </div>
             )}
 
-            {/* Right Column: Split Equal-Sized Stacks */}
-            <div class="lg:col-span-1 flex flex-col gap-6 h-full w-full">
+            {/* Right Column: Clean, stackable side panel */}
+            <div class="lg:col-span-1 flex flex-col gap-8 w-full">
               {set.right_top && (
                 <div 
-                  class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md flex-1 h-1/2 w-full"
+                  class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md w-full"
                   data-image-src={set.right_top}
                   data-image-alt={`${set.set_title || 'Story Set'} - Right Top`}
                   data-index={baseIndex + 1}
                 >
-                  <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 h-full w-full">
+                  <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 aspect-[3/2]">
                     <SmartImage
                       src={set.right_top}
                       alt={`${set.set_title || 'Story Set'} - Right Top`}
@@ -97,12 +97,12 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
 
               {set.right_bottom && (
                 <div 
-                  class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md flex-1 h-1/2 w-full"
+                  class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md w-full"
                   data-image-src={set.right_bottom}
                   data-image-alt={`${set.set_title || 'Story Set'} - Right Bottom`}
                   data-index={baseIndex + 2}
                 >
-                  <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 h-full w-full">
+                  <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 aspect-[3/2]">
                     <SmartImage
                       src={set.right_bottom}
                       alt={`${set.set_title || 'Story Set'} - Right Bottom`}
@@ -143,19 +143,13 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
     aria-label="Image viewer"
     aria-hidden="true"
   >
-    <button id="lightbox-close" class="absolute top-6 right-6 z-[110] text-white/70 hover:text-white p-2" aria-label="Close image viewer">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
-    </button>
+    <button id="lightbox-close" class="absolute top-6 right-6 z-[110] text-white/70 hover:text-white p-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg></button>
     <div class="relative flex h-full w-full max-w-6xl items-center justify-center px-12">
-      <button id="lightbox-prev" class="absolute left-4 z-[110] hidden sm:flex text-white/50 hover:text-white p-4 rounded-full hover:bg-white/5" aria-label="Previous image">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
-      </button>
+      <button id="lightbox-prev" class="absolute left-4 z-[110] hidden sm:flex text-white/50 hover:text-white p-4 rounded-full hover:bg-white/5"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg></button>
       <div class="relative max-h-[85vh] max-w-[90vw] flex items-center justify-center">
         <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-[90vw] object-contain rounded-sm shadow-2xl pointer-events-none" />
       </div>
-      <button id="lightbox-next" class="absolute right-4 z-[110] hidden sm:flex text-white/50 hover:text-white p-4 rounded-full hover:bg-white/5" aria-label="Next image">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
-      </button>
+      <button id="lightbox-next" class="absolute right-4 z-[110] hidden sm:flex text-white/50 hover:text-white p-4 rounded-full hover:bg-white/5"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-8 w-8"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg></button>
     </div>
   </div>
 </Layout>
@@ -169,9 +163,7 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
     const nextBtn = document.getElementById('lightbox-next');
     
     const items = Array.from(document.querySelectorAll('.portfolio-item')).sort((a, b) => {
-      const idxA = parseInt(a.getAttribute('data-index') || '0', 10);
-      const idxB = parseInt(b.getAttribute('data-index') || '0', 10);
-      return idxA - idxB;
+      return parseInt(a.getAttribute('data-index') || '0', 10) - parseInt(b.getAttribute('data-index') || '0', 10);
     });
 
     if (!lightbox || !lightboxImg || items.length === 0) return;
@@ -179,14 +171,12 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
     let currentIndex = 0;
     let touchStartX = 0;
     let touchEndX = 0;
-    const minSwipeDistance = 50;
 
     const openLightbox = (index: number) => {
       currentIndex = index;
       updateLightboxContent();
       lightbox.classList.remove('hidden');
       lightbox.classList.add('flex');
-      lightbox.setAttribute('aria-hidden', 'false');
       setTimeout(() => { lightbox.classList.remove('opacity-0'); lightbox.classList.add('opacity-100'); }, 10);
       document.body.style.overflow = 'hidden';
     };
@@ -194,7 +184,6 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
     const closeLightbox = () => {
       lightbox.classList.remove('opacity-100');
       lightbox.classList.add('opacity-0');
-      lightbox.setAttribute('aria-hidden', 'true');
       setTimeout(() => { lightbox.classList.remove('flex'); lightbox.classList.add('hidden'); }, 300);
       document.body.style.overflow = '';
     };
@@ -203,15 +192,15 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
     const showPrev = () => { currentIndex = (currentIndex - 1 + items.length) % items.length; updateLightboxContent(); };
 
     const updateLightboxContent = () => {
-      const currentWrapper = items[currentIndex] as HTMLElement;
-      if (currentWrapper) {
-        lightboxImg.src = currentWrapper.getAttribute('data-image-src') || '';
-        lightboxImg.alt = currentWrapper.getAttribute('data-image-alt') || '';
+      const wrapper = items[currentIndex] as HTMLElement;
+      if (wrapper) {
+        lightboxImg.src = wrapper.getAttribute('data-image-src') || '';
+        lightboxImg.alt = wrapper.getAttribute('data-image-alt') || '';
       }
     };
 
     lightbox.addEventListener('touchstart', (e: TouchEvent) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
-    lightbox.addEventListener('touchend', (e: TouchEvent) => { touchEndX = e.changedTouches[0].screenX; const dist = touchEndX - touchStartX; if (dist < -minSwipeDistance) showNext(); if (dist > minSwipeDistance) showPrev(); }, { passive: true });
+    lightbox.addEventListener('touchend', (e: TouchEvent) => { touchEndX = e.changedTouches[0].screenX; const dist = touchEndX - touchStartX; if (dist < -50) showNext(); if (dist > 50) showPrev(); }, { passive: true });
 
     items.forEach((item, index) => {
       const newItem = item.cloneNode(true);
