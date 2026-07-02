@@ -1,20 +1,32 @@
 {
-  "header_eyebrow": "Galleries",
-  "header_heading": "Engagement Sessions",
-  "header_intro": "Bespoke engagement photography tailored to your favorite locations. Let's capture the excitement, romance, and anticipation of your journey toward marriage.",
-  "cta_text": "Ready to document your next chapter together?",
-  "gallery": [
-    { "title": "Photo 1", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 2", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 3", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 4", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 5", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 6", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 7", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 8", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 9", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 10", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 11", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 12", "image": "/src/assets/uploads/dsc_5986.jpg" }
+  "header_eyebrow": "Portfolio",
+  "header_heading": "Engagement",
+  "header_intro": "Adventurous and natural engagement photography sessions in Dalton, Littleton, and across the White Mountains, NH.",
+  "cta_text": "Ready to capture your love story?",
+  "story_sets": [
+    {
+      "set_title": "Featured Story Set — 1",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
+    },
+    {
+      "set_title": "Featured Story Set — 2",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
+    },
+    {
+      "set_title": "Featured Story Set — 3",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
+    },
+    {
+      "set_title": "Featured Story Set — 4",
+      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
+      "right_top": "/src/assets/uploads/dsc_7587.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
+    }
   ]
 }

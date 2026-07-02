@@ -242,12 +242,15 @@ collections:
           - { name: "header_heading", label: "Header — Page Title", widget: "string" }
           - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
           - { name: "cta_text", label: "CTA Box Text", widget: "string" }
-          - name: "gallery"
-            label: "Photo Gallery"
+          - name: "story_sets"
+            label: "Featured Story Sets (Groups of 3 Photos)"
             widget: "list"
+            summary: "{{fields.set_title}}"
             fields:
-              - { name: "title", label: "Photo Label Description (e.g. Photo 1)", widget: "string" }
-              - { name: "image", label: "Photo Asset", widget: "image" }
+              - { name: "set_title", label: "Story Section Title (e.g., Forest Trail Session)", widget: "string" }
+              - { name: "main_feature", label: "1. Main Large Feature Image (Left Side Slot)", widget: "image" }
+              - { name: "right_top", label: "2. Stacked Top Photo (Right Side Slot)", widget: "image" }
+              - { name: "right_bottom", label: "3. Stacked Bottom Photo (Right Side Slot)", widget: "image" }
 
   - name: "portfolio_family"
     label: "Portfolio - Family Gatherings"
