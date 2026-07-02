@@ -6,9 +6,9 @@
   "story_sets": [
     {
       "set_title": "Featured Story Set — 1",
-      "main_feature": "/src/assets/uploads/dsc_7587.jpg",
-      "right_top": "/src/assets/uploads/dsc_7587.jpg",
-      "right_bottom": "/src/assets/uploads/dsc_7587.jpg"
+      "main_feature": "/src/assets/uploads/1.jpg",
+      "right_top": "/src/assets/uploads/2.jpg",
+      "right_bottom": "/src/assets/uploads/3.jpg"
     },
     {
       "set_title": "Featured Story Set — 2",
