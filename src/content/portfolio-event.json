@@ -3,18 +3,30 @@
   "header_heading": "Event Photography",
   "header_intro": "Documenting milestones, corporate gatherings, and intimate celebrations with a documentary storytelling approach. From small details to big emotional highlights, every moment is preserved.",
   "cta_text": "Planning an event? Let's discuss capturing your story.",
-  "gallery": [
-    { "title": "Photo 1", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 2", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 3", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 4", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 5", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 6", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 7", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 8", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 9", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 10", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 11", "image": "/src/assets/uploads/dsc_5986.jpg" },
-    { "title": "Photo 12", "image": "/src/assets/uploads/dsc_5986.jpg" }
+  "story_sets": [
+    {
+      "set_title": "Featured Story Set — 1",
+      "main_feature": "/src/assets/uploads/dsc_5986.jpg",
+      "right_top": "/src/assets/uploads/dsc_5986.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_5986.jpg"
+    },
+    {
+      "set_title": "Featured Story Set — 2",
+      "main_feature": "/src/assets/uploads/dsc_5986.jpg",
+      "right_top": "/src/assets/uploads/dsc_5986.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_5986.jpg"
+    },
+    {
+      "set_title": "Featured Story Set — 3",
+      "main_feature": "/src/assets/uploads/dsc_5986.jpg",
+      "right_top": "/src/assets/uploads/dsc_5986.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_5986.jpg"
+    },
+    {
+      "set_title": "Featured Story Set — 4",
+      "main_feature": "/src/assets/uploads/dsc_5986.jpg",
+      "right_top": "/src/assets/uploads/dsc_5986.jpg",
+      "right_bottom": "/src/assets/uploads/dsc_5986.jpg"
+    }
   ]
 }
