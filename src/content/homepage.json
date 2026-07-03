@@ -3,8 +3,8 @@
   "about_photo": "/src/assets/uploads/screenshot-2026-06-26-at-4.42.35 pm.png",
   "services_footnote": "Add additional people, extended event coverage, additional edited images, edited images on a mailed flash drive, or 48-hour rush delivery to your session anytime. Please contact me for additional pricing!\n\nSeasonal 15 minute mini sessions run throughout the year. Contact me to see what mini's are currently available in the White Mountains! \n\nDon't see your session available? Please reach out for a quote unique to your session!",
   "services_heading": "Sessions for every season of life.",
-  "minis_body_after": "mini sessions seasonally is so important to me. They are no pressure sessions aimed for all families and individuals to have their stories captured no matter the budget. ",
-  "portfolio_blurb": "A naturally vibrant and colorful photographer that captures a blend of candid moments alongside posed portraits to create a timeless gallery. ",
+  "minis_body_after": "mini sessions is so important to me. They are no pressure sessions aimed for all families and individuals to have their stories captured no matter the budget. ",
+  "portfolio_blurb": "I love to call myself a naturally vibrant and colorful photographer that captures a blend of candid moments alongside posed portraits to create a timeless gallery that you'll always want to look back on. ",
   "testimonials_link_href": "/testimonials",
   "minis_eyebrow": "Photography for everyone",
   "services_eyebrow": "Services & Pricing",
@@ -18,7 +18,7 @@
     {
       "title": "Senior Portraits",
       "href": "/senior-portraits",
-      "img": "/src/assets/uploads/dsc_2705.jpg",
+      "img": "/src/assets/uploads/dsc_0501.jpg",
       "alt": "A high school senior standing outdoors among tall grasses during a fall senior portrait session.",
       "span": "md:col-span-2 md:row-span-2",
       "ratio": "aspect-[3/4]"
@@ -26,7 +26,7 @@
     {
       "title": "Couples",
       "href": "/couples",
-      "img": "/src/assets/uploads/dsc_3779.jpg",
+      "img": "/src/assets/uploads/dsc_1725.jpg",
       "alt": "A couple laughing together during a relaxed outdoor photo session.",
       "span": "md:col-span-2",
       "ratio": "aspect-[4/3]"
@@ -42,7 +42,7 @@
     {
       "title": "Family",
       "href": "/family",
-      "img": "/src/assets/uploads/pfamily.avif",
+      "img": "/src/assets/uploads/dsc_7286.jpg",
       "alt": "A mother and father holding their baby in front of golden autumn birch trees backlit by the sun.",
       "span": "md:col-span-2 md:row-span-2",
       "ratio": "aspect-[3/4]"
@@ -50,7 +50,7 @@
     {
       "title": "Maternity",
       "href": "/maternity",
-      "img": "/src/assets/uploads/dsc_4547.jpg",
+      "img": "/src/assets/uploads/dsc_4539.jpg",
       "alt": "An expectant couple standing in a sunlit field, holding up a strip of black-and-white ultrasound photos.",
       "span": "md:col-span-2",
       "ratio": "aspect-[4/3]"
@@ -58,7 +58,7 @@
     {
       "title": "Pet Photography",
       "href": "/pet-photography",
-      "img": "/src/assets/uploads/photo-mar-16-2022-3-28-14-pm.jpg",
+      "img": "/src/assets/uploads/dsc_6198.jpg",
       "alt": "A close-up portrait of a chocolate Labrador's face, with warm light catching its eye.",
       "span": "md:col-span-2",
       "ratio": "aspect-[4/3]"
@@ -66,7 +66,7 @@
     {
       "title": "Events & Parties",
       "href": "/events",
-      "img": "/src/assets/uploads/pevents.avif",
+      "img": "/src/assets/uploads/dsc_8625.jpg",
       "alt": "A soccer player in a number 3 jersey raising an arm on the field under the lights at dusk.",
       "span": "md:col-span-4",
       "ratio": "aspect-[16/7]"
@@ -113,11 +113,12 @@
   "cta_image_alt": "A loon stretching its wings on a calm lake, water droplets falling from its feathers.",
   "cta_button_label": "Get in Touch",
   "minis_body_emphasis": "“Pay What You Can”",
-  "testimonials_heading": "From the people I've worked with.",
+  "testimonials_heading": "From the people I've photographed.",
   "about_paragraphs": [
-    "I'm a New Hampshire based photographer rooted in the picturesque White Mountains. My passion behind the camera is capturing candid, meaningful moments that feel genuine, the real, raw emotion of your story.",
-    "Whether it's a quiet in-between glance or a big joyful milestone, my goal is to tell your story in a way that feels true to you, all while keeping my photography approachable and affordable.",
-    "I believe everyone deserves the chance to have their photos taken and I hope you'll give me that chance. Welcome to my website, and to the place I'm lucky to call home."
+    "I'm a New Hampshire based photographer rooted in the picturesque White Mountains. My passion behind the camera is capturing candid, meaningful moments that feel real, and capture the genuine emotion of your story.",
+    "Whether it's updated photos or a big joyful milestone, my goal is to tell your story in a way that feels true to you while keeping my photography approachable and affordable.",
+    "I believe everyone deserves the chance to have their photos taken and I hope you'll give me that chance. Welcome to my website, and to the place I'm lucky to call home!",
+    "-Meredith "
   ],
   "about_eyebrow": "Hello & welcome",
   "minis_body_before": "I believe the moments that matter most shouldn't be out of reach. That's why hosting",
