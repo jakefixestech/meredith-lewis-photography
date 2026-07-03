@@ -42,7 +42,7 @@
     {
       "title": "Family",
       "href": "/family",
-      "img": "/src/assets/uploads/dsc_7286.jpg",
+      "img": "/src/assets/uploads/dsc_6063.jpg",
       "alt": "A mother and father holding their baby in front of golden autumn birch trees backlit by the sun.",
       "span": "md:col-span-2 md:row-span-2",
       "ratio": "aspect-[3/4]"
@@ -58,7 +58,7 @@
     {
       "title": "Pet Photography",
       "href": "/pet-photography",
-      "img": "/src/assets/uploads/dsc_6198.jpg",
+      "img": "/src/assets/uploads/dsc_0264.jpg",
       "alt": "A close-up portrait of a chocolate Labrador's face, with warm light catching its eye.",
       "span": "md:col-span-2",
       "ratio": "aspect-[4/3]"
@@ -66,7 +66,7 @@
     {
       "title": "Events & Parties",
       "href": "/events",
-      "img": "/src/assets/uploads/dsc_8625.jpg",
+      "img": "/src/assets/uploads/dsc_8534.jpg",
       "alt": "A soccer player in a number 3 jersey raising an arm on the field under the lights at dusk.",
       "span": "md:col-span-4",
       "ratio": "aspect-[16/7]"
