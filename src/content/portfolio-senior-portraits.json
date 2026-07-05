@@ -7,34 +7,36 @@
     {
       "set_title": "Featured Session — 1",
       "images": [
-        { "img_src": "/src/assets/uploads/dsc_2705.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_2673.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_2750.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_6767.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_6722.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_6637.jpg" }
+        "/src/assets/uploads/dsc_0360.jpg",
+        "/src/assets/uploads/dsc_0451.jpg",
+        "/src/assets/uploads/dsc_0469.jpg",
+        "/src/assets/uploads/dsc_0501.jpg",
+        "/src/assets/uploads/psenior.avif",
+        "/src/assets/uploads/dsc_0366.jpg"
       ]
     },
     {
       "set_title": "Featured Session — 2",
       "images": [
-        { "img_src": "/src/assets/uploads/dsc_0501.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_0360.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_0469.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_2705.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_2673.jpg" }
+        "/src/assets/uploads/dsc_2673.jpg",
+        "/src/assets/uploads/dsc_2679.jpg",
+        "/src/assets/uploads/dsc_2705.jpg",
+        "/src/assets/uploads/dsc_2716.jpg",
+        "/src/assets/uploads/dsc_2750.jpg",
+        "/src/assets/uploads/senior.jpg"
       ]
     },
     {
       "set_title": "Featured Session — 3",
       "images": [
-        { "img_src": "/src/assets/uploads/dsc_6767.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_6722.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_6637.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_0501.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_0360.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_0469.jpg" }
+        "/src/assets/uploads/dsc_6559.jpg",
+        "/src/assets/uploads/dsc_6609-2.jpg",
+        {
+          "img_src": "/src/assets/uploads/dsc_6637.jpg"
+        },
+        "/src/assets/uploads/dsc_6722.jpg",
+        "/src/assets/uploads/dsc_6767.jpg",
+        "/src/assets/uploads/dsc_6772.jpg"
       ]
     }
   ]
