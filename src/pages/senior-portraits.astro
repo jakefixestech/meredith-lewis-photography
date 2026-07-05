@@ -78,7 +78,6 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
                   <div class="flex-none w-[82vw] sm:w-[45vw] md:w-[31vw] lg:w-[23.5vw] snap-start">
                     <div 
                       class="portfolio-item h-full overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md"
-                      data-image-src={imgObj.img_src}
                       data-image-alt={`${set.set_title || 'Session'} - Gallery Image`}
                       data-index={imgIndex}
                     >
@@ -202,15 +201,19 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
     const updateLightboxContent = () => {
       const wrapper = activeItems[currentIndex];
       if (wrapper) {
-        lightboxImg.src = wrapper.getAttribute('data-image-src') || '';
-        lightboxImg.alt = wrapper.getAttribute('data-image-alt') || '';
+        // Safe check to load directly from the compiled live HTML image asset source
+        const realImg = wrapper.querySelector('img') as HTMLImageElement;
+        if (realImg) {
+          lightboxImg.src = realImg.src;
+          lightboxImg.alt = wrapper.getAttribute('data-image-alt') || '';
+        }
       }
     };
 
     lightbox.addEventListener('touchstart', (e: TouchEvent) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
     lightbox.addEventListener('touchend', (e: TouchEvent) => { touchEndX = e.changedTouches[0].screenX; const dist = touchEndX - touchStartX; if (dist < -50) showNext(); if (dist > 50) showPrev(); }, { passive: true });
 
-    // Scope click handlers strictly to their session section container rows
+    // Isolate triggers by row containers
     const sessions = document.querySelectorAll('.session-container');
     sessions.forEach(session => {
       const items = Array.from(session.querySelectorAll('.portfolio-item')).sort((a, b) => {
@@ -229,7 +232,6 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
     lightPrevBtn?.addEventListener('click', showPrev);
     lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
     
-    // Keydown handler that checks if lightbox is currently opened
     const handleKeyDown = (e: KeyboardEvent) => {
       if (lightbox.classList.contains('hidden')) return;
       if (e.key === 'Escape') closeLightbox();
