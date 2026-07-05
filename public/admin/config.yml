@@ -197,14 +197,15 @@ collections:
           - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
           - { name: "cta_text", label: "CTA Box Text", widget: "string" }
           - name: "story_sets"
-            label: "Featured Story Sets (Groups of 3 Photos)"
+            label: "Featured Sessions (3 Sessions of 6 Images)"
             widget: "list"
             summary: "{{fields.set_title}}"
             fields:
-              - { name: "set_title", label: "Story Section Title (e.g., Downtown Session)", widget: "string" }
-              - { name: "main_feature", label: "1. Main Large Feature Image (Left Side Slot)", widget: "image" }
-              - { name: "right_top", label: "2. Stacked Top Photo (Right Side Slot)", widget: "image" }
-              - { name: "right_bottom", label: "3. Stacked Bottom Photo (Right Side Slot)", widget: "image" }
+              - { name: "set_title", label: "Session Title (e.g., Downtown Session)", widget: "string" }
+              - name: "images"
+                label: "Session Images (Up to 6)"
+                widget: "list"
+                field: { name: "img_src", label: "Image File", widget: "image" }
 
   - name: "portfolio_couples"
     label: "Portfolio - Couples"
@@ -220,14 +221,15 @@ collections:
           - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
           - { name: "cta_text", label: "CTA Box Text", widget: "string" }
           - name: "story_sets"
-            label: "Featured Story Sets (Groups of 3 Photos)"
+            label: "Featured Sessions (3 Sessions of 6 Images)"
             widget: "list"
             summary: "{{fields.set_title}}"
             fields:
-              - { name: "set_title", label: "Story Section Title (e.g., Mountain Adventure)", widget: "string" }
-              - { name: "main_feature", label: "1. Main Large Feature Image (Left Side Slot)", widget: "image" }
-              - { name: "right_top", label: "2. Stacked Top Photo (Right Side Slot)", widget: "image" }
-              - { name: "right_bottom", label: "3. Stacked Bottom Photo (Right Side Slot)", widget: "image" }
+              - { name: "set_title", label: "Session Title", widget: "string" }
+              - name: "images"
+                label: "Session Images (Up to 6)"
+                widget: "list"
+                field: { name: "img_src", label: "Image File", widget: "image" }
 
   - name: "portfolio_engagement"
     label: "Portfolio - Engagement"
@@ -243,14 +245,15 @@ collections:
           - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
           - { name: "cta_text", label: "CTA Box Text", widget: "string" }
           - name: "story_sets"
-            label: "Featured Story Sets (Groups of 3 Photos)"
+            label: "Featured Sessions (3 Sessions of 6 Images)"
             widget: "list"
             summary: "{{fields.set_title}}"
             fields:
-              - { name: "set_title", label: "Story Section Title (e.g., Forest Trail Session)", widget: "string" }
-              - { name: "main_feature", label: "1. Main Large Feature Image (Left Side Slot)", widget: "image" }
-              - { name: "right_top", label: "2. Stacked Top Photo (Right Side Slot)", widget: "image" }
-              - { name: "right_bottom", label: "3. Stacked Bottom Photo (Right Side Slot)", widget: "image" }
+              - { name: "set_title", label: "Session Title", widget: "string" }
+              - name: "images"
+                label: "Session Images (Up to 6)"
+                widget: "list"
+                field: { name: "img_src", label: "Image File", widget: "image" }
 
   - name: "portfolio_family"
     label: "Portfolio - Family Gatherings"
@@ -266,14 +269,15 @@ collections:
           - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
           - { name: "cta_text", label: "CTA Box Text", widget: "string" }
           - name: "story_sets"
-            label: "Featured Story Sets (Groups of 3 Photos)"
+            label: "Featured Sessions (3 Sessions of 6 Images)"
             widget: "list"
             summary: "{{fields.set_title}}"
             fields:
-              - { name: "set_title", label: "Story Section Title (e.g., Riverside Gathering)", widget: "string" }
-              - { name: "main_feature", label: "1. Main Large Feature Image (Left Side Slot)", widget: "image" }
-              - { name: "right_top", label: "2. Stacked Top Photo (Right Side Slot)", widget: "image" }
-              - { name: "right_bottom", label: "3. Stacked Bottom Photo (Right Side Slot)", widget: "image" }
+              - { name: "set_title", label: "Session Title", widget: "string" }
+              - name: "images"
+                label: "Session Images (Up to 6)"
+                widget: "list"
+                field: { name: "img_src", label: "Image File", widget: "image" }
 
   - name: "portfolio_maternity"
     label: "Portfolio - Maternity"
@@ -289,14 +293,15 @@ collections:
           - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
           - { name: "cta_text", label: "CTA Box Text", widget: "string" }
           - name: "story_sets"
-            label: "Featured Story Sets (Groups of 3 Photos)"
+            label: "Featured Sessions (3 Sessions of 6 Images)"
             widget: "list"
             summary: "{{fields.set_title}}"
             fields:
-              - { name: "set_title", label: "Story Section Title (e.g., Meadow Sunset)", widget: "string" }
-              - { name: "main_feature", label: "1. Main Large Feature Image (Left Side Slot)", widget: "image" }
-              - { name: "right_top", label: "2. Stacked Top Photo (Right Side Slot)", widget: "image" }
-              - { name: "right_bottom", label: "3. Stacked Bottom Photo (Right Side Slot)", widget: "image" }
+              - { name: "set_title", label: "Session Title", widget: "string" }
+              - name: "images"
+                label: "Session Images (Up to 6)"
+                widget: "list"
+                field: { name: "img_src", label: "Image File", widget: "image" }
 
   - name: "portfolio_event"
     label: "Portfolio - Event"
@@ -312,14 +317,15 @@ collections:
           - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
           - { name: "cta_text", label: "CTA Box Text", widget: "string" }
           - name: "story_sets"
-            label: "Featured Story Sets (Groups of 3 Photos)"
+            label: "Featured Sessions (3 Sessions of 6 Images)"
             widget: "list"
             summary: "{{fields.set_title}}"
             fields:
-              - { name: "set_title", label: "Story Section Title (e.g., Celebration Gathering)", widget: "string" }
-              - { name: "main_feature", label: "1. Main Large Feature Image (Left Side Slot)", widget: "image" }
-              - { name: "right_top", label: "2. Stacked Top Photo (Right Side Slot)", widget: "image" }
-              - { name: "right_bottom", label: "3. Stacked Bottom Photo (Right Side Slot)", widget: "image" }
+              - { name: "set_title", label: "Session Title", widget: "string" }
+              - name: "images"
+                label: "Session Images (Up to 6)"
+                widget: "list"
+                field: { name: "img_src", label: "Image File", widget: "image" }
 
   - name: "portfolio_pets"
     label: "Portfolio - Pets"
@@ -334,14 +340,15 @@ collections:
           - { name: "header_heading", label: "Header — Page Title", widget: "string" }
           - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
           - name: "story_sets"
-            label: "Featured Story Sets (Groups of 3 Photos)"
+            label: "Featured Sessions (3 Sessions of 6 Images)"
             widget: "list"
             summary: "{{fields.set_title}}"
             fields:
-              - { name: "set_title", label: "Story Section Title (e.g., Backyard Play)", widget: "string" }
-              - { name: "main_feature", label: "1. Main Large Feature Image (Left Side Slot)", widget: "image" }
-              - { name: "right_top", label: "2. Stacked Top Photo (Right Side Slot)", widget: "image" }
-              - { name: "right_bottom", label: "3. Stacked Bottom Photo (Right Side Slot)", widget: "image" }
+              - { name: "set_title", label: "Session Title", widget: "string" }
+              - name: "images"
+                label: "Session Images (Up to 6)"
+                widget: "list"
+                field: { name: "img_src", label: "Image File", widget: "image" }
           # ---------- END OF LIFE SECTION ----------
           - { name: "eol_heading", label: "End Of Life — Heading", widget: "string" }
           - { name: "eol_paragraph_1", label: "End Of Life — Paragraph 1", widget: "text" }
@@ -368,14 +375,15 @@ collections:
           - { name: "cta_box_text", label: "Bottom CTA — Box Paragraph", widget: "text" }
           - { name: "cta_button_label", label: "Bottom CTA — Button text", widget: "string" }
           - name: "story_sets"
-            label: "Featured Story Sets (Groups of 3 Photos)"
+            label: "Featured Sessions (3 Sessions of 6 Images)"
             widget: "list"
             summary: "{{fields.set_title}}"
             fields:
-              - { name: "set_title", label: "Story Section Title (e.g., Summer Minis)", widget: "string" }
-              - { name: "main_feature", label: "1. Main Large Feature Image (Left Side Slot)", widget: "image" }
-              - { name: "right_top", label: "2. Stacked Top Photo (Right Side Slot)", widget: "image" }
-              - { name: "right_bottom", label: "3. Stacked Bottom Photo (Right Side Slot)", widget: "image" }
+              - { name: "set_title", label: "Session Title", widget: "string" }
+              - name: "images"
+                label: "Session Images (Up to 6)"
+                widget: "list"
+                field: { name: "img_src", label: "Image File", widget: "image" }
 
   - name: "faqs_page"
     label: "FAQs Page"
