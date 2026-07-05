@@ -35,9 +35,7 @@
     {
       "set_title": "Featured Session — 3",
       "images": [
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
+        "/src/assets/uploads/dsc_1725.jpg",
         {
           "img_src": "/src/assets/uploads/dsc_7587.jpg"
         },
