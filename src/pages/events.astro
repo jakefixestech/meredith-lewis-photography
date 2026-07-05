@@ -3,29 +3,39 @@ import Layout from "../layouts/Layout.astro";
 import SmartImage from "../components/SmartImage.astro";
 import content from "../content/portfolio-event.json";
 
-interface StorySet {
+interface SessionItem {
   set_title?: string;
-  main_feature: string;
-  right_top: string;
-  right_bottom: string;
+  images: Array<{ img_src: string }>;
 }
 
 const rawContent = content as any;
 
-// Keeps whatever text Meredith wrote, falling back only if completely empty
 const headerEyebrow = rawContent.header_eyebrow || "Galleries";
 const headerHeading = rawContent.header_heading || "Events";
-const headerIntro = rawContent.header_intro || "Professional event photography for celebrations, milestones, and corporate gatherings across the White Mountains, NH.";
-const ctaText = rawContent.cta_text || "Ready to document your next event?";
+const headerIntro = rawContent.header_intro || "";
 
-const storySets = (rawContent.story_sets as StorySet[]) || [];
+// Exact original fallback variable mapping to the JSON text field
+const ctaText = rawContent.cta_text || "Planning an event? Let's chat!";
+
+const storySets = (rawContent.story_sets as SessionItem[]) || [];
 ---
 
 <Layout
   title={`${headerHeading} Portfolio | Meredith Lewis Photography`}
-  description={headerIntro}
+  description={headerIntro || "Professional event photography for celebrations, milestones, and corporate gatherings across the White Mountains, NH."}
   solidNav={true}
 >
+  <style is:global>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+  {/* Header Section */}
   <section class="bg-white px-5 py-20 text-center sm:px-8 sm:py-24 lg:px-12">
     <div class="mx-auto max-w-3xl">
       <span class="text-xs font-medium uppercase tracking-[0.2em] text-neutral-400">
@@ -41,128 +51,90 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
     </div>
   </section>
 
-  {storySets.length > 0 ? (
-    storySets.map((set, rowIndex) => {
-      const isEvenRow = rowIndex % 2 === 0;
-      const baseIndex = rowIndex * 3;
-      
-      return (
-        <section class={`w-full py-20 px-5 sm:px-8 lg:px-12 border-t border-neutral-100 ${isEvenRow ? 'bg-stone-50/40' : 'bg-white'}`}>
-          <div class="mx-auto max-w-7xl">
+  {/* Slider Sessions */}
+  {storySets.map((set, rowIndex) => {
+    const isEvenRow = rowIndex % 2 === 0;
+    
+    return (
+      <section class={`session-container w-full py-16 px-5 sm:px-8 lg:px-12 border-t border-neutral-100 ${isEvenRow ? 'bg-stone-50/40' : 'bg-white'}`}>
+        <div class="mx-auto max-w-7xl">
+          
+          <div class="mb-8 border-b pb-3 border-neutral-200 max-w-xs">
+            <h2 class="text-sm font-sans font-semibold uppercase tracking-[0.15em] text-neutral-800 sm:text-base">
+              {set.set_title || `Featured Session — ${rowIndex + 1}`}
+            </h2>
+          </div>
+
+          <div class="group/slider relative w-full px-0 md:px-4">
             
-            <div class="mb-10 border-b pb-4 border-neutral-300 max-w-xs">
-              <h2 class="text-sm font-sans font-semibold uppercase tracking-[0.15em] text-neutral-800 sm:text-base">
-                {set.set_title || `Featured Story Set — ${rowIndex + 1}`}
-              </h2>
+            <button 
+              class="slider-arrow-prev absolute left-0 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-neutral-200 bg-white/90 p-3 text-neutral-700 shadow-sm transition-all duration-200 hover:bg-neutral-900 hover:text-white md:flex opacity-0 group-hover/slider:opacity-100 backdrop-blur-sm"
+              aria-label="Scroll left"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="h-5 w-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+
+            <div class="slider-track no-scrollbar flex gap-6 overflow-x-auto pb-2 snap-x snap-mandatory scroll-smooth items-stretch">
+              {set.images && set.images.map((imgObj, imgIndex) => {
+                return (
+                  <div class="flex-none w-[82vw] sm:w-[45vw] md:w-[31vw] lg:w-[23.5vw] snap-start">
+                    <div 
+                      class="portfolio-item h-full overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md"
+                      data-image-alt={`${set.set_title || 'Session'} - Gallery Image`}
+                      data-index={imgIndex}
+                    >
+                      <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 aspect-[2/3] w-full h-full flex items-center">
+                        <SmartImage
+                          src={imgObj.img_src}
+                          alt={`${set.set_title || 'Session'} - Gallery Image`}
+                          class="portfolio-img h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-
-            <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 w-full items-start">
-              
-              {/* Left Column: Big Feature Image */}
-              {set.main_feature && (
-                <div class="lg:col-span-2 w-full">
-                  <div 
-                    class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md"
-                    data-image-src={set.main_feature}
-                    data-image-alt={`${set.set_title || 'Story Set'} - Main Feature`}
-                    data-index={baseIndex}
-                  >
-                    <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900">
-                      <SmartImage
-                        src={set.main_feature}
-                        alt={`${set.set_title || 'Story Set'} - Main Feature`}
-                        class="portfolio-img h-auto w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.015]"
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Right Column: Stackable side panels */}
-              <div class="lg:col-span-1 flex flex-col gap-8 w-full">
-                {set.right_top && (
-                  <div 
-                    class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md w-full"
-                    data-image-src={set.right_top}
-                    data-image-alt={`${set.set_title || 'Story Set'} - Right Top`}
-                    data-index={baseIndex + 1}
-                  >
-                    <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 aspect-[3/2]">
-                      <SmartImage
-                        src={set.right_top}
-                        alt={`${set.set_title || 'Story Set'} - Right Top`}
-                        class="portfolio-img h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
-                      />
-                    </div>
-                  </div>
-                )}
-
-                {set.right_bottom && (
-                  <div 
-                    class="portfolio-item overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md w-full"
-                    data-image-src={set.right_bottom}
-                    data-image-alt={`${set.set_title || 'Story Set'} - Right Bottom`}
-                    data-index={baseIndex + 2}
-                  >
-                    <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 aspect-[3/2]">
-                      <SmartImage
-                        src={set.right_bottom}
-                        alt={`${set.set_title || 'Story Set'} - Right Bottom`}
-                        class="portfolio-img h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
-                      />
-                    </div>
-                  </div>
-                )}
-              </div>
-
+            
+            <button 
+              class="slider-arrow-next absolute right-0 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-neutral-200 bg-white/90 p-3 text-neutral-700 shadow-sm transition-all duration-200 hover:bg-neutral-900 hover:text-white md:flex opacity-0 group-hover/slider:opacity-100 backdrop-blur-sm"
+              aria-label="Scroll right"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="h-5 w-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+            
+            <div class="pointer-events-none mt-2 flex justify-end text-[10px] uppercase tracking-widest text-neutral-400 sm:hidden">
+              Swipe to explore ➔
             </div>
+          </div>
 
-          </div>
-        </section>
-      );
-    })
-  ) : (
-    /* Handles existing old configuration objects safely without crashing */
-    rawContent.gallery && rawContent.gallery.length > 0 && (
-      <section class="bg-white px-5 pb-24 sm:px-8 lg:px-12">
-        <div class="mx-auto max-w-8xl">
-          <div class="columns-1 gap-5 sm:columns-2 lg:columns-3 [&>div]:mb-5">
-            {rawContent.gallery.map((item: any, index: number) => (
-              <div 
-                class="portfolio-item break-inside-avoid overflow-hidden rounded-sm bg-neutral-100 transition-transform duration-300 hover:scale-[1.01] cursor-pointer"
-                data-image-src={item.image}
-                data-image-alt={item.title || "Event Photo"}
-                data-index={index}
-              >
-                <SmartImage
-                  src={item.image}
-                  alt={item.title || "Event Photo"}
-                  class="portfolio-img h-auto w-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
         </div>
       </section>
-    )
-  )}
+    );
+  })}
 
-  <section class="bg-neutral-950 px-5 py-20 text-center text-white sm:px-8 lg:px-12">
-    <div class="mx-auto max-w-3xl">
-      <h2 class="font-serif text-2xl font-light tracking-wide text-neutral-100 sm:text-3xl">
+  {/* Solid Black Background Bottom Callout Section with Original Text */}
+  <section class="bg-neutral-950 px-5 py-24 text-center text-white sm:px-8 lg:px-12">
+    <div class="mx-auto max-w-2xl">
+      <h2 class="font-serif text-3xl font-medium tracking-tight sm:text-4xl">
         {ctaText}
       </h2>
-      <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-        <a href="/contact" class="inline-block rounded-full bg-white px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-neutral-900 transition-colors hover:bg-neutral-200">
-          Get in Touch
-        </a>
-        <a href="https://meredithlewisphotography.pixieset.com/booking/" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full border border-neutral-700 bg-transparent px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-neutral-200 transition-colors hover:bg-white hover:text-neutral-900">
-          Book Online
+      <div class="mt-10">
+        <a 
+          href="/contact" 
+          class="inline-block rounded-full bg-white px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-neutral-950 transition-colors hover:bg-neutral-200 shadow-sm"
+        >
+          Let's Chat
         </a>
       </div>
     </div>
   </section>
 
+  {/* Lightbox Module */}
   <div
     id="lightbox"
     class="fixed inset-0 z-[100] hidden flex-col items-center justify-center bg-black/95 p-4 opacity-0 transition-opacity duration-300 backdrop-blur-sm select-none"
@@ -182,24 +154,36 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
 </Layout>
 
 <script>
-  function initLightbox() {
+  function initGalleryControls() {
+    const arrowContainers = document.querySelectorAll('.group\\/slider');
+    arrowContainers.forEach(container => {
+      const track = container.querySelector('.slider-track');
+      const prevBtn = container.querySelector('.slider-arrow-prev');
+      const nextBtn = container.querySelector('.slider-arrow-next');
+      if (!track || !prevBtn || !nextBtn) return;
+
+      const getScrollAmount = () => {
+        const firstItem = track.querySelector('.flex-none');
+        return firstItem ? firstItem.clientWidth + 24 : track.clientWidth * 0.75;
+      };
+      nextBtn.addEventListener('click', () => { track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' }); });
+      prevBtn.addEventListener('click', () => { track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' }); });
+    });
+
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
     const closeBtn = document.getElementById('lightbox-close');
-    const prevBtn = document.getElementById('lightbox-prev');
-    const nextBtn = document.getElementById('lightbox-next');
-    
-    const items = Array.from(document.querySelectorAll('.portfolio-item')).sort((a, b) => {
-      return parseInt(a.getAttribute('data-index') || '0', 10) - parseInt(b.getAttribute('data-index') || '0', 10);
-    });
+    const lightPrevBtn = document.getElementById('lightbox-prev');
+    const lightNextBtn = document.getElementById('lightbox-next');
+    if (!lightbox || !lightboxImg) return;
 
-    if (!lightbox || !lightboxImg || items.length === 0) return;
-
+    let activeItems: HTMLElement[] = [];
     let currentIndex = 0;
     let touchStartX = 0;
     let touchEndX = 0;
 
-    const openLightbox = (index: number) => {
+    const openLightbox = (itemsInSession: HTMLElement[], index: number) => {
+      activeItems = itemsInSession;
       currentIndex = index;
       updateLightboxContent();
       lightbox.classList.remove('hidden');
@@ -215,33 +199,51 @@ const storySets = (rawContent.story_sets as StorySet[]) || [];
       document.body.style.overflow = '';
     };
 
-    const showNext = () => { currentIndex = (currentIndex + 1) % items.length; updateLightboxContent(); };
-    const showPrev = () => { currentIndex = (currentIndex - 1 + items.length) % items.length; updateLightboxContent(); };
+    const showNext = () => { if (activeItems.length === 0) return; currentIndex = (currentIndex + 1) % activeItems.length; updateLightboxContent(); };
+    const showPrev = () => { if (activeItems.length === 0) return; currentIndex = (currentIndex - 1 + activeItems.length) % activeItems.length; updateLightboxContent(); };
 
     const updateLightboxContent = () => {
-      const wrapper = items[currentIndex] as HTMLElement;
+      const wrapper = activeItems[currentIndex];
       if (wrapper) {
-        lightboxImg.src = wrapper.getAttribute('data-image-src') || '';
-        lightboxImg.alt = wrapper.getAttribute('data-image-alt') || '';
+        const realImg = wrapper.querySelector('img') as HTMLImageElement;
+        if (realImg) {
+          lightboxImg.src = realImg.src;
+          lightboxImg.alt = wrapper.getAttribute('data-image-alt') || '';
+        }
       }
     };
 
     lightbox.addEventListener('touchstart', (e: TouchEvent) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
     lightbox.addEventListener('touchend', (e: TouchEvent) => { touchEndX = e.changedTouches[0].screenX; const dist = touchEndX - touchStartX; if (dist < -50) showNext(); if (dist > 50) showPrev(); }, { passive: true });
 
-    items.forEach((item, index) => {
-      const newItem = item.cloneNode(true);
-      item.parentNode?.replaceChild(newItem, item);
-      newItem.addEventListener('click', () => openLightbox(index));
+    const sessions = document.querySelectorAll('.session-container');
+    sessions.forEach(session => {
+      const items = Array.from(session.querySelectorAll('.portfolio-item')).sort((a, b) => {
+        return parseInt(a.getAttribute('data-index') || '0', 10) - parseInt(b.getAttribute('data-index') || '0', 10);
+      }) as HTMLElement[];
+
+      items.forEach((item, index) => {
+        const newItem = item.cloneNode(true);
+        item.parentNode?.replaceChild(newItem, item);
+        newItem.addEventListener('click', () => openLightbox(items, index));
+      });
     });
 
     closeBtn?.addEventListener('click', closeLightbox);
-    nextBtn?.addEventListener('click', showNext);
-    prevBtn?.addEventListener('click', showPrev);
+    lightNextBtn?.addEventListener('click', showNext);
+    lightPrevBtn?.addEventListener('click', showPrev);
     lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', (e) => { if (lightbox.classList.contains('hidden')) return; if (e.key === 'Escape') closeLightbox(); if (e.key === 'ArrowRight') showNext(); if (e.key === 'ArrowLeft') showPrev(); });
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (lightbox.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'ArrowLeft') showPrev();
+    };
+    document.removeEventListener('keydown', handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown);
   }
 
-  initLightbox();
-  document.addEventListener('astro:page-load', initLightbox);
+  initGalleryControls();
+  document.addEventListener('astro:page-load', initGalleryControls);
 </script>

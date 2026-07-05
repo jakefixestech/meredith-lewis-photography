@@ -1,36 +1,45 @@
 {
   "hero_bg_image": "/src/assets/uploads/dsc_6933.jpg",
-  "cta_box_text": "Seasonal Pay What You Can Mini's don't happen often, but when they do, their spots sell out quickly! Get in touch with me to be the first to know about the next time minis are available.",
-  "header_heading": "Pay What You Can Minis ",
   "hero_bg_alt": "Beautiful field of purple lupine flowers blooming in the White Mountains of New Hampshire",
-  "cta_box_title": "Want to be the first to know when to secure a spot for the next round of minis?",
-  "cta_button_label": "Inquire About Minis Here",
   "header_eyebrow": "Limited Seasonal Sessions",
+  "header_heading": "Pay What You Can Minis ",
   "header_intro": "Captured in 15 minute increments these limited edition sessions celebrate the changing seasons of New Hampshire. These sessions are specifically pay what you can, allowing everyone the opportunity to have professional images in their home. ",
+  "cta_box_title": "Want to be the first to know when to secure a spot for the next round of minis?",
+  "cta_box_text": "Seasonal Pay What You Can Mini's don't happen often, but when they do, their spots sell out quickly! Get in touch with me to be the first to know about the next time minis are available.",
+  "cta_button_label": "Inquire About Minis Here",
   "story_sets": [
     {
-      "set_title": "Featured Story Set — 1",
-      "main_feature": "/src/assets/uploads/dsc_0888.jpg",
-      "right_top": "/src/assets/uploads/dsc_0888.jpg",
-      "right_bottom": "/src/assets/uploads/dsc_0888.jpg"
+      "set_title": "Featured Session — 1",
+      "images": [
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" }
+      ]
     },
     {
-      "set_title": "Featured Story Set — 2",
-      "main_feature": "/src/assets/uploads/dsc_0888.jpg",
-      "right_top": "/src/assets/uploads/dsc_0888.jpg",
-      "right_bottom": "/src/assets/uploads/dsc_0888.jpg"
+      "set_title": "Featured Session — 2",
+      "images": [
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" }
+      ]
     },
     {
-      "set_title": "Featured Story Set — 3",
-      "main_feature": "/src/assets/uploads/dsc_0888.jpg",
-      "right_top": "/src/assets/uploads/dsc_0888.jpg",
-      "right_bottom": "/src/assets/uploads/dsc_0888.jpg"
-    },
-    {
-      "set_title": "Featured Story Set — 4",
-      "main_feature": "/src/assets/uploads/dsc_0888.jpg",
-      "right_top": "/src/assets/uploads/dsc_0888.jpg",
-      "right_bottom": "/src/assets/uploads/dsc_0888.jpg"
+      "set_title": "Featured Session — 3",
+      "images": [
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_0888.jpg" }
+      ]
     }
   ]
 }

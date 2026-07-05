@@ -31,157 +31,63 @@ collections:
           - name: "about_paragraphs"
             label: "About — Paragraphs"
             widget: "list"
-            field: { name: "text", label: "Paragraph", widget: "text" }
+            field: { name: "paragraph", label: "Paragraph Text", widget: "text" }
 
-          # ---------- PORTFOLIO ----------
-          - { name: "portfolio_eyebrow", label: "Portfolio — small text above heading", widget: "string" }
-          - { name: "portfolio_heading", label: "Portfolio — Heading", widget: "string" }
-          - { name: "portfolio_blurb", label: "Portfolio — Short Description", widget: "text" }
-          - name: "galleries"
-            label: "Gallery Tiles"
+          # ---------- THREE SQUARE BANNER LINKS ----------
+          - { name: "banner_1_image", label: "Banner 1 — Image", widget: "image" }
+          - { name: "banner_1_title", label: "Banner 1 — Title", widget: "string" }
+          - { name: "banner_1_link", label: "Banner 1 — URL Link", widget: "string" }
+
+          - { name: "banner_2_image", label: "Banner 2 — Image", widget: "image" }
+          - { name: "banner_2_title", label: "Banner 2 — Title", widget: "string" }
+          - { name: "banner_2_link", label: "Banner 2 — URL Link", widget: "string" }
+
+          - { name: "banner_3_image", label: "Banner 3 — Image", widget: "image" }
+          - { name: "banner_3_title", label: "Banner 3 — Title", widget: "string" }
+          - { name: "banner_3_link", label: "Banner 3 — URL Link", widget: "string" }
+
+          # ---------- RECENT STORIES / BLOG GRID ----------
+          - { name: "stories_heading", label: "Recent Stories — Section Heading", widget: "string" }
+          - name: "featured_stories"
+            label: "Featured Stories Grid"
             widget: "list"
             fields:
-              - { name: "title", label: "Title", widget: "string" }
-              - { name: "img", label: "Image", widget: "image" }
-              - { name: "alt", label: "Image description (for screen readers)", widget: "string" }
-              - { name: "href", widget: "hidden" }
-              - { name: "span", widget: "hidden" }
-              - { name: "ratio", widget: "hidden" }
+              - { name: "title", label: "Story Title", widget: "string" }
+              - { name: "subtitle", label: "Story Subtitle/Location", widget: "string" }
+              - { name: "image", label: "Story Cover Image", widget: "image" }
+              - { name: "link", label: "Story URL Link", widget: "string" }
 
-          # ---------- SERVICES & PRICING ----------
-          - { name: "services_eyebrow", label: "Services — small text above heading", widget: "string" }
-          - { name: "services_heading", label: "Services — Heading", widget: "string" }
-          - { name: "services_blurb", label: "Services — Short Description", widget: "text" }
-          - name: "services"
-            label: "Services & Pricing List"
-            widget: "list"
-            fields:
-              - { name: "name", label: "Service Name", widget: "string" }
-              - { name: "price", label: "Price", widget: "string" }
-          - { name: "services_footnote", label: "Services — Footnote", widget: "text" }
-
-          # ---------- PAY WHAT YOU CAN ----------
-          - { name: "minis_eyebrow", label: "Mini Sessions — small text above heading", widget: "string" }
-          - { name: "minis_heading", label: "Mini Sessions — Heading", widget: "string" }
-          - { name: "minis_body_before", label: "Mini Sessions — Text (before the quoted phrase)", widget: "text" }
-          - { name: "minis_body_emphasis", label: "Mini Sessions — Highlighted Phrase", widget: "string" }
-          - { name: "minis_body_after", label: "Mini Sessions — Text (after the quoted phrase)", widget: "text" }
-          - { name: "minis_button_label", widget: "hidden" }
-          - { name: "minis_button_href", widget: "hidden" }
-
-          # ---------- TESTIMONIALS ----------
-          - { name: "testimonials_eyebrow", label: "Testimonials — small text above heading", widget: "string" }
-          - { name: "testimonials_heading", label: "Testimonials — Heading", widget: "string" }
+          # ---------- REVIEWS SLIDER ----------
           - name: "testimonials"
-            label: "Testimonials (reviews)"
+            label: "Client Testimonials Slider"
             widget: "list"
             fields:
-              - { name: "quote", label: "Review Text", widget: "text" }
-              - { name: "author", label: "Reviewer Name", widget: "string" }
-          - { name: "testimonials_link_label", widget: "hidden" }
-          - { name: "testimonials_link_href", widget: "hidden" }
+              - { name: "quote", label: "Client Quote", widget: "text" }
+              - { name: "author", label: "Client Name(s)", widget: "string" }
 
-          # ---------- CLOSING CTA ----------
-          - { name: "cta_image", label: "Closing — Background Image", widget: "image" }
-          - { name: "cta_image_alt", label: "Closing Image — description for screen readers", widget: "string" }
-          - { name: "cta_heading", label: "Closing — Heading", widget: "string" }
-          - { name: "cta_text", label: "Closing — Text", widget: "text" }
-          - { name: "cta_button_label", widget: "hidden" }
-          - { name: "cta_button_href", widget: "hidden" }
-
-  - name: "services"
-    label: "Services & Pricing Page"
+  - name: "about_page"
+    label: "About Page"
     files:
       - name: "content"
-        label: "Services & Pricing Content"
-        file: "src/content/services.json"
-        editor:
-          preview: false
-        fields:
-          # ---------- HEADER ----------
-          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
-          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
-          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
-          - { name: "header_subnote", label: "Header — Note (what every session includes)", widget: "text" }
-
-          # ---------- SERVICE CARDS ----------
-          - name: "services"
-            label: "Services (each card)"
-            widget: "list"
-            fields:
-              - { name: "name", label: "Service Name", widget: "string" }
-              - { name: "price", label: "Price", widget: "string" }
-              - { name: "image", label: "Photo", widget: "image" }
-              - { name: "alt", label: "Photo description (for screen readers)", widget: "string" }
-              - { name: "description", label: "Description", widget: "text" }
-              - { name: "link", widget: "hidden", required: false }
-
-          # ---------- ADD ONS / ADDITIONAL PHOTOS ----------
-          - { name: "addons_bg", label: "Add Ons — Background Photo", widget: "image" }
-          - { name: "addons_bg_alt", label: "Add Ons Background — description for screen readers", widget: "string" }
-          - { name: "addons_eyebrow", label: "Add Ons — small text above title", widget: "string" }
-          - { name: "addons_heading", label: "Add Ons — Section Title", widget: "string" }
-          - name: "addons"
-            label: "Additional Photos (the three boxes)"
-            widget: "list"
-            fields:
-              - { name: "title", label: "Box Title", widget: "string" }
-              - { name: "body", label: "Box Text", widget: "text" }
-
-  - name: "testimonials_page"
-    label: "Testimonials Page"
-    files:
-      - name: "content"
-        label: "Testimonials Content"
-        file: "src/content/testimonials.json"
-        editor:
-          preview: false
-        fields:
-          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
-          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
-          - { name: "header_intro", label: "Header — Intro Line", widget: "text" }
-          - name: "testimonials"
-            label: "Testimonials (reviews)"
-            widget: "list"
-            fields:
-              - { name: "author", label: "Reviewer Name", widget: "string" }
-              - { name: "quote", label: "Review Text", widget: "text" }
-
-  - name: "contact_page"
-    label: "Contact Page"
-    files:
-      - name: "content"
-        label: "Contact Content"
-        file: "src/content/contact.json"
+        label: "About Page Content"
+        file: "src/content/about.json"
         editor:
           preview: false
         fields:
           - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
           - { name: "header_heading", label: "Header — Page Title", widget: "string" }
           - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
-          - { name: "info_heading", label: "Contact Info — Heading", widget: "string" }
-          - { name: "booking_text", label: "Booking — Text above the Book button", widget: "text" }
-
-  - name: "portfolio_page"
-    label: "Portfolio Main Page"
-    files:
-      - name: "content"
-        label: "Portfolio Overview Content"
-        file: "src/content/portfolio.json"
-        editor:
-          preview: false
-        fields:
-          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
-          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
-          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
-          - name: "sections"
-            label: "Portfolio Row Sections"
+          - { name: "bio_image_1", label: "Bio Image 1", widget: "image" }
+          - { name: "bio_image_2", label: "Bio Image 2", widget: "image" }
+          - name: "bio_paragraphs"
+            label: "Bio Paragraphs"
             widget: "list"
-            fields:
-              - { name: "title", label: "Collection Title (e.g. Couples)", widget: "string" }
-              - { name: "description", label: "Short Blurb description", widget: "text" }
-              - { name: "image", label: "Featured Section Photo", widget: "image" }
-              - { name: "href", label: "Page URL Path (e.g. /couples)", widget: "string" }
+            field: { name: "paragraph", label: "Paragraph", widget: "text" }
+          - { name: "fun_facts_heading", label: "Fun Facts Heading", widget: "string" }
+          - name: "fun_facts"
+            label: "Fun Facts List"
+            widget: "list"
+            field: { name: "fact", label: "Fact Text", widget: "string" }
 
   - name: "portfolio_senior_portraits"
     label: "Portfolio - Senior Portraits"
@@ -201,7 +107,7 @@ collections:
             widget: "list"
             summary: "{{fields.set_title}}"
             fields:
-              - { name: "set_title", label: "Session Title (e.g., Downtown Session)", widget: "string" }
+              - { name: "set_title", label: "Session Title", widget: "string" }
               - name: "images"
                 label: "Session Images (Up to 6)"
                 widget: "list"
@@ -211,7 +117,7 @@ collections:
     label: "Portfolio - Couples"
     files:
       - name: "content"
-        label: "Couples & Romance Content"
+        label: "Couples Content"
         file: "src/content/portfolio-couples.json"
         editor:
           preview: false
@@ -256,7 +162,7 @@ collections:
                 field: { name: "img_src", label: "Image File", widget: "image" }
 
   - name: "portfolio_family"
-    label: "Portfolio - Family Gatherings"
+    label: "Portfolio - Family"
     files:
       - name: "content"
         label: "Family Content"
@@ -303,11 +209,39 @@ collections:
                 widget: "list"
                 field: { name: "img_src", label: "Image File", widget: "image" }
 
-  - name: "portfolio_event"
-    label: "Portfolio - Event"
+  - name: "portfolio_pets"
+    label: "Portfolio - Pets"
     files:
       - name: "content"
-        label: "Event Content"
+        label: "Pet Photography Content"
+        file: "src/content/portfolio-pets.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - { name: "eol_heading", label: "EOL Section — Heading", widget: "string" }
+          - { name: "eol_paragraph_1", label: "EOL Section — Paragraph 1", widget: "text" }
+          - { name: "eol_paragraph_2", label: "EOL Section — Paragraph 2", widget: "text" }
+          - { name: "eol_share_text", label: "EOL Section — Announcement Box text", widget: "text" }
+          - { name: "eol_cta_label", label: "EOL Section — CTA Button text", widget: "string" }
+          - name: "story_sets"
+            label: "Featured Sessions (3 Sessions of 6 Images)"
+            widget: "list"
+            summary: "{{fields.set_title}}"
+            fields:
+              - { name: "set_title", label: "Session Title", widget: "string" }
+              - name: "images"
+                label: "Session Images (Up to 6)"
+                widget: "list"
+                field: { name: "img_src", label: "Image File", widget: "image" }
+
+  - name: "portfolio_event"
+    label: "Portfolio - Events"
+    files:
+      - name: "content"
+        label: "Events Content"
         file: "src/content/portfolio-event.json"
         editor:
           preview: false
@@ -327,36 +261,6 @@ collections:
                 widget: "list"
                 field: { name: "img_src", label: "Image File", widget: "image" }
 
-  - name: "portfolio_pets"
-    label: "Portfolio - Pets"
-    files:
-      - name: "content"
-        label: "Pets Content"
-        file: "src/content/portfolio-pets.json"
-        editor:
-          preview: false
-        fields:
-          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
-          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
-          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
-          - name: "story_sets"
-            label: "Featured Sessions (3 Sessions of 6 Images)"
-            widget: "list"
-            summary: "{{fields.set_title}}"
-            fields:
-              - { name: "set_title", label: "Session Title", widget: "string" }
-              - name: "images"
-                label: "Session Images (Up to 6)"
-                widget: "list"
-                field: { name: "img_src", label: "Image File", widget: "image" }
-          # ---------- END OF LIFE SECTION ----------
-          - { name: "eol_heading", label: "End Of Life — Heading", widget: "string" }
-          - { name: "eol_paragraph_1", label: "End Of Life — Paragraph 1", widget: "text" }
-          - { name: "eol_paragraph_2", label: "End Of Life — Paragraph 2", widget: "text" }
-          - { name: "eol_qualify_text", label: "End Of Life — Guidelines Box Text", widget: "text" }
-          - { name: "eol_share_text", label: "End Of Life — Share Appeal Text", widget: "text" }
-          - { name: "eol_cta_label", label: "End Of Life — Button Label", widget: "string" }
-
   - name: "portfolio_seasonal_minis"
     label: "Portfolio - Seasonal Minis"
     files:
@@ -367,9 +271,35 @@ collections:
           preview: false
         fields:
           - { name: "hero_bg_image", label: "Hero Banner Background Image", widget: "image" }
-          - { name: "hero_bg_alt", label: "Hero Image — description for screen readers", widget: "string" }
+          - { name: "hero_bg_alt", label: "Hero Banner — Description for Screen Readers", widget: "string" }
           - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
-          - { name: "header_heading", label: "Header — Page Title (e.g., Lupine Seasonal Minis)", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - { name: "cta_box_title", label: "Bottom CTA — Box Title", widget: "string" }
+          - { name: "cta_box_text", label: "Bottom CTA — Box Paragraph", widget: "text" }
+          - { name: "cta_button_label", label: "Bottom CTA — Button text", widget: "string" }
+          - name: "story_sets"
+            label: "Featured Sessions (3 Sessions of 6 Images)"
+            widget: "list"
+            summary: "{{fields.set_title}}"
+            fields:
+              - { name: "set_title", label: "Session Title", widget: "string" }
+              - name: "images"
+                label: "Session Images (Up to 6)"
+                widget: "list"
+                field: { name: "img_src", label: "Image File", widget: "image" }
+
+  - name: "portfolio_weddings"
+    label: "Portfolio - Weddings"
+    files:
+      - name: "content"
+        label: "Weddings Content"
+        file: "src/content/portfolio-weddings.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
           - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
           - { name: "cta_box_title", label: "Bottom CTA — Box Title", widget: "string" }
           - { name: "cta_box_text", label: "Bottom CTA — Box Paragraph", widget: "text" }
@@ -402,4 +332,26 @@ collections:
             widget: "list"
             fields:
               - { name: "question", label: "Question", widget: "string" }
-              - { name: "answer", label: "Answer Content", widget: "text" }
+              - { name: "answer", label: "Answer", widget: "text" }
+
+  - name: "investment_page"
+    label: "Investment Page"
+    files:
+      - name: "content"
+        label: "Investment Content"
+        file: "src/content/investment.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
+          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - name: "pricing_cards"
+            label: "Pricing Collections Cards"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Collection Title", widget: "string" }
+              - { name: "price", label: "Starting Price String", widget: "string" }
+              - { name: "details", label: "Bullet Description Lines (comma or newline separated)", widget: "text" }
+              - { name: "image", label: "Card Thumbnail Image", widget: "image" }
+              - { name: "link", label: "Button Link Destination", widget: "string" }

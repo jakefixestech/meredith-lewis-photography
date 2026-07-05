@@ -5,28 +5,37 @@
   "cta_text": "Planning an event? Let's chat!",
   "story_sets": [
     {
-      "set_title": "Featured Story Set — 1",
-      "main_feature": "/src/assets/uploads/dsc_5986.jpg",
-      "right_top": "/src/assets/uploads/dsc_5986.jpg",
-      "right_bottom": "/src/assets/uploads/dsc_5986.jpg"
+      "set_title": "Featured Session — 1",
+      "images": [
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" }
+      ]
     },
     {
-      "set_title": "Featured Story Set — 2",
-      "main_feature": "/src/assets/uploads/dsc_5986.jpg",
-      "right_top": "/src/assets/uploads/dsc_5986.jpg",
-      "right_bottom": "/src/assets/uploads/dsc_5986.jpg"
+      "set_title": "Featured Session — 2",
+      "images": [
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" }
+      ]
     },
     {
-      "set_title": "Featured Story Set — 3",
-      "main_feature": "/src/assets/uploads/dsc_5986.jpg",
-      "right_top": "/src/assets/uploads/dsc_5986.jpg",
-      "right_bottom": "/src/assets/uploads/dsc_5986.jpg"
-    },
-    {
-      "set_title": "Featured Story Set — 4",
-      "main_feature": "/src/assets/uploads/dsc_5986.jpg",
-      "right_top": "/src/assets/uploads/dsc_5986.jpg",
-      "right_bottom": "/src/assets/uploads/dsc_5986.jpg"
+      "set_title": "Featured Session — 3",
+      "images": [
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
+        { "img_src": "/src/assets/uploads/dsc_5986.jpg" }
+      ]
     }
   ]
 }
