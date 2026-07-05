@@ -24,24 +24,12 @@
     {
       "set_title": "Featured Session — 2",
       "images": [
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        }
+        "/src/assets/uploads/dsc_0888.jpg",
+        "/src/assets/uploads/dsc_1033.jpg",
+        "/src/assets/uploads/dsc_1054.jpg",
+        "/src/assets/uploads/dsc_8572.jpg",
+        "/src/assets/uploads/dsc_8579.jpg",
+        "/src/assets/uploads/dsc_8986.jpg"
       ]
     },
     {
