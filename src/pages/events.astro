@@ -5,7 +5,7 @@ import content from "../content/portfolio-event.json";
 
 interface SessionItem {
   set_title?: string;
-  images: Array<{ img_src: string }>;
+  images: Array<string | { img_src: string }>;
 }
 
 const rawContent = content as any;
@@ -51,7 +51,7 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
     </div>
   </section>
 
-  {/* Slider Sessions */}
+  {/* Slider Sessions Grid System */}
   {storySets.map((set, rowIndex) => {
     const isEvenRow = rowIndex % 2 === 0;
     
@@ -77,7 +77,13 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
             </button>
 
             <div class="slider-track no-scrollbar flex gap-6 overflow-x-auto pb-2 snap-x snap-mandatory scroll-smooth items-stretch">
-              {set.images && set.images.map((imgObj, imgIndex) => {
+              {set.images?.map((imgObj, imgIndex) => {
+                if (!imgObj) return null;
+
+                // Dynamically resolve raw string path or nested object from CMS
+                const finalSrc = typeof imgObj === 'string' ? imgObj : imgObj.img_src;
+                if (!finalSrc) return null;
+
                 return (
                   <div class="flex-none w-[82vw] sm:w-[45vw] md:w-[31vw] lg:w-[23.5vw] snap-start">
                     <div 
@@ -87,7 +93,7 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
                     >
                       <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 aspect-[2/3] w-full h-full flex items-center">
                         <SmartImage
-                          src={imgObj.img_src}
+                          src={finalSrc}
                           alt={`${set.set_title || 'Session'} - Gallery Image`}
                           class="portfolio-img h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
                         />
@@ -117,7 +123,7 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
     );
   })}
 
-  {/* Solid Black Background Bottom Callout Section with Original Text */}
+  {/* Solid Black Callout Background Section */}
   <section class="bg-neutral-950 px-5 py-24 text-center text-white sm:px-8 lg:px-12">
     <div class="mx-auto max-w-2xl">
       <h2 class="font-serif text-3xl font-medium tracking-tight sm:text-4xl">

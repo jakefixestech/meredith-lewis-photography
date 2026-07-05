@@ -5,7 +5,7 @@ import content from "../content/portfolio-maternity.json";
 
 interface SessionItem {
   set_title?: string;
-  images: Array<{ img_src: string }>;
+  images: Array<string | { img_src: string }>;
 }
 
 const rawContent = content as any;
@@ -47,6 +47,7 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
     </div>
   </section>
 
+  {/* Slider Sessions Grid System */}
   {storySets.map((set, rowIndex) => {
     const isEvenRow = rowIndex % 2 === 0;
     
@@ -72,7 +73,13 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
             </button>
 
             <div class="slider-track no-scrollbar flex gap-6 overflow-x-auto pb-2 snap-x snap-mandatory scroll-smooth items-stretch">
-              {set.images && set.images.map((imgObj, imgIndex) => {
+              {set.images?.map((imgObj, imgIndex) => {
+                if (!imgObj) return null;
+
+                // Dynamically resolve raw string path or nested object from CMS
+                const finalSrc = typeof imgObj === 'string' ? imgObj : imgObj.img_src;
+                if (!finalSrc) return null;
+
                 return (
                   <div class="flex-none w-[82vw] sm:w-[45vw] md:w-[31vw] lg:w-[23.5vw] snap-start">
                     <div 
@@ -82,7 +89,7 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
                     >
                       <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 aspect-[2/3] w-full h-full flex items-center">
                         <SmartImage
-                          src={imgObj.img_src}
+                          src={finalSrc}
                           alt={`${set.set_title || 'Session'} - Gallery Image`}
                           class="portfolio-img h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
                         />
@@ -112,22 +119,24 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
     );
   })}
 
-  <section class="bg-neutral-950 px-5 py-20 text-center text-white sm:px-8 lg:px-12">
-    <div class="mx-auto max-w-3xl">
-      <h2 class="font-serif text-2xl font-light tracking-wide text-neutral-100 sm:text-3xl">
+  {/* Solid Black Callout Background Section */}
+  <section class="bg-neutral-950 px-5 py-24 text-center text-white sm:px-8 lg:px-12">
+    <div class="mx-auto max-w-2xl">
+      <h2 class="font-serif text-3xl font-medium tracking-tight sm:text-4xl">
         {ctaText}
       </h2>
-      <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-        <a href="/contact" class="inline-block rounded-full bg-white px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-neutral-900 transition-colors hover:bg-neutral-200">
-          Get in Touch
-        </a>
-        <a href="https://meredithlewisphotography.pixieset.com/booking/" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full border border-neutral-700 bg-transparent px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-neutral-200 transition-colors hover:bg-white hover:text-neutral-900">
-          Book Online
+      <div class="mt-10">
+        <a 
+          href="/contact" 
+          class="inline-block rounded-full bg-white px-8 py-3 text-sm font-medium uppercase tracking-[0.15em] text-neutral-950 transition-colors hover:bg-neutral-200 shadow-sm"
+        >
+          Let's Chat
         </a>
       </div>
     </div>
   </section>
 
+  {/* Lightbox Module */}
   <div
     id="lightbox"
     class="fixed inset-0 z-[100] hidden flex-col items-center justify-center bg-black/95 p-4 opacity-0 transition-opacity duration-300 backdrop-blur-sm select-none"
