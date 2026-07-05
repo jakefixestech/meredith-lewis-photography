@@ -65,30 +65,6 @@ collections:
               - { name: "quote", label: "Client Quote", widget: "text" }
               - { name: "author", label: "Client Name(s)", widget: "string" }
 
-  - name: "about_page"
-    label: "About Page"
-    files:
-      - name: "content"
-        label: "About Page Content"
-        file: "src/content/about.json"
-        editor:
-          preview: false
-        fields:
-          - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
-          - { name: "header_heading", label: "Header — Page Title", widget: "string" }
-          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
-          - { name: "bio_image_1", label: "Bio Image 1", widget: "image" }
-          - { name: "bio_image_2", label: "Bio Image 2", widget: "image" }
-          - name: "bio_paragraphs"
-            label: "Bio Paragraphs"
-            widget: "list"
-            field: { name: "paragraph", label: "Paragraph", widget: "text" }
-          - { name: "fun_facts_heading", label: "Fun Facts Heading", widget: "string" }
-          - name: "fun_facts"
-            label: "Fun Facts List"
-            widget: "list"
-            field: { name: "fact", label: "Fact Text", widget: "string" }
-
   - name: "portfolio_senior_portraits"
     label: "Portfolio - Senior Portraits"
     files:
@@ -355,3 +331,23 @@ collections:
               - { name: "details", label: "Bullet Description Lines (comma or newline separated)", widget: "text" }
               - { name: "image", label: "Card Thumbnail Image", widget: "image" }
               - { name: "link", label: "Button Link Destination", widget: "string" }
+
+  - name: "about_page"
+    label: "About Page"
+    files:
+      - name: "content"
+        label: "About Page Content"
+        file: "src/content/about.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "title_eyebrow", label: "Hero — Small Top Text", widget: "string" }
+          - { name: "title_heading", label: "Hero — Main Heading", widget: "string" }
+          - { name: "section_1_photo", label: "Section 1 — Photo (Faith & Coffee)", widget: "image" }
+          - { name: "section_1_text", label: "Section 1 — Text Paragraph", widget: "text" }
+          - { name: "section_2_photo", label: "Section 2 — Photo (Adventure/All In)", widget: "image" }
+          - { name: "section_2_text", label: "Section 2 — Text Paragraph", widget: "text" }
+          - { name: "section_3_photo", label: "Section 3 — Photo (Her History/2018)", widget: "image" }
+          - { name: "section_3_text", label: "Section 3 — Text Paragraph", widget: "text" }
+          - { name: "section_4_photo", label: "Section 4 — Photo (Stories Worth Telling)", widget: "image" }
+          - { name: "section_4_text", label: "Section 4 — Text Paragraph", widget: "text" }
