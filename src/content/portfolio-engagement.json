@@ -7,34 +7,52 @@
     {
       "set_title": "Featured Story Set — 1",
       "images": [
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" }
+        "/src/assets/uploads/dsc_2298.jpg",
+        "/src/assets/uploads/dsc_2401.jpg",
+        "/src/assets/uploads/dsc_2524.jpg",
+        "/src/assets/uploads/dsc_2590.jpg",
+        "/src/assets/uploads/dsc_2606-enhanced-nr.jpg",
+        "/src/assets/uploads/dsc_3705.jpg"
       ]
     },
     {
       "set_title": "Featured Story Set — 2",
       "images": [
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" }
+        "/src/assets/uploads/dsc_3741.jpg",
+        "/src/assets/uploads/dsc_3779.jpg",
+        "/src/assets/uploads/dsc_3825.jpg",
+        {
+          "img_src": "/src/assets/uploads/dsc_7587.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_7587.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_7587.jpg"
+        }
       ]
     },
     {
       "set_title": "Featured Story Set — 3",
       "images": [
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_7587.jpg" }
+        {
+          "img_src": "/src/assets/uploads/dsc_7587.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_7587.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_7587.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_7587.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_7587.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_7587.jpg"
+        }
       ]
     }
   ]
