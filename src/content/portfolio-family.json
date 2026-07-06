@@ -29,24 +29,12 @@
     {
       "set_title": "Featured Story Set — 3",
       "images": [
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        }
+        "/src/assets/uploads/dsc_5986.jpg",
+        "/src/assets/uploads/dsc_6016.jpg",
+        "/src/assets/uploads/dsc_6063.jpg",
+        "/src/assets/uploads/dsc_6038.jpg",
+        "/src/assets/uploads/dsc_6072.jpg",
+        "/src/assets/uploads/dsc_6094-2.jpg"
       ]
     }
   ]
