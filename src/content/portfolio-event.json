@@ -1,40 +1,64 @@
 {
   "header_eyebrow": "Galleries",
   "header_heading": "Events",
-  "header_intro": "Documenting milestones, corporate gatherings, intimate celebrations and more using a documentary storytelling approach. From small details to big emotional highlights, every moment from this special day is preserved.",
+  "header_intro": "Documenting milestones, corporate gatherings, intimate celebrations and more using a documentary storytelling approach. From small details to event highlights, every moment from this special day is preserved for all the yers to come!",
   "cta_text": "Planning an event? Let's chat!",
   "story_sets": [
     {
       "set_title": "Featured Session — 1",
       "images": [
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" }
+        "/src/assets/uploads/dsc_6653.jpg",
+        "/src/assets/uploads/dsc_6662.jpg",
+        "/src/assets/uploads/dsc_6684.jpg",
+        "/src/assets/uploads/dsc_6743.jpg",
+        "/src/assets/uploads/dsc_6724.jpg",
+        "/src/assets/uploads/screenshot-2026-07-06-at-1.08.41 pm.png"
       ]
     },
     {
       "set_title": "Featured Session — 2",
       "images": [
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" }
+        {
+          "img_src": "/src/assets/uploads/dsc_5986.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_5986.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_5986.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_5986.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_5986.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_5986.jpg"
+        }
       ]
     },
     {
       "set_title": "Featured Session — 3",
       "images": [
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" },
-        { "img_src": "/src/assets/uploads/dsc_5986.jpg" }
+        {
+          "img_src": "/src/assets/uploads/dsc_5986.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_5986.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_5986.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_5986.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_5986.jpg"
+        },
+        {
+          "img_src": "/src/assets/uploads/dsc_5986.jpg"
+        }
       ]
     }
   ]
