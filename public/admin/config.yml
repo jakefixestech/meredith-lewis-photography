@@ -92,6 +92,28 @@ collections:
           - { name: "cta_button_label", label: "Closing CTA — Button Text", widget: "string" }
           - { name: "cta_button_href", label: "Closing CTA — Button Link (do not change)", widget: "hidden" }
 
+  - name: "portfolio_page"
+    label: "Portfolio Page (Main Landing)"
+    files:
+      - name: "content"
+        label: "Portfolio Page Content"
+        file: "src/content/portfolio.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above heading", widget: "string" }
+          - { name: "header_heading", label: "Header — Heading", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - name: "sections"
+            label: "Gallery Sections (8 categories)"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { name: "title", label: "Category Title", widget: "string" }
+              - { name: "description", label: "Category Description", widget: "text" }
+              - { name: "image", label: "Category Image", widget: "image" }
+              - { name: "href", label: "Category Link (do not change)", widget: "hidden" }
+
   - name: "portfolio_senior_portraits"
     label: "Portfolio - Senior Portraits"
     files:
