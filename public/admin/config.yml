@@ -398,6 +398,22 @@ collections:
           - { name: "info_heading", label: "Contact Info — Section Heading", widget: "string" }
           - { name: "booking_text", label: "Booking — Paragraph Text", widget: "text" }
 
+  - name: "not_found_page"
+    label: "404 Error Page"
+    files:
+      - name: "content"
+        label: "404 Page Content"
+        file: "src/content/404.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "bg_image", label: "Background Image (optional)", widget: "image", required: false }
+          - { name: "bg_image_alt", label: "Background Image — description for screen readers", widget: "string" }
+          - { name: "eyebrow", label: "Small text above heading", widget: "string" }
+          - { name: "heading", label: "Heading (404)", widget: "string" }
+          - { name: "body_text", label: "Body Text", widget: "text" }
+          - { name: "button_label", label: "Button Text", widget: "string" }
+
   - name: "about_page"
     label: "About Page"
     files:
