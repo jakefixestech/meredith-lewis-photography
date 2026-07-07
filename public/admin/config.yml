@@ -69,7 +69,7 @@ collections:
           - { name: "minis_body_emphasis", label: "Mini Sessions — Highlighted Phrase", widget: "string" }
           - { name: "minis_body_after", label: "Mini Sessions — Paragraph (text after highlighted phrase)", widget: "text" }
           - { name: "minis_button_label", label: "Mini Sessions — Button Text", widget: "string" }
-          - { name: "minis_button_href", label: "Mini Sessions — Button Link", widget: "string" }
+          - { name: "minis_button_href", label: "Mini Sessions — Button Link (do not change)", widget: "hidden" }
 
           # ---------- REVIEWS SLIDER ----------
           - { name: "testimonials_eyebrow", label: "Testimonials — small text above heading", widget: "string" }
@@ -82,7 +82,7 @@ collections:
               - { name: "quote", label: "Client Quote", widget: "text" }
               - { name: "author", label: "Client Name(s)", widget: "string" }
           - { name: "testimonials_link_label", label: "Testimonials — Link Text", widget: "string" }
-          - { name: "testimonials_link_href", label: "Testimonials — Link URL", widget: "string" }
+          - { name: "testimonials_link_href", label: "Testimonials — Link URL (do not change)", widget: "hidden" }
 
           # ---------- CLOSING CALL TO ACTION ----------
           - { name: "cta_image", label: "Closing CTA — Background Image", widget: "image" }
@@ -90,7 +90,7 @@ collections:
           - { name: "cta_heading", label: "Closing CTA — Heading", widget: "string" }
           - { name: "cta_text", label: "Closing CTA — Paragraph Text", widget: "text" }
           - { name: "cta_button_label", label: "Closing CTA — Button Text", widget: "string" }
-          - { name: "cta_button_href", label: "Closing CTA — Button Link (email address)", widget: "string" }
+          - { name: "cta_button_href", label: "Closing CTA — Button Link (do not change)", widget: "hidden" }
 
   - name: "portfolio_senior_portraits"
     label: "Portfolio - Senior Portraits"
@@ -358,6 +358,21 @@ collections:
               - { name: "details", label: "Bullet Description Lines (comma or newline separated)", widget: "text" }
               - { name: "image", label: "Card Thumbnail Image", widget: "image" }
               - { name: "link", label: "Button Link Destination", widget: "string" }
+
+  - name: "contact_page"
+    label: "Contact Page"
+    files:
+      - name: "content"
+        label: "Contact Page Content"
+        file: "src/content/contact.json"
+        editor:
+          preview: false
+        fields:
+          - { name: "header_eyebrow", label: "Header — small text above heading", widget: "string" }
+          - { name: "header_heading", label: "Header — Heading", widget: "string" }
+          - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
+          - { name: "info_heading", label: "Contact Info — Section Heading", widget: "string" }
+          - { name: "booking_text", label: "Booking — Paragraph Text", widget: "text" }
 
   - name: "about_page"
     label: "About Page"
