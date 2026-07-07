@@ -113,6 +113,8 @@ collections:
               - { name: "description", label: "Category Description", widget: "text" }
               - { name: "image", label: "Category Image", widget: "image" }
               - { name: "href", label: "Category Link (do not change)", widget: "hidden" }
+          - { name: "cta_eyebrow", label: "Bottom CTA — small text above heading", widget: "string" }
+          - { name: "cta_heading", label: "Bottom CTA — Heading", widget: "string" }
 
   - name: "portfolio_senior_portraits"
     label: "Portfolio - Senior Portraits"
