@@ -361,27 +361,41 @@ collections:
               - { name: "question", label: "Question", widget: "string" }
               - { name: "answer", label: "Answer", widget: "text" }
 
-  - name: "investment_page"
-    label: "Investment Page"
+  - name: "services_page"
+    label: "Services & Pricing Page"
     files:
       - name: "content"
-        label: "Investment Content"
-        file: "src/content/investment.json"
+        label: "Services & Pricing Content"
+        file: "src/content/services.json"
         editor:
           preview: false
         fields:
           - { name: "header_eyebrow", label: "Header — small text above title", widget: "string" }
           - { name: "header_heading", label: "Header — Page Title", widget: "string" }
           - { name: "header_intro", label: "Header — Intro Paragraph", widget: "text" }
-          - name: "pricing_cards"
-            label: "Pricing Collections Cards"
+          - { name: "header_subnote", label: "Header — Small Note Below Intro", widget: "string" }
+          - name: "services"
+            label: "Session Types & Pricing"
             widget: "list"
+            summary: "{{fields.name}} — {{fields.price}}"
             fields:
-              - { name: "title", label: "Collection Title", widget: "string" }
-              - { name: "price", label: "Starting Price String", widget: "string" }
-              - { name: "details", label: "Bullet Description Lines (comma or newline separated)", widget: "text" }
-              - { name: "image", label: "Card Thumbnail Image", widget: "image" }
-              - { name: "link", label: "Button Link Destination", widget: "string" }
+              - { name: "name", label: "Session Type", widget: "string" }
+              - { name: "price", label: "Price", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - { name: "image", label: "Card Image", widget: "image" }
+              - { name: "alt", label: "Card Image — description for screen readers", widget: "string" }
+              - { name: "link", label: "Card Link (do not change — leave blank unless linking to another page)", widget: "hidden", required: false }
+          - { name: "addons_bg", label: "Add-Ons Section — Background Image", widget: "image" }
+          - { name: "addons_bg_alt", label: "Add-Ons Background Image — description for screen readers", widget: "string" }
+          - { name: "addons_eyebrow", label: "Add-Ons — small text above heading", widget: "string" }
+          - { name: "addons_heading", label: "Add-Ons — Heading", widget: "string" }
+          - name: "addons"
+            label: "Add-On Cards"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { name: "title", label: "Add-On Title", widget: "string" }
+              - { name: "body", label: "Add-On Description", widget: "text" }
 
   - name: "contact_page"
     label: "Contact Page"
