@@ -18,24 +18,12 @@
     {
       "set_title": "Featured Story Set — 2",
       "images": [
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        },
-        {
-          "img_src": "/src/assets/uploads/dsc_7587.jpg"
-        }
+        "/src/assets/uploads/dsc_8103.jpg",
+        "/src/assets/uploads/dsc_8098.jpg",
+        "/src/assets/uploads/dsc_8074.jpg",
+        "/src/assets/uploads/dsc_8142.jpg",
+        "/src/assets/uploads/dsc_8129.jpg",
+        "/src/assets/uploads/dsc_8094.jpg"
       ]
     },
     {
