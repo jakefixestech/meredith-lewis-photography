@@ -1,47 +1,47 @@
 {
   "header_eyebrow": "Galleries",
   "header_heading": "The Portfolio Collections",
-  "header_intro": "Explore personally curated moments capturing memories, milestones, and portraits across the beautiful landscapes of the White Mountains in New Hampshire. ",
+  "header_intro": "All of my photos come from personally curated photoshoots capturing memories, milestones, and portraits across the beautiful landscapes of the White Mountains in New Hampshire. ",
   "sections": [
     {
       "title": "Senior Portraits",
-      "description": "Weather you're up for a coffee and a stroll in downtown littleton, making a splash in Franconia Notch, or showing off your sport or hobby; let me help make your senior portraits show off exactly who are are! This session is all about you: let's have fun, let loose and take photos that you'll want to look back on for a life time (and hang on your mom's fridge.)",
+      "description": "Weather you're up for a coffee and a stroll in downtown littleton, making a splash in Franconia Notch, or showing off your sport or hobby; let me help make your senior portraits show off exactly who are are! This session is all about you: let's have fun, let loose and take photos that you feel confident in and want to look back on for a life time (and hang on your mom's fridge.)",
       "image": "/src/assets/uploads/dsc_0469.jpg",
       "href": "/senior-portraits"
     },
     {
       "title": "Couples",
-      "description": "Couples sessions are all about capturing the two of you in purest form: the laughs, the inside jokes, and the way you look at each other when you think no one is watching. No stiff poses here, just photos that feel uniquely you! Let's create a fun session together! ",
+      "description": "Couples sessions are all about capturing the two of you in your most candid connections: the laughs, the inside jokes, and the way you look at each other when you think no one is watching. No stiff poses, just images that feel uniquely you! Let's create a fun session together! ",
       "image": "/src/assets/uploads/dsc_1605.jpg",
       "href": "/couples"
     },
     {
-      "title": "Engagement Sessions",
-      "description": "Congratulations on your engagement lovebirds, now let's take pictures to celebrate! Whether you're aiming for classic engagement portraits, or want to make these photos uniquely you, I am your girl! Let's chat about bringing your personalities to life in your engagement session!",
+      "title": "Engagement",
+      "description": "Congratulations on your engagement lovebirds, now let's take portraits to celebrate! Whether you're aiming for classic engagement portraits, or want to make these photos uniquely you, I am your girl! Let's chat about bringing your personalities to life in your engagement session!",
       "image": "/src/assets/uploads/dsc_3779.jpg",
       "href": "/engagement"
     },
     {
       "title": "Family",
-      "description": "Helping tell the story of your family with timeless family portraits filled with love, laughs and imperfect moments that are what really make your family YOU! Documentary style photos with posed portraits mixed in, aimed at keeping you kids happy and smiling the whole time!",
+      "description": "Helping tell the story of your family with timeless family portraits filled with love, laughs and imperfect moments that are what really make your family YOU! These sessions are aimed to be documentary style photos with posed portraits mixed in, keeping your kids happy and smiling the whole time!",
       "image": "/src/assets/uploads/dsc_7286.jpg",
       "href": "/family"
     },
     {
       "title": "Maternity",
-      "description": "Congratulations mama! Let's capture your maternity photos in a way that is uniquely you, and celebrate your baby to be! Whether it's just you, your entire family, or including that first fur baby of yours, I'm all in! ",
+      "description": "Congratulations mama! Let's capture your maternity photos in a way that is uniquely you and celebrate your baby to be! Whether it's just you, your entire family, or including that first fur baby of yours, I'm all in on your session! ",
       "image": "/src/assets/uploads/dsc_7265.jpg",
       "href": "/maternity"
     },
     {
       "title": "Pet Photography",
-      "description": "Paws, claws, and personality! These sessions are aimed to be fun and dedicated entirely to capturing the unique character and spirit of your beloved pets. There is no one else who is more pet obsessed than your photographer! Treats included! ",
+      "description": "Paws, claws, and personality! These sessions are aimed to be fun and dedicated entirely to capturing the unique character and love between you and your beloved pets. There is no one else who is more pet obsessed than your photographer! Treats included! ",
       "image": "/src/assets/uploads/dsc_9074.jpg",
       "href": "/pet-photography"
     },
     {
       "title": "Events",
-      "description": "Let me take the pressure off your shoulder and document your special celebrations, milestones, and community gatherings with a documentary approach that lets you live completely in the moment! Let me help you put your phone down and enjoy your special day!",
+      "description": "Let me take the pressure off your shoulders and document your special celebrations, milestones, and community gatherings with a documentary approach that lets you live completely in the moment! Put your phone down and enjoy your special day and let me worry about the photos!",
       "image": "/src/assets/uploads/dsc_8541.jpg",
       "href": "/events"
     },
@@ -53,5 +53,5 @@
     }
   ],
   "cta_eyebrow": "Ready to Book?",
-  "cta_heading": "Let’s preserve your moments."
+  "cta_heading": "Let’s photograph your moments."
 }
