@@ -18,14 +18,14 @@
   ],
   "addons_heading": "Upgrade your photoshoot experience",
   "header_eyebrow": "Services & Pricing",
-  "header_intro": "I always accept unique sessions! Contact me to inquire about a personalized session to fit your specific needs!",
+  "header_intro": "I always accept unique sessions. Contact me to inquire about a personalized session to fit your specific needs!",
   "addons_bg_alt": "An alpine tarn reflecting the sky among the rocks of the White Mountains.",
   "addons_eyebrow": "Add Ons",
   "services": [
     {
       "name": "Senior Portraits",
       "price": "$225",
-      "image": "/src/assets/uploads/dsc_2705.jpg",
+      "image": "/src/assets/uploads/dsc_6490.jpg",
       "alt": "A high school senior in a white dress sitting in a sunlit field of wildflowers.",
       "description": "A senior portrait session includes 1 hour of coverage at 1-2 locations and 10 edited images. I'd love to get to know your senior, and to make their photos uniquely them! ",
       "link": ""
@@ -33,7 +33,7 @@
     {
       "name": "Couples",
       "price": "$225",
-      "image": "/src/assets/uploads/pcouples.avif",
+      "image": "/src/assets/uploads/dsc_6337-enhanced-nr.jpg",
       "alt": "A couple embracing in front of a weathered grey barn.",
       "description": "A couples session includes 1 hour of coverage at 1-2 locations between 2 people and 10 edited images. I would love to capture your love story!",
       "link": ""
@@ -57,7 +57,7 @@
     {
       "name": "Maternity",
       "price": "$225",
-      "image": "/src/assets/uploads/dsc_7265.jpg",
+      "image": "/src/assets/uploads/dsc_8220.jpg",
       "alt": "An expecting couple holding an ultrasound photo in a field.",
       "description": "A maternity session includes 1 hour of coverage at 1 location and 10 edited images. This session includes up to 4 people, and additional people can be added at $25 per person. Congratulations mama!",
       "link": ""
@@ -65,7 +65,7 @@
     {
       "name": "Pet Photography",
       "price": "$225",
-      "image": "/src/assets/uploads/dsc_9074.jpg",
+      "image": "/src/assets/uploads/dsc_2031.jpg",
       "alt": "A woman kissing her small dog outdoors.",
       "description": "Pet photography includes 1 hour of coverage at 1 location and 10 edited images. This shoot includes 2 people and your pup (up to 2). Additional people may be added at $25 per person. No one is more pet obsessed than me! ",
       "link": ""
@@ -81,7 +81,7 @@
     {
       "name": "Seasonal Mini Sessions",
       "price": "Minis & Pay What You Can Minis",
-      "image": "/src/assets/uploads/dsc_1076.jpg",
+      "image": "/src/assets/uploads/screenshot-2026-07-06-at-3.06.34 pm.png",
       "alt": "A mother and young son sitting together in a field of purple lupine flowers.",
       "description": "Fifteen minute mini sessions are offered seasonally throughout the year. Click below to see what seasonal sessions are currently being offered!",
       "link": "/seasonal-minis"
