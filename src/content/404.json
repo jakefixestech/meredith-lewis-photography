@@ -1,8 +1,8 @@
 {
-  "bg_image": "/src/assets/uploads/hero1.jpg",
+  "bg_image": "/src/assets/uploads/rocks.jpg",
   "bg_image_alt": "A scenic White Mountains landscape.",
   "eyebrow": "Page Not Found",
-  "heading": "404",
+  "heading": "Oops!",
   "body_text": "The page you're looking for seems to have wandered off the trail. Let's get you back to familiar ground.",
   "button_label": "Back to Home"
 }
