@@ -12,6 +12,7 @@ interface Props {
   height?: number;
   loading?: "eager" | "lazy";
   fetchpriority?: "high" | "low" | "auto";
+  quality?: number | "low" | "mid" | "high" | "max";
 }
 
 const {
@@ -22,6 +23,7 @@ const {
   height,
   loading = "lazy",
   fetchpriority,
+  quality,
 } = Astro.props;
 
 // Grab every image under src/assets (any subfolder, common formats).
@@ -46,6 +48,7 @@ const loader = images[key];
       height={height}
       loading={loading}
       fetchpriority={fetchpriority}
+      quality={quality ?? 80}
     />
   ) : (
     // Fallback: if the path isn't in src/assets (e.g. still in public/),
