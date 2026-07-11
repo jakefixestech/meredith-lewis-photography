@@ -13,6 +13,11 @@ interface Props {
   loading?: "eager" | "lazy";
   fetchpriority?: "high" | "low" | "auto";
   quality?: number | "low" | "mid" | "high" | "max";
+  // Optional responsive-image support: pass both together to get a real
+  // srcset with multiple sizes, so phones don't download the same file
+  // as desktop. `width`/`height` above still set the largest/fallback size.
+  widths?: number[];
+  sizes?: string;
 }
 
 const {
@@ -24,6 +29,8 @@ const {
   loading = "lazy",
   fetchpriority,
   quality,
+  widths,
+  sizes,
 } = Astro.props;
 
 // Grab every image under src/assets (any subfolder, common formats).
@@ -46,6 +53,8 @@ const loader = images[key];
       class={className}
       width={width}
       height={height}
+      widths={widths}
+      sizes={sizes}
       loading={loading}
       fetchpriority={fetchpriority}
       quality={quality ?? 80}
