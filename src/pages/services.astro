@@ -31,7 +31,7 @@ import content from "../content/services.json";
     <div class="mx-auto max-w-6xl">
       <div class="grid gap-x-10 gap-y-16 sm:grid-cols-2">
         {
-          content.services.map((s) => {
+          content.services.map((s, index) => {
             const Tag = s.link ? "a" : "div";
             return (
               <Tag
@@ -44,7 +44,8 @@ import content from "../content/services.json";
                     alt={s.alt}
                     width={900}
                     height={675}
-                    loading="lazy"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    fetchpriority={index === 0 ? "high" : "auto"}
                     class="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                 </div>
