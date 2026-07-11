@@ -16,6 +16,8 @@ import SmartImage from "../components/SmartImage.astro";
       alt={content.hero_image_alt}
       width={1600}
       height={1000}
+      widths={[500, 800, 1200, 1600]}
+      sizes="100vw"
       loading="eager"
       fetchpriority="high"
       quality={68}
@@ -288,6 +290,9 @@ import SmartImage from "../components/SmartImage.astro";
       alt={content.cta_image_alt}
       width={1600}
       height={900}
+      widths={[500, 800, 1200, 1600]}
+      sizes="100vw"
+      quality={68}
       loading="lazy"
       class="absolute inset-0 h-full w-full object-cover"
     />
