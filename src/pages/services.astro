@@ -2,11 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import SmartImage from "../components/SmartImage.astro";
 import content from "../content/services.json";
+import { resolveOgImage } from "../lib/ogImage";
+
+const ogImage = await resolveOgImage(content.addons_bg);
 ---
 
 <Layout
   title="Services & Pricing | Meredith Lewis Photography"
   description="Photography session types and pricing with Meredith Lewis Photography. Senior portraits, couples, engagement, family, maternity, pet, and event photography throughout the White Mountains of New Hampshire."
+  image={ogImage}
 >
   <!-- ===================== HEADER ===================== -->
   <section class="px-5 pt-12 pb-12 sm:px-8 sm:pt-16 sm:pb-16 lg:px-12">

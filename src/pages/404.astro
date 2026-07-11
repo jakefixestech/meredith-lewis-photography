@@ -2,14 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import content from "../content/404.json";
 import SmartImage from "../components/SmartImage.astro";
+import { resolveOgImage } from "../lib/ogImage";
 
 const hasBgImage = Boolean(content.bg_image);
+const ogImage = await resolveOgImage(content.bg_image);
 ---
 
 <Layout
   title="Page Not Found | Meredith Lewis Photography"
   description="The page you're looking for couldn't be found. Head back to the Meredith Lewis Photography homepage."
   noindex={true}
+  image={ogImage}
 >
   <section class="relative flex min-h-[70vh] items-center justify-center overflow-hidden px-5 py-32 sm:px-8">
     {hasBgImage && (

@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import SmartImage from "../components/SmartImage.astro";
 import content from "../content/portfolio-couples.json";
+import { resolveOgImage, firstStorySetImage } from "../lib/ogImage";
 
 interface SessionItem {
   set_title?: string;
@@ -15,12 +16,14 @@ const headerHeading = rawContent.header_heading || "Couples";
 const headerIntro = rawContent.header_intro || "";
 const ctaText = rawContent.cta_text || "";
 const storySets = (rawContent.story_sets as SessionItem[]) || [];
+const ogImage = await resolveOgImage(firstStorySetImage(storySets));
 ---
 
 <Layout
   title={`${headerHeading} Portfolio | Meredith Lewis Photography`}
   description={headerIntro || "Intimate, natural couples photography and romance sessions in Dalton, Littleton, and the White Mountains, NH."}
   solidNav={true}
+  image={ogImage}
 >
   <style is:global>
     .no-scrollbar::-webkit-scrollbar {

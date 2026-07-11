@@ -2,12 +2,16 @@
 import Layout from "../layouts/Layout.astro";
 import content from "../content/homepage.json";
 import SmartImage from "../components/SmartImage.astro";
+import { resolveOgImage } from "../lib/ogImage";
+
+const ogImage = await resolveOgImage(content.hero_image);
 ---
 
 <Layout
   title="Meredith Lewis Photography | White Mountains, NH"
   description="Meredith Lewis Photography — capturing candid, heartfelt moments throughout the White Mountains of New Hampshire, Maine, and Vermont. Approachable, affordable portrait and event photography."
   solidNav={false}
+  image={ogImage}
 >
   <!-- ===================== HERO ===================== -->
   <section id="home" class="relative h-screen min-h-[600px] w-full">

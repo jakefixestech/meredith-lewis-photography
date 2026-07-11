@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import SmartImage from "../components/SmartImage.astro";
 import content from "../content/portfolio-seasonal-minis.json";
+import { resolveOgImage, firstStorySetImage } from "../lib/ogImage";
 
 interface SessionItem {
   set_title?: string;
@@ -21,12 +22,14 @@ const ctaBoxText = rawContent.cta_box_text || "";
 const ctaButtonLabel = rawContent.cta_button_label || "Inquire Here";
 
 const storySets = (rawContent.story_sets as SessionItem[]) || [];
+const ogImage = await resolveOgImage(heroBgImage || firstStorySetImage(storySets));
 ---
 
 <Layout
   title={`${headerHeading} Portfolio | Meredith Lewis Photography`}
   description={headerIntro || "Limited edition seasonal mini photography sessions across the White Mountains, NH."}
   solidNav={false}
+  image={ogImage}
 >
   <style is:global>
     .no-scrollbar::-webkit-scrollbar {

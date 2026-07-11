@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import SmartImage from "../components/SmartImage.astro";
 import content from "../content/portfolio-pets.json";
+import { resolveOgImage, firstStorySetImage } from "../lib/ogImage";
 
 interface SessionItem {
   set_title?: string;
@@ -21,12 +22,14 @@ const eolShareText = rawContent.eol_share_text || "";
 const eolCtaLabel = rawContent.eol_cta_label || "Send a Message";
 
 const storySets = (rawContent.story_sets as SessionItem[]) || [];
+const ogImage = await resolveOgImage(firstStorySetImage(storySets));
 ---
 
 <Layout
   title={`${headerHeading} Portfolio | Meredith Lewis Photography`}
   description={headerIntro || "Heartwarming and natural pet photography sessions in Dalton, Littleton, and across the White Mountains, NH."}
   solidNav={true}
+  image={ogImage}
 >
   <style is:global>
     .no-scrollbar::-webkit-scrollbar {

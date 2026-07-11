@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SmartImage from "../components/SmartImage.astro";
+import { resolveOgImage } from "../lib/ogImage";
 
 let rawContent: any = {};
 try {
@@ -24,12 +25,15 @@ const s3Text = rawContent.section_3_text || "I picked up my first camera shortly
 
 const s4Photo = rawContent.section_4_photo || "";
 const s4Text = rawContent.section_4_text || "At the end of the day, my favorite part of this job isn't just creating beautiful images, it's getting to know the amazing people in front of my camera. Every session has a story worth telling and it's an honor that you trust me to capture a small piece of yours. I can't wait to meet you, laugh with you, and create photos you'll treasure for all years to come!";
+
+const ogImage = await resolveOgImage(s1Photo);
 ---
 
 <Layout
   title="About Meredith | Meredith Lewis Photography"
   description="Meet Meredith Lewis, a New Hampshire based photographer rooted in the White Mountains, capturing candid, heartfelt moments."
   solidNav={true}
+  image={ogImage}
 >
   {/* Hero Title Header */}
   <section class="bg-white px-5 pt-24 pb-12 text-center sm:px-8 sm:pt-32 lg:px-12">
