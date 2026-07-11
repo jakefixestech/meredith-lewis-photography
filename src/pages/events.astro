@@ -86,13 +86,13 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
                   <div class="flex-none w-[82vw] sm:w-[45vw] md:w-[31vw] lg:w-[23.5vw] snap-start">
                     <div 
                       class="portfolio-item h-full overflow-hidden rounded-sm group cursor-pointer bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:shadow-md"
-                      data-image-alt={`${set.set_title || 'Session'} - Gallery Image`}
+                      data-image-alt={`${set.set_title || 'Featured Session'} — ${imgIndex + 1}`}
                       data-index={imgIndex}
                     >
                       <div class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 aspect-[2/3] w-full h-full flex items-center">
                         <SmartImage
                           src={finalSrc}
-                          alt={`${set.set_title || 'Session'} - Gallery Image`}
+                          alt={`${set.set_title || 'Featured Session'} — ${imgIndex + 1}`}
                           width={1200}
                           height={1800}
                           widths={[500, 750, 1000, 1200]}
