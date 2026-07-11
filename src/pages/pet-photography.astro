@@ -99,7 +99,7 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
                           alt={`${set.set_title || 'Featured Session'} — ${imgIndex + 1}`}
                           width={1200}
                           height={1800}
-                          widths={[500, 750, 1000, 1200]}
+                          widths={[400, 500, 650, 750, 1000, 1200]}
                           sizes="(min-width: 1024px) 23.5vw, (min-width: 768px) 31vw, (min-width: 640px) 45vw, 82vw"
                           loading={rowIndex === 0 && imgIndex === 0 ? "eager" : "lazy"}
                           fetchpriority={rowIndex === 0 && imgIndex === 0 ? "high" : "auto"}
