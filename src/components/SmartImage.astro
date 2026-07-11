@@ -13,9 +13,6 @@ interface Props {
   loading?: "eager" | "lazy";
   fetchpriority?: "high" | "low" | "auto";
   quality?: number | "low" | "mid" | "high" | "max";
-  // Optional responsive-image support: pass both together to get a real
-  // srcset with multiple sizes, so phones don't download the same file
-  // as desktop. `width`/`height` above still set the largest/fallback size.
   widths?: number[];
   sizes?: string;
 }
@@ -38,8 +35,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/**/*.{jpeg,jpg,png,gif,webp,avif}"
 );
 
-// The CMS stores paths like "/src/assets/uploads/hero.jpg".
-// Normalize so a leading slash (or not) both resolve.
+// Normalize CMS path (leading slash optional)
 const key = src.startsWith("/") ? src : `/${src}`;
 
 const loader = images[key];
@@ -60,8 +56,7 @@ const loader = images[key];
       quality={quality ?? 80}
     />
   ) : (
-    // Fallback: if the path isn't in src/assets (e.g. still in public/),
-    // render a normal img so the site never breaks mid-migration.
+    // Fallback: plain <img> if not resolved via src/assets
     <img
       src={src}
       alt={alt}

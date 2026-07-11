@@ -14,7 +14,6 @@ const headerEyebrow = rawContent.header_eyebrow || "Galleries";
 const headerHeading = rawContent.header_heading || "Events";
 const headerIntro = rawContent.header_intro || "";
 
-// Exact original fallback variable mapping to the JSON text field
 const ctaText = rawContent.cta_text || "Planning an event? Let's chat!";
 
 const storySets = (rawContent.story_sets as SessionItem[]) || [];
@@ -80,7 +79,6 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
               {set.images?.map((imgObj, imgIndex) => {
                 if (!imgObj) return null;
 
-                // Dynamically resolve raw string path or nested object from CMS
                 const finalSrc = typeof imgObj === 'string' ? imgObj : imgObj.img_src;
                 if (!finalSrc) return null;
 

@@ -1,5 +1,5 @@
 ---
-// Nav.astro — shared site navigation. Edit links once, updates everywhere.
+// Nav.astro — shared site navigation.
 //
 // Props:
 //   solid (boolean, default true)
@@ -133,7 +133,7 @@ const navLinks = [
 </header>
 
 <script>
-  // Mobile menu toggle (runs on every page)
+  // Mobile menu toggle
   const toggle = document.getElementById("menu-toggle");
   const menu = document.getElementById("mobile-menu");
   const iconOpen = document.getElementById("icon-open");
@@ -162,7 +162,7 @@ const navLinks = [
     link.addEventListener("click", closeMenu);
   });
 
-  // Transparent-over-hero scroll behavior — only runs if the nav is NOT solid.
+  // Transparent-over-hero scroll behavior
   const nav = document.getElementById("site-nav");
   if (nav && !nav.classList.contains("bg-white")) {
     const wordmark = document.getElementById("wordmark");

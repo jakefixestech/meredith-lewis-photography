@@ -1,19 +1,5 @@
 ---
-// Layout.astro — the master wrapper for every page.
-// Handles <head> (fonts, SEO, OG tags), the shared Nav, and the shared Footer.
-// Each page just imports this, passes title + description, and drops its content
-// in the <slot />.
-//
-// USAGE (an inner page):
-//   ---
-//   import Layout from "../layouts/Layout.astro";
-//   ---
-//   <Layout title="About | Meredith Lewis Photography" description="...">
-//     <section>...page content...</section>
-//   </Layout>
-//
-// For the HOME page only, pass solidNav={false} so the nav is transparent
-// over the hero: <Layout title="..." description="..." solidNav={false}>
+// Layout.astro — shared page wrapper (head, Nav, Footer).
 
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
@@ -35,8 +21,7 @@ const {
   noindex = false,
 } = Astro.props;
 
-// Canonical + OG URL. Requires `site` set in astro.config.mjs:
-//   site: 'https://meredithlewisphotography.com'
+// Canonical + OG URL (requires `site` in astro.config.mjs)
 const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://meredithlewisphotography.com").href;
 const ogImage = new URL(image, Astro.site ?? "https://meredithlewisphotography.com").href;
 ---

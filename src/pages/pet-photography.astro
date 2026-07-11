@@ -83,7 +83,6 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
               {set.images?.map((imgObj, imgIndex) => {
                 if (!imgObj) return null;
 
-                // Dynamically resolve raw string path or nested object from CMS
                 const finalSrc = typeof imgObj === 'string' ? imgObj : imgObj.img_src;
                 if (!finalSrc) return null;
 
@@ -132,7 +131,7 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
     );
   })}
 
-  {/* Specialized End of Life Information Section (Correct Solid Black Layout) */}
+  {/* End of Life Information Section */}
   {eolHeading && (
     <section class="bg-neutral-950 px-5 py-24 text-center text-white sm:px-8 lg:px-12">
       <div class="mx-auto max-w-3xl text-center">

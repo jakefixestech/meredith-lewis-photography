@@ -1,5 +1,5 @@
 ---
-// Footer.astro — shared site footer. Edit once, updates everywhere.
+// Footer.astro — shared site footer.
 import SmartImage from "./SmartImage.astro";
 
 const navLinks = [
@@ -23,6 +23,8 @@ const navLinks = [
           alt="Meredith Lewis Photography — based in the White Mountains, ME, NH &amp; VT, established 2019."
           width={760}
           height={485}
+          widths={[400, 520, 760]}
+          sizes="(min-width: 640px) 500px, 260px"
           class="w-[260px] h-auto sm:h-80 sm:w-auto aspect-[760/485]"
         />
       </a>

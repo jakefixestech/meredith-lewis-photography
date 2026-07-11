@@ -77,7 +77,6 @@ const storySets = (rawContent.story_sets as SessionItem[]) || [];
               {set.images?.map((imgObj, imgIndex) => {
                 if (!imgObj) return null;
 
-                // Dynamically resolve whether the CMS gave us a raw string path or a nested object
                 const finalSrc = typeof imgObj === 'string' ? imgObj : imgObj.img_src;
                 if (!finalSrc) return null;
 

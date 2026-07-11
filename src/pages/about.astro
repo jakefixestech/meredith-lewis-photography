@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import SmartImage from "../components/SmartImage.astro";
 
-// Safe dynamic lookup to ensure it won't crash if Decap hasn't built the JSON yet
 let rawContent: any = {};
 try {
   const contentFile = await import("../content/about.json");
